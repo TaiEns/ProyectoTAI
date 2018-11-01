@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TainEns", "TainEns\TainEns.csproj", "{722A3838-3051-4502-AE03-E0D082ED65F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{1C457A9E-71A4-456D-8D88-90F9A7512855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocios", "Negocios\Negocios.csproj", "{C98FCE2F-11A6-484C-8464-30C81108D1C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{722A3838-3051-4502-AE03-E0D082ED65F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722A3838-3051-4502-AE03-E0D082ED65F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722A3838-3051-4502-AE03-E0D082ED65F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722A3838-3051-4502-AE03-E0D082ED65F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C457A9E-71A4-456D-8D88-90F9A7512855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C457A9E-71A4-456D-8D88-90F9A7512855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C457A9E-71A4-456D-8D88-90F9A7512855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C457A9E-71A4-456D-8D88-90F9A7512855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98FCE2F-11A6-484C-8464-30C81108D1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98FCE2F-11A6-484C-8464-30C81108D1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98FCE2F-11A6-484C-8464-30C81108D1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98FCE2F-11A6-484C-8464-30C81108D1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F8EB47F-7AE9-4EAF-8EF6-59A88901C14A}
+	EndGlobalSection
+EndGlobal
