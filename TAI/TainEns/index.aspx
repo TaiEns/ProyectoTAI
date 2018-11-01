@@ -45,12 +45,12 @@
         
             <button id="IniciarSesion" class="btn btn-lg btn-primary btn-block azuloscuro" type="submit">Iniciar Sesión</button>
 
-            <div class="alert alert-warning alert-dismissible fade show bg-danger" role="alert" style="margin-bottom: 0; height: 40px;">
+            <asp:Panel ID="pnErrorUsuarioContra" runat="server" class="alert alert-warning alert-dismissible fade show bg-danger" role="alert" style="margin-bottom: 0; height: 40px;">
                 <p style="color: #fff; font-family: Roboto; margin-bottom: 0; display: inline; margin: auto;">Usuario o contraseña incorrectos</p>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color: #fff;">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
+            </asp:Panel>
         </div>
     </form>
     <footer class="footer azuloscuro">

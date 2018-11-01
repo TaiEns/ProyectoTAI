@@ -11,7 +11,21 @@ namespace TainEns
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack){
+                Inicio();
+            }
         }
+
+        protected void Inicio()
+        {
+            ApagarComponentes();
+        }
+
+        #region Metodos
+        protected void ApagarComponentes()
+        {
+            pnErrorUsuarioContra.Visible = false;
+        }
+        #endregion
     }
 }
