@@ -67,11 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\albun.css" />
+    <Content Include="css\floating-labels.css" />
+    <Content Include="css\mdb.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="DLL\DatosSQL.dll" />
     <Content Include="DLL\itextsharp.dll" />
+    <Content Include="img\facebook-logo.png" />
+    <Content Include="img\footer.png" />
+    <Content Include="img\gmail-logo.png" />
+    <Content Include="img\icono.png" />
+    <Content Include="img\instagram-logo.png" />
+    <Content Include="img\LOGO-1.png" />
+    <Content Include="img\usuario.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\holder.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
