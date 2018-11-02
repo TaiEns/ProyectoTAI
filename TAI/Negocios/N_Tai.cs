@@ -68,9 +68,9 @@ namespace Negocios
             return (from User in LstUsuarios() where User.NombreUsuario == pNombre select User).FirstOrDefault();
         }
 
-        public E_Usuario ValidaLogin(string Email, string Password)
+        public E_Usuario ValidaLogin(string NombreUsuario, string Password)
         {
-            return (from User in LstUsuarios() where User.EmailUsuario == Email && User.PasswordUsuario == Password select User).FirstOrDefault();
+            return (from User in LstUsuarios() where User.NombreUsuario == NombreUsuario && User.PasswordUsuario == Password select User).FirstOrDefault();
         }
 
         public E_Usuario BuscarUsuarioPorNombreNegocio(string NombreNegocio, int IdUsuario)
