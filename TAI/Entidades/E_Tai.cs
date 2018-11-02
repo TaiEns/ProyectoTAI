@@ -15,7 +15,7 @@ namespace Entidades
         private string _EmailUsuario;
         private string _PasswordUsuario;
         private string _EstatusUsuario;
-
+        private string _Usuario;
         private string _NombreNegocio;
         private string _DireccionNegocio;
         #endregion
@@ -31,6 +31,7 @@ namespace Entidades
             _EstatusUsuario = string.Empty;
             _NombreNegocio = string.Empty;
             _DireccionNegocio = string.Empty;
+            _Usuario = string.Empty;
         }
         #endregion
 
@@ -43,6 +44,7 @@ namespace Entidades
         public string EstatusUsuario { get => _EstatusUsuario; set => _EstatusUsuario = value; }
         public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
+        public string Usuario { get => _Usuario; set => _Usuario = value; }
         #endregion
 
     }
@@ -142,7 +144,6 @@ namespace Entidades
         private string _DiasLaborales;
         private string _TipoNegocio;
         private string _TelefonoNegocio;
-        private string _EstatusUsuario;
         private string _NombreNegocio;
         private string _DireccionNegocio;
         #endregion
@@ -155,7 +156,6 @@ namespace Entidades
             _DiasLaborales = string.Empty;
             _TipoNegocio = string.Empty;
             _TelefonoNegocio = string.Empty;
-            _EstatusUsuario = string.Empty;
             _NombreNegocio = string.Empty;
             _DireccionNegocio = string.Empty;
         }
@@ -167,7 +167,6 @@ namespace Entidades
         public string EDiasLaborales { get => _DiasLaborales; set => _DiasLaborales = value; }
         public string TipoNegocio { get => _TipoNegocio; set => _TipoNegocio = value; }
         public string TelefonoNegocio { get => _TelefonoNegocio; set => _TelefonoNegocio = value; }
-        public string EstatusUsuario { get => _EstatusUsuario; set => _EstatusUsuario = value; }
         public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
         #endregion
