@@ -25,55 +25,64 @@
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <label for="Nombres">Nombres</label>
-              <input type="text" class="form-control" id="Nombres" placeholder="Nombres" required/>
+              <asp:TextBox ID="Nombres" runat="server" class="form-control" placeholder="Nombres" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Nombres" placeholder="Nombres" required/>-->
             </div>
             <div class="col-md-4 mb-3">
               <label for="Apellidos">Apellidos</label>
-              <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required/>
+                <asp:TextBox ID="Apellidos" runat="server" class="form-control" placeholder="Apellidos" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required/>-->
             </div>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <label for="Usuario">Usuario</label>
-              <input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>
+              <asp:TextBox ID="Usuario" runat="server" class="form-control" placeholder="Usuario" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>-->
             </div>
             <div class="col-md-4 mb-3">
               <label for="Correo">Correo</label>
-              <input type="text" class="form-control" id="Correo" placeholder="Correo" required/>
+              <asp:TextBox ID="Correo" runat="server" class="form-control" placeholder="Correo" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Correo" placeholder="Correo" required/>-->
             </div>
           </div>
 
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <label for="Contrasena">Contraseña</label>
-              <input type="password" class="form-control" id="Contrasena" placeholder="Contrasena" required/>
+              <asp:TextBox ID="Contrasena" runat="server" class="form-control" placeholder="Contrasena" required></asp:TextBox>
+              <!--<input type="password" class="form-control" id="Contrasena" placeholder="Contrasena" required/>-->
             </div>
             <div class="col-md-4 mb-3">
               <label for="ConfContrasena">Confirmar Contraseña</label>
-              <input type="password" class="form-control" id="ConfContrasena" placeholder="Confirmar Contraseña" required/>
+              <asp:TextBox ID="ConfContrasena" type="password" runat="server" class="form-control" placeholder="Confirmar Contraseña" required></asp:TextBox>
+              <!--<input type="password" class="form-control" id="ConfContrasena" placeholder="Confirmar Contraseña" required/>-->
             </div>
          </div> 
           <div id="botones">
-            <button id="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Registrarse</button>
-            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="../index.html" style="margin-top: 0px;">Cancelar</a>
+            <asp:Button ID="Registrarse" runat="server" Text="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Registrarse_Click"/>
+            <!--<button id="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Registrarse</button>-->
+            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="../index.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
     </form>
-
+    <asp:Panel runat="server" ID="pnlModaltrigger" data-toggle="modal"></asp:Panel>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
-            <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
-            </div>
-            <div class="modal-body text-center">
-                Su registro se ha realizado con exito
-            </div>
+    <asp:Panel ID="pnModal" runat="server">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
+                </div>
+                <div class="modal-body text-center">
+                    Su registro se ha realizado con exito
+                </div>
+                </div>
             </div>
         </div>
-    </div>
+    </asp:Panel>
 
     <footer class="footer azuloscuro">
         <div class="footer-content">
@@ -171,15 +180,13 @@
         Incorrecto("#ConfContrasena");
       }
       if(cont == 5){
-        $("#Registrarse").attr("data-toggle", "modal");
-        //ar url = "../index.html"; 
-        //$(location).attr('href',url).delay(10000);
-        redireccionar();
+        //$("#Registrarse").attr("data-toggle", "modal");
+        //redireccionar();
       }
     }
 
     function redireccionar() {
-      setTimeout("location.href='../index.html'", 3000);
+      setTimeout("location.href='../index.aspx'", 3000);
     }
   </script>
   <script type="text/javascript">$('#primero').popover(options)</script>
