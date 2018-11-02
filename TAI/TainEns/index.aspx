@@ -14,43 +14,47 @@
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <nav class="navbar navbar-light">
-        <a class="navbar-brand"></a>
-        <form class="form-inline" action="#">
-            <button type="button" class="btn btn-outline-primary">Registrarse</button>
-        </form>
-    </nav>
-    <form id="frmIniciarSesion" class="form-signin" runat="server">
-        <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="img/LOGO-1.png" alt="TAI" width="80" height="120"/>
-                <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+    <form  runat="server">
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand"></a>
+            <div class="form-inline">
+                <asp:HyperLink ID="hlRegistrarse" class="btn btn-outline-primary" runat="server" NavigateUrl="~/paginas/registrar_usuario.aspx">Registrarse</asp:HyperLink>
             </div>
-            <div class="form-row">
-                <label for="Usuario">Usuario</label>
-                <input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>
-            </div>
-            <div class="form-row">
-                <label for="Contrasena">Contraseña</label>
-                <input type="password" class="form-control" id="Contrasena" placeholder="Contraseña" required/>
-                <div class="invalid-feedback">
-                    ¿Y la contraseña?
+        </nav>
+        <div id="frmIniciarSesion" class="form-signin">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="img/LOGO-1.png" alt="TAI" width="80" height="120"/>
+                    <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
                 </div>
-            </div>
-            <div class="checkbox mb-3">
-                <label>
-                <a href="#">Olvide mi Contraseña</a>
-                </label>
-            </div>
-        
-            <button id="IniciarSesion" class="btn btn-lg btn-primary btn-block azuloscuro" type="submit">Iniciar Sesión</button>
+                <div class="form-row">
+                    <label for="Usuario">Usuario</label>
+                    <asp:TextBox ID="Usuario" class="form-control" placeholder="Usuario" runat="server" required></asp:TextBox>
+                    <!--<input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>-->
+                </div>
+                <div class="form-row">
+                    <label for="Contrasena">Contraseña</label>
+                    <asp:TextBox ID="Contrasena" runat="server" CssClass="form-control" type="password" placeholder="Contraseña" required></asp:TextBox>
+                    <!--<input type="password" class="form-control" id="Contrasena" placeholder="Contraseña" required/>-->
+                    <div class="invalid-feedback">
+                        ¿Y la contraseña?
+                    </div>
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                    <a href="#">Olvide mi Contraseña</a>
+                    </label>
+                </div>
+                <asp:Button ID="IniciarSesion" runat="server" Text="Iniciar Sesión" class="btn btn-lg btn-primary btn-block azuloscuro" OnClick="IniciarSesion_Click"/>
+                <!--<button id="IniciarSesion" class="btn btn-lg btn-primary btn-block azuloscuro" type="submit">Iniciar Sesión</button>-->
 
-            <asp:Panel ID="pnErrorUsuarioContra" runat="server" class="alert alert-warning alert-dismissible fade show bg-danger" role="alert" style="margin-bottom: 0; height: 40px;">
-                <p style="color: #fff; font-family: Roboto; margin-bottom: 0; display: inline; margin: auto;">Usuario o contraseña incorrectos</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color: #fff;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </asp:Panel>
+                <asp:Panel ID="pnErrorUsuarioContra" runat="server" class="alert alert-warning alert-dismissible fade show bg-danger" role="alert" style="margin-bottom: 0; height: 40px;">
+                    <p style="color: #fff; font-family: Roboto; margin-bottom: 0; display: inline; margin: auto;">Usuario o contraseña incorrectos</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color: #fff;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </asp:Panel>
+            </div>
         </div>
     </form>
     <footer class="footer azuloscuro">
