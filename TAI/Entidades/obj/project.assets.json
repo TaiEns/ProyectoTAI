@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\santiago\\Desktop\\hola\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\santiago\\Desktop\\hola\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\santiago\\Desktop\\hola\\ProyectoTAI\\TAI\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
