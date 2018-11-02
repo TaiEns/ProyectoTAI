@@ -30,9 +30,51 @@ nav li:hover{
   background-color: #3A749A;
 }
 
+.formulario {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  margin: auto;
+}
+ .form-input{
+  width: 80%;
+  margin-left: 5%
+}
+
+ .form-input div{
+  margin: auto;
+}
+
+.form-control{
+  width: 100%;
+  min-width: 270px;
+}
+
+.modal-header{
+  display: inline;
+}
+
 .azuloscuro{
   background-color: #2980B9;
   border: 0;
+}
+
+#botones{
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.botones{
+  display: inline-block;
+  margin: auto;
+  min-width: 150px;
+  max-width: 270px;
+  max-height: 100px;
+}
+
+.cancelar:hover{
+  background-color: #CE131F;
 }
 
 .footer {
