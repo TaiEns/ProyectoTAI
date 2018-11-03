@@ -73,7 +73,7 @@
             </div>
             <div class="col-md-4 mb-3">
               <label for="Presentacion">Presentacion</label>
-              <asp:TextBox ID="Presentacion" runat="server" class="form-control" placeholder="Presentacion" required></asp:TextBox>
+              <asp:FileUpload ID="Presentacion" runat="server" required/>
               <!--<input type="text" class="form-control" id="Presentacion" placeholder="Presentacion" required/>-->
             </div>
           </div>
