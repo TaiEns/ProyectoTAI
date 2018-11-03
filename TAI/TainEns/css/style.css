@@ -16,6 +16,7 @@ code {
 
 
 footer{
+  position: fixed;
   margin-top: 10px;
   height: 70px;
 }
@@ -130,4 +131,8 @@ nav li:hover{
 
 .dropdown-item:hover {
     background-color: #3A7297;
+}
+
+.columna{
+    margin: 10px;
 }
