@@ -56,9 +56,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Abarrotes lupita</h5>
                     <p class="card-text">bla bla bla bla</p>
-                    <a href="#">Productos</a><br/>
+                    <a href="productos.aspx">Productos</a><br/>
                       <asp:Button ID="btnModificar" runat="server" Text="Modificar" class="btn btn-primary" />
-                      <asp:Button ID="btnBorrar" runat="server" Text="Borrar" class="btn btn-primary" />
+                      <asp:Button ID="btnBorrar" runat="server" Text="Borrar" class="btn btn-primary cancelar" />
                   </div>
                 </div>
             </div>
