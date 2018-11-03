@@ -22,67 +22,49 @@ namespace TainEns.paginas.Cliente.Negocios {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control Nombres.
+        /// Control Nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Nombres;
+        protected global::System.Web.UI.WebControls.TextBox Nombre;
         
         /// <summary>
-        /// Control Apellidos.
+        /// Control Precio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Apellidos;
+        protected global::System.Web.UI.WebControls.TextBox Precio;
         
         /// <summary>
-        /// Control Usuario.
+        /// Control Cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Usuario;
+        protected global::System.Web.UI.WebControls.TextBox Cantidad;
         
         /// <summary>
-        /// Control Correo.
+        /// Control Presentacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Correo;
+        protected global::System.Web.UI.WebControls.TextBox Presentacion;
         
         /// <summary>
-        /// Control Contrasena.
+        /// Control Agregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Contrasena;
-        
-        /// <summary>
-        /// Control ConfContrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfContrasena;
-        
-        /// <summary>
-        /// Control Registrarse.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Registrarse;
+        protected global::System.Web.UI.WebControls.Button Agregar;
         
         /// <summary>
         /// Control pnModal.

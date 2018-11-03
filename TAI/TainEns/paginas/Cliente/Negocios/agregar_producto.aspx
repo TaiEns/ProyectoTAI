@@ -36,12 +36,12 @@
 
 	    <form class="form-inline my-2 my-lg-0">
 	      <div class="dropdown ">
-			  <button class="btn btn-secondary dropdown-toggle azuloscuro usuario" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    <img src="../../../img/usuario.png" width="30" height="30"/>
+			  <button class="btn btn-secondary dropdown-toggle azuloscuro Cantidad" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <img src="../../../img/Cantidad.png" width="30" height="30"/>
 			  </button>
 			  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
 			    <button class="dropdown-item" type="button">Configuración <i class="fas fa-edit"></i></button>
-			    <button class="dropdown-item" type="button">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></button>
+                <a class="dropdown-item" href="../../../index.aspx">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a>
 			  </div>
 			</div>
 	    </form>
@@ -51,49 +51,40 @@
     <form id="form1" runat="server">
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
           <div class="text-center mb-4">
-            <h1 class="h3 mb-3 font-weight-bold">Registrarse</h1>
+            <h1 class="h3 mb-3 font-weight-bold">Agregar Producto</h1>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
-              <label for="Nombres">Nombres</label>
-              <asp:TextBox ID="Nombres" runat="server" class="form-control" placeholder="Nombres" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombres" placeholder="Nombres" required/>-->
+              <label for="Nombre">Nombre</label>
+              <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
             </div>
             <div class="col-md-4 mb-3">
-              <label for="Apellidos">Apellidos</label>
-                <asp:TextBox ID="Apellidos" runat="server" class="form-control" placeholder="Apellidos" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required/>-->
+              <label for="Precio">Precio</label>
+                <asp:TextBox ID="Precio" runat="server" class="form-control" placeholder="Precio" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Precio" placeholder="Precio" required/>-->
             </div>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
-              <label for="Usuario">Usuario</label>
-              <asp:TextBox ID="Usuario" runat="server" class="form-control" placeholder="Usuario" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>-->
+              <label for="Cantidad">Cantidad</label>
+              <asp:TextBox ID="Cantidad" runat="server" class="form-control" placeholder="Cantidad" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Cantidad" placeholder="Cantidad" required/>-->
             </div>
             <div class="col-md-4 mb-3">
-              <label for="Correo">Correo</label>
-              <asp:TextBox ID="Correo" runat="server" class="form-control" placeholder="Correo" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Correo" placeholder="Correo" required/>-->
+              <label for="Presentacion">Presentacion</label>
+              <asp:TextBox ID="Presentacion" runat="server" class="form-control" placeholder="Presentacion" required></asp:TextBox>
+              <!--<input type="text" class="form-control" id="Presentacion" placeholder="Presentacion" required/>-->
             </div>
           </div>
-
-          <div class="form-row form-input">
-            <div class="col-md-4 mb-3">
-              <label for="Contrasena">Contraseña</label>
-              <asp:TextBox ID="Contrasena" runat="server" class="form-control" placeholder="Contrasena" required></asp:TextBox>
-              <!--<input type="password" class="form-control" id="Contrasena" placeholder="Contrasena" required/>-->
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="ConfContrasena">Confirmar Contraseña</label>
-              <asp:TextBox ID="ConfContrasena" type="password" runat="server" class="form-control" placeholder="Confirmar Contraseña" required></asp:TextBox>
-              <!--<input type="password" class="form-control" id="ConfContrasena" placeholder="Confirmar Contraseña" required/>-->
-            </div>
-         </div> 
+          <div class="form-group" style="max-width: 600px; margin: 10px auto;">
+            <label for="Desctipcion">Descripción</label>
+            <textarea class="form-control" id="Desctipcion" rows="3" ></textarea>
+          </div>
           <div id="botones">
-            <asp:Button ID="Registrarse" runat="server" Text="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle="modal"  data-target="#exampleModal" />
-            <!--<button id="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Registrarse</button>-->
-            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="../index.aspx" style="margin-top: 0px;">Cancelar</a>
+            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle="modal"  data-target="#exampleModal" />
+            <!--<button id="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Agregar</button>-->
+            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="mis_negocios.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
     </form>
@@ -129,7 +120,7 @@
         $( document ).on("ready",main);
         function main(){
           var cont = 0;
-          $("#Registrarse").on("click", Validar);
+          $("#Agregar").on("click", Validar);
         }
 
         function Incorrecto(tb){
@@ -153,43 +144,43 @@
         }
 
         function Validar(){
-          var tbNombres = $("#Nombres").val();
-          var tbApellidos = $("#Apellidos").val();
-          var tbUsuario = $("#Usuario").val();
-          var tbCorreo = $("#Correo").val();
+          var tbNombre = $("#Nombre").val();
+          var tbPrecio = $("#Precio").val();
+          var tbCantidad = $("#Cantidad").val();
+          var tbPresentacion = $("#Presentacion").val();
           var tbContrasena = $("#Contrasena").val();
           var tbConfContrasena = $("#ConfContrasena").val();
           var cont = 0;
 
-          if(tbNombres != ""){
-            Correcto("#Nombres");
+          if(tbNombre != ""){
+            Correcto("#Nombre");
             cont++;
           }
           else{
-            Incorrecto("#Nombres");
+            Incorrecto("#Nombre");
           }
-          if(tbApellidos != ""){
-            Correcto("#Apellidos");
+          if(tbPrecio != ""){
+            Correcto("#Precio");
             cont++;
           }
           else{
-            Incorrecto("#Apellidos");
+            Incorrecto("#Precio");
           }
 
-          if(tbUsuario != ""){
-            Correcto("#Usuario");
+          if(tbCantidad != ""){
+            Correcto("#Cantidad");
             cont++;
           }
           else{
-            Incorrecto("#Usuario");
+            Incorrecto("#Cantidad");
           }
 
-          if(tbCorreo != ""){
-            Correcto("#Correo");
+          if(tbPresentacion != ""){
+            Correcto("#Presentacion");
             cont++;
           }
           else{
-            Incorrecto("#Correo");
+            Incorrecto("#Presentacion");
           }
 
           if(tbContrasena != ""){
@@ -217,7 +208,7 @@
                 Correcto("#Contrasena");
             }
           if(cont == 5){
-            //$("#Registrarse").attr("data-toggle", "modal");
+            //$("#Agregar").attr("data-toggle", "modal");
             //redireccionar();
           }
         }

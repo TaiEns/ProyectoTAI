@@ -41,7 +41,7 @@
 			  </button>
 			  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
 			    <button class="dropdown-item" type="button">Configuración <i class="fas fa-edit"></i></button>
-			    <button class="dropdown-item" type="button">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></button>
+                <a class="dropdown-item" href="../../../index.aspx">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a>
 			  </div>
 			</div>
 	    </form>
@@ -69,7 +69,7 @@
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [NombreProducto], [Descripcion], [CostoProducto] FROM [tbProductos]"></asp:SqlDataSource>
-                <div><asp:HyperLink ID="hlAgregarProduto" runat="server" class="btn btn-primary" NavigateUrl="#">Agregar</asp:HyperLink></div>
+                <div><asp:HyperLink ID="hlAgregarProduto" runat="server" class="btn btn-primary" NavigateUrl="~/paginas/Cliente/Negocios/agregar_producto.aspx">Agregar</asp:HyperLink></div>
             </div>
         </div>
     </form>
