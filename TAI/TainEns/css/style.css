@@ -75,6 +75,7 @@ nav li:hover{
 
 .cancelar:hover{
   background-color: #CE131F;
+  border: 0;
 }
 
 .footer {
