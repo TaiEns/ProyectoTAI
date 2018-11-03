@@ -49,6 +49,7 @@
 	</nav>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
         </div>
     </form>
 

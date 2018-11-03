@@ -49,21 +49,36 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="container">
-            <h1>Mis Negocios</h1>
-            <div class="shadow p-3 mb-5 bg-white rounded" style="margin:0">
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="../../../img/negocio.jpg" alt="Card image cap" width="286" height="180"/>
-                  <div class="card-body">
-                    <h5 class="card-title">Abarrotes lupita</h5>
-                    <p class="card-text">bla bla bla bla</p>
-                    <a href="productos.aspx">Productos</a><br/>
-                      <asp:Button ID="btnModificar" runat="server" Text="Modificar" class="btn btn-primary" />
-                      <asp:Button ID="btnBorrar" runat="server" Text="Borrar" class="btn btn-primary cancelar" />
-                  </div>
+            <div class="row">
+                <h1>Mis Negocios</h1>
+            </div>  
+            <div class="row">
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <asp:Button ID="btnModificar" runat="server" Text="Modificar" class="btn btn-primary" />
+                              <asp:Button ID="btnBorrar" runat="server" Text="Borrar" class="btn btn-primary cancelar" />
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <asp:Button ID="Button1" runat="server" Text="Modificar" class="btn btn-primary" />
+                            <asp:Button ID="Button2" runat="server" Text="Borrar" class="btn btn-primary cancelar" />
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </form>
 
     <footer class="footer azuloscuro">
