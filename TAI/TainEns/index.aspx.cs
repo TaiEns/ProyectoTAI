@@ -40,13 +40,18 @@ namespace TainEns
         protected void Direccionar(E_Usuario ObjEU)
         {
             ObjEUR = ObjNUR.BuscarUsuarioRolPorId(ObjEU.IdUsuarios);
-            if(ObjEUR.IdRol == 1)
+            Session["IdUsuario"] = ObjEU.IdUsuarios;
+            if (ObjEUR.IdRol == 1)
             {
                 Response.Redirect("paginas/Administrador/administrador.aspx");
             }
-            else
-            {
+            if (ObjEUR.IdRol == 2)
+            { 
                 Response.Redirect("paginas/Cliente/cliente.aspx");
+            }
+            if (ObjEUR.IdRol == 3)
+            {
+                //Cliente
             }
         }
         #endregion
@@ -59,10 +64,18 @@ namespace TainEns
 
         protected void IniciarSesion_Click(object sender, EventArgs e)
         {
-            ObjEU = ObjNU.ValidaLogin(Usuario.Text, Contrasena.Text);
+            ObjEU = ObjNU.BuscarUsuarioPorUsuario(Usuario.Text);
             if(ObjEU != null)
             {
-                Direccionar(ObjEU);
+                if(ObjEU.PasswordUsuario == Contrasena.Text)
+                {
+                    Direccionar(ObjEU);
+                }
+                else
+                {
+                    pnErrorUsuarioContra.Visible = true;
+                }
+                
             }
             else
             {
