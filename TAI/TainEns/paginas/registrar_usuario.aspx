@@ -65,24 +65,23 @@
             <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="../index.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
-    </form>
-    <asp:Panel runat="server" ID="pnlModaltrigger" data-toggle="modal"></asp:Panel>
-    <!-- Modal -->
-    <asp:Panel ID="pnModal" runat="server">
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
-                </div>
-                <div class="modal-body text-center">
-                    Su registro se ha realizado con exito
-                </div>
+        <!-- Modal -->
+        <asp:Panel ID="pnModal" runat="server">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        Su registro se ha realizado con exito
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </asp:Panel>
+        </asp:Panel>
+    </form>    
 
     <footer class="footer azuloscuro">
         <div class="footer-content">
@@ -188,8 +187,10 @@
             Correcto("#ConfContrasena");
             Correcto("#Contrasena");
         }
-      if(cont == 5){
-        //$("#Registrarse").attr("data-toggle", "modal");
+        if (cont == 6) {
+            if (tbConfContrasena == tbContrasena) {
+                $("#Registrarse").attr("data-toggle", "modal");
+            }
         //redireccionar();
       }
     }
