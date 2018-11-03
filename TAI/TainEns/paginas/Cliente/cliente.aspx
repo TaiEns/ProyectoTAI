@@ -27,7 +27,7 @@
 	        <a class="nav-link text-white" href="#">Inicio <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link text-white active" href="#">Mis Negocios</a>
+	        <a class="nav-link text-white active" href="Negocios/mis_negocios.aspx">Mis Negocios</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="#">Lista</a>
