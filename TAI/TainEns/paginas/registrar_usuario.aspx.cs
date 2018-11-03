@@ -42,13 +42,24 @@ namespace TainEns.paginas
             string Contra = Contrasena.Text;
             string confContra = ConfContrasena.Text;
 
-            if(Nombre != "" && Apellido != "" && NombreUsuario != "" && Email != "" && Contra != "")
+            if(Nombre != "" && Apellido != "" && NombreUsuario != "" && Email != "" && Contra != "" && confContra != "")
             {
-                pnModal.Visible = true;
-                Registrarse.Attributes.Add("data-toggle", "modal");
-                System.Threading.Thread.Sleep(3000);
-                //Response.Redirect("../index.aspx");
+                if (Contrasena.Text == ConfContrasena.Text)
+                {
+                    string msn = ObjNU.InsertarUsuario(ObjEU);
+                    //Agregar atributo al boton para mostrar modal
+                    Registrarse.Attributes.Add("data-toggle", "modal");
+                    //System.Threading.Thread.Sleep(3000);
+                    ObjEU.NombreUsuario = Nombres.Text + " " + Apellidos.Text;
+                    ObjEU.Usuario = Usuario.Text;
+                    ObjEU.EmailUsuario = Correo.Text;
+                    ObjEU.PasswordUsuario = Contrasena.Text;
+                    Response.Redirect("../index.aspx");
+                }
             }
+            
+            
+
         }
     }
 }

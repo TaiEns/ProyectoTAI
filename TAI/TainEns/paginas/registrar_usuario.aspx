@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
-        <a class="navbar-brand text-white" href="../index.html"><img src="../img/footer.png" width="30" height="30">TAI</a>
+        <a class="navbar-brand text-white" href="../index.aspx"><img src="../img/footer.png" width="30" height="30"/>TAI</a>
     </nav>
     <form id="form1" runat="server">
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
@@ -178,7 +178,16 @@
       }
       else{
         Incorrecto("#ConfContrasena");
-      }
+        }
+
+        if (tbContrasena != tbConfContrasena) {
+            Incorrecto("#ConfContrasena");
+            Incorrecto("#Contrasena");
+        }
+        else {
+            Correcto("#ConfContrasena");
+            Correcto("#Contrasena");
+        }
       if(cont == 5){
         //$("#Registrarse").attr("data-toggle", "modal");
         //redireccionar();
