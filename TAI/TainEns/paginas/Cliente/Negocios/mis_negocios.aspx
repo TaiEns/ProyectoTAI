@@ -53,12 +53,12 @@
                 <h1>Mis Negocios</h1>
             </div>  
             <div class="row">
-                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                <div id="tarjeta" class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 id="TituloTarjeta" class="card-title" runat="server">Card title</h5>
+                              <asp:Label ID="lblDescripcion" runat="server" Text="" class="card-text"></asp:Label>
                               <asp:Button ID="btnModificar" runat="server" Text="Modificar" class="btn btn-primary" />
                               <asp:Button ID="btnBorrar" runat="server" Text="Borrar" class="btn btn-primary cancelar" />
                           </div>

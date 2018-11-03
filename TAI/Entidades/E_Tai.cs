@@ -171,28 +171,28 @@ namespace Entidades
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
         #endregion
 
-        public class E_UsuarioNegocios
+    }
+    public class E_UsuarioNegocios
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdUsuario;
+        private int _IdNegocios;
+        #endregion
+
+        #region Contructor
+        public E_UsuarioNegocios()
         {
-            #region Atributos
-            private string _Accion;
-            private int _IdUsuario;
-            private int _IdNegocios;
-            #endregion
-
-            #region Contructor
-            public E_UsuarioNegocios()
-            {
-                _IdNegocios = 0;
-                _IdUsuario = 0;
-                _Accion = string.Empty;
-            }
-            #endregion
-
-            #region Encapsulamiento
-            public string Accion { get => _Accion; set => _Accion = value; }
-            public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
-            public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
-            #endregion
+            _IdNegocios = 0;
+            _IdUsuario = 0;
+            _Accion = string.Empty;
         }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
+        public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
+        #endregion
     }
 }

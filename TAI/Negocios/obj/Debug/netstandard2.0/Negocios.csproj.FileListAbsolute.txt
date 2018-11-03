@@ -1,0 +1,14 @@
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.deps.json
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.pdb
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\DatosSQL.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\itextsharp.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfo.cs
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.pdb

@@ -68,6 +68,11 @@ namespace Negocios
             return (from User in LstUsuarios() where User.NombreUsuario == pNombre select User).FirstOrDefault();
         }
 
+        public E_Usuario BuscarUsuarioPorUsuario(string pUsuario)
+        {
+            return (from User in LstUsuarios() where User.Usuario == pUsuario select User).FirstOrDefault();
+        }
+
         public E_Usuario ValidaLogin(string NombreUsuario, string Password)
         {
             return (from User in LstUsuarios() where User.NombreUsuario == NombreUsuario && User.PasswordUsuario == Password select User).FirstOrDefault();
@@ -247,26 +252,26 @@ namespace Negocios
         D_Listados ObjLst = new D_Listados();
         private string Sp = "IBM_UsuarioNegocios";
 
-        public string InsertarUsuarioNegocios(E_Negocios.E_UsuarioNegocios pEntidad)
+        public string InsertarUsuarioNegocios(E_UsuarioNegocios pEntidad)
         {
             pEntidad.Accion = "INSERTAR";
-            return ObjIBM.IBM_Entidad<E_Negocios.E_UsuarioNegocios>(Sp, pEntidad);
+            return ObjIBM.IBM_Entidad<E_UsuarioNegocios>(Sp, pEntidad);
         }
 
         public string BorraUsuarioNegocio(int pIdUsuario)
         {
-            E_Negocios.E_UsuarioNegocios Entidad = new E_Negocios.E_UsuarioNegocios
+            E_UsuarioNegocios Entidad = new E_UsuarioNegocios
             {
                 Accion = "BORRAR",
                 IdUsuario = pIdUsuario
             };
-            return ObjIBM.IBM_Entidad<E_Negocios.E_UsuarioNegocios>(Sp, Entidad);
+            return ObjIBM.IBM_Entidad<E_UsuarioNegocios>(Sp, Entidad);
         }
 
-        public string ModoficaUsuarioNegocio(E_Negocios.E_UsuarioNegocios pEntidad)
+        public string ModoficaUsuarioNegocio(E_UsuarioNegocios pEntidad)
         {
             pEntidad.Accion = "MODIFICAR";
-            return ObjIBM.IBM_Entidad<E_Negocios.E_UsuarioNegocios>(Sp, pEntidad);
+            return ObjIBM.IBM_Entidad<E_UsuarioNegocios>(Sp, pEntidad);
         }
 
         //listado general de usuario en formato DataTable y list <E_Sistema>
@@ -275,19 +280,19 @@ namespace Negocios
             return ObjLst.DT_ListadoGeneral("[tbUsuarioNegocios]", "IdUsuario");
         }
 
-        public List<E_Negocios.E_UsuarioNegocios> LstUsuarios()
+        public List<E_UsuarioNegocios> LstUsuarioNegocio()
         {
-            return D_ConvierteDatos.ConvertirDTALista<E_Negocios.E_UsuarioNegocios>(GetDT_UsuarioNegocio());
+            return D_ConvierteDatos.ConvertirDTALista<E_UsuarioNegocios>(GetDT_UsuarioNegocio());
         }
 
         // Busqueda de usuarios por diferente creiterio
 
-        public E_Negocios.E_UsuarioNegocios BuscarUsuarioNegocioPorId(int pIdUsuario)
+        public E_UsuarioNegocios BuscarUsuarioNegocioPorId(int pIdUsuario)
         {
             return (from User in LstUsuarios() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
 
-        public E_Negocios.E_UsuarioNegocios BuscarUsuarioNegocioPorNegocio(int pIdNegocios)
+        public E_UsuarioNegocios BuscarUsuarioNegocioPorNegocio(int pIdNegocios)
         {
             return (from User in LstUsuarios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
         }

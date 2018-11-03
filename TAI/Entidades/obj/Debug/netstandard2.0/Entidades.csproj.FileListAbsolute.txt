@@ -1,0 +1,9 @@
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\santiago\Desktop\haha\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
