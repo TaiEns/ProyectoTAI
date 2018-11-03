@@ -126,3 +126,7 @@ nav li:hover{
 #menuUsuario i{
  margin-left: 15px;
 }
+
+.dropdown-item:hover {
+    background-color: #3A7297;
+}
