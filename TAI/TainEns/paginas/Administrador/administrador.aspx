@@ -46,7 +46,7 @@
 			  </button>
 			  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
 			    <button class="dropdown-item" type="button">Configuración <i class="fas fa-edit"></i></button>
-			    <button class="dropdown-item" type="button">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></button>
+                <a class="dropdown-item" href="../../index.aspx">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a>
 			  </div>
 			</div>
 	    </form>
