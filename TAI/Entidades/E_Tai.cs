@@ -163,7 +163,7 @@ namespace Entidades
 
         #region Encapsulamiento
         public string Accion { get => _Accion; set => _Accion = value; }
-        public int IdNegocio { get => _IdNegocios; set => _IdNegocios = value; }
+        public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
         public string EDiasLaborales { get => _DiasLaborales; set => _DiasLaborales = value; }
         public string TipoNegocio { get => _TipoNegocio; set => _TipoNegocio = value; }
         public string TelefonoNegocio { get => _TelefonoNegocio; set => _TelefonoNegocio = value; }

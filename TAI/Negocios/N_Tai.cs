@@ -289,13 +289,73 @@ namespace Negocios
 
         public E_UsuarioNegocios BuscarUsuarioNegocioPorId(int pIdUsuario)
         {
-            return (from User in LstUsuarios() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
+            return (from User in LstUsuarioNegocio() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
 
         public E_UsuarioNegocios BuscarUsuarioNegocioPorNegocio(int pIdNegocios)
         {
-            return (from User in LstUsuarios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
+            return (from User in LstUsuarioNegocio() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
         }
+    }
+
+    public class N_Negocio
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_Negocios";
+
+        //Acciones de insertar, Borrar y Modificar los datos del usuario
+        public string InsertarNegocio(E_Negocios pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, pEntidad);
+        }
+
+        public string BorraNegocio(int pIdNegocios)
+        {
+            E_Negocios Entidad = new E_Negocios
+            {
+                Accion = "BORRAR",
+                IdNegocios = pIdNegocios
+            };
+            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, Entidad);
+        }
+
+        public string ModoficaNegocio(E_Negocios pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, pEntidad);
+        }
+
+        //listado general de usuario en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_Negocios()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbNegocios]", "NombreNegocio");
+        }
+
+        public List<E_Negocios> LstNegocios()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_Negocios>(GetDT_Negocios());
+        }
+
+        // Busqueda de usuarios por diferente creiterio
+
+        public E_Negocios BuscarUsuarioPorId(int pIdNegocios)
+        {
+            return (from User in LstNegocios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
+        }
+
+        public E_Negocios BuscarUsuarioPorNombre(string pNombreNegocio)
+        {
+            return (from User in LstNegocios() where User.NombreNegocio == pNombreNegocio select User).FirstOrDefault();
+        }
+
+ 
+        public E_Negocios BuscarUsuarioPorTipoNegocio(string TipoNegocio, int IdNegocios)
+        {
+            return (from User in LstNegocios() where User.TipoNegocio == TipoNegocio && User.IdNegocios == IdNegocios select User).FirstOrDefault();
+        }
+
     }
 
 }
