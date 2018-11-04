@@ -86,6 +86,7 @@ namespace Entidades
         private string _Descripcion;
         private int _CostoProducto;
         private int _CantidadProducto;
+        private string _EstadoProducto;
         #endregion
 
         #region Constructor
@@ -109,6 +110,7 @@ namespace Entidades
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
         public int CostoProducto { get => _CostoProducto; set => _CostoProducto = value; }
         public int CantidadProducto { get => _CantidadProducto; set => _CantidadProducto = value; }
+        public string EstadoProducto { get => _EstadoProducto; set => _EstadoProducto = value; }
         #endregion
     }
 
@@ -146,6 +148,7 @@ namespace Entidades
         private string _TelefonoNegocio;
         private string _NombreNegocio;
         private string _DireccionNegocio;
+        private string _EstadoNegocio;
         #endregion
 
         #region Contructor
@@ -169,6 +172,7 @@ namespace Entidades
         public string TelefonoNegocio { get => _TelefonoNegocio; set => _TelefonoNegocio = value; }
         public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
+        public string EstadoNegocio { get => _EstadoNegocio; set => _EstadoNegocio = value; }
         #endregion
 
     }

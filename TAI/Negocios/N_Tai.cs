@@ -340,7 +340,7 @@ namespace Negocios
 
         // Busqueda de usuarios por diferente creiterio
 
-        public E_Negocios BuscarUsuarioPorId(int pIdNegocios)
+        public E_Negocios BuscarNegocioPorId(int pIdNegocios)
         {
             return (from User in LstNegocios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
         }
