@@ -53,7 +53,11 @@ namespace TainEns.paginas
                     ObjEU.Usuario = Usuario.Text;
                     ObjEU.EmailUsuario = Correo.Text;
                     ObjEU.PasswordUsuario = Contrasena.Text;
-                    string msn = ObjNU.InsertarUsuario(ObjEU);
+                    string msnU = ObjNU.InsertarUsuario(ObjEU);
+                    ObjEU = ObjNU.BuscarUsuarioPorNombre(ObjEU.NombreUsuario);
+                    ObjEUR.IdUsuario = ObjEU.IdUsuarios;
+                    ObjEUR.IdRol = 2;
+                    string msnUR = ObjNUR.InsertarUsuarioRol(ObjEUR);
                     Response.Redirect("../index.aspx");
                 }
             }

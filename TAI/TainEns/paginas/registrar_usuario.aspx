@@ -50,7 +50,7 @@
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <label for="Contrasena">Contraseña</label>
-              <asp:TextBox ID="Contrasena" runat="server" class="form-control" placeholder="Contrasena" required></asp:TextBox>
+              <asp:TextBox ID="Contrasena" type="password" runat="server" class="form-control" placeholder="Contrasena" required></asp:TextBox>
               <!--<input type="password" class="form-control" id="Contrasena" placeholder="Contrasena" required/>-->
             </div>
             <div class="col-md-4 mb-3">
@@ -179,7 +179,7 @@
         Incorrecto("#ConfContrasena");
         }
 
-        if (tbContrasena != tbConfContrasena) {
+        if (tbContrasena != tbConfContrasena || tbContrasena == "" && tbConfContrasena == "") {
             Incorrecto("#ConfContrasena");
             Incorrecto("#Contrasena");
         }
