@@ -80,11 +80,15 @@
             </div>
         </div>
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
+                <asp:CommandField ButtonType="Image" CausesValidation="False" HeaderText="Modificar" InsertVisible="False" ShowCancelButton="False" ShowSelectButton="True" />
+                <asp:CommandField ButtonType="Button" CausesValidation="False" HeaderText="Borrar" InsertVisible="False" ShowCancelButton="False" ShowSelectButton="True" />
+                <asp:ButtonField ButtonType="Button" CommandName="eliminarrr" DataTextField="IdNegocios" HeaderText="elim" Text="Eliminar" />
             </Columns>
         </asp:GridView>
+        <asp:Label ID="bandera" runat="server"></asp:Label>
     </form>
 
     <footer class="footer azuloscuro">
