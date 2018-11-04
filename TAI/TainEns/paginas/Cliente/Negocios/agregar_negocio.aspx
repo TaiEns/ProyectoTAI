@@ -89,31 +89,44 @@
               <div class="col-md-4 mb-3">
                   <label for="Tipo">Tipo</label>
                   <asp:DropDownList ID="Tipo" runat="server" class="form-control form-control-lg" required>
-                      <asp:ListItem Value="1">Mini mercado</asp:ListItem>
-                      <asp:ListItem Value="2">Fruteria</asp:ListItem>
-                      <asp:ListItem Value="3">Carniceria</asp:ListItem>
+                      <asp:ListItem Value="Mini Mercado">Mini mercado</asp:ListItem>
+                      <asp:ListItem Value="Fruteria">Fruteria</asp:ListItem>
+                      <asp:ListItem Value="Fruteria">Carniceria</asp:ListItem>
                   </asp:DropDownList>
+              </div>
+              <div class="col-md-4 mb-3">
+                  <label for="DLaborales">Días laborales</label>
+                  <asp:TextBox ID="DLaborales" runat="server" class="form-control" placeholder="Dias laborales" required></asp:TextBox>
+              </div>
+          </div>
+          <div class="form-row form-input">
+              <div class="col-md-4 mb-3">
+                  <label for="Telefono">Telefono</label>
+                <asp:TextBox ID="Telefono" runat="server" class="form-control" placeholder="(---)--- ----" required></asp:TextBox>
               </div>
               <div class="col-md-4 mb-3">
               </div>
           </div>
-          <div id="botones">
-            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" />
-            <!--<button id="Registrarse" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Registrarse</button>-->
-            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="../index.aspx" style="margin-top: 0px;">Cancelar</a>
-          </div>
+          <div class="form-row form-input">
+              <div class="col-md-4 mb-3">
+                    <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Agregar_Click" />
+              </div>
+              <div class="col-md-4 mb-3">
+                    <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="mis_negocios.aspx" style="margin-top: 0px;">Cancelar</a>
+              </div>
+           </div>
         </div>
         <!-- Modal -->
         <asp:Panel ID="pnModal" runat="server">
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                    <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
-                    </div>
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Agregado</h2>
+                        </div>
                     <div class="modal-body text-center">
-                        Su registro se ha realizado con exito
+                        Se ha enviado la Solicitud <br />
+                        En cuanto sea aprobada tu negocio estara disponible.
                     </div>
                     </div>
                 </div>
@@ -167,6 +180,8 @@
           var tbCodigo = $("#CP").val();
           var tbNumero = $("#Numero").val();
           var ddlTipo = $("#Tipo").val();
+          var tbDLaborales = $("#DLaborales").val();
+          var tbTelefono = $("#Telefono").val();
           var cont = 0;
 
           if(tbNombre != ""){
@@ -182,7 +197,7 @@
           }
           else{
             Incorrecto("#RFC");
-        }
+          }
         if (tbCalle != "") {
             Correcto("#Calle");
             cont++;
@@ -214,22 +229,34 @@
 
         if (ddlTipo != "") {
             Correcto("#Tipo");
-            cont++;
           }
           else{
             Incorrecto("#Tipo");
+        }
+
+        if (tbDLaborales != "") {
+            Correcto("#DLaborales");
+            cont++;
+          }
+          else{
+            Incorrecto("#DLaborales");
+        }
+        if (tbTelefono != "") {
+            Correcto("#Telefono");
+            cont++;
+          }
+          else{
+            Incorrecto("#Telefono");
           }
 
      
-        if (cont == 7) {
-            if (tbConfCP == tbCP) {
-                $("#Registrarse").attr("data-toggle", "modal");
-            }
-      }
+        if (cont == 8) {
+            $("#Agregar").attr("data-toggle", "modal");
+            //redireccionar();
+        }
     }
-
     function redireccionar() {
-      setTimeout("location.href='../index.aspx'", 3000);
+      setTimeout("location.href='mis_negocios.aspx'", 3000);
     }
   </script>
     <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
