@@ -26,7 +26,18 @@ namespace TainEns.paginas.Cliente.Negocios
         {
             int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
             ObjEU = ObjNE.BuscarUsuarioPorId(IdUsuario);
-            List<E_UsuarioNegocios>  LstUN = new N_UsuarioNegocios().L
+            List<E_UsuarioNegocios>  LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
+            List<E_Negocios> LstN = new List<E_Negocios>();
+            foreach (E_UsuarioNegocios UN in LstUN)
+            {
+                if (UN.IdUsuario == IdUsuario)
+                {
+                    LstN.Add(new N_Negocio().BuscarNegocioPorId(UN.IdNegocios));
+                }
+            }
+
+            GridView1.DataSource = LstN;
+            GridView1.DataBind();
 
 
         }

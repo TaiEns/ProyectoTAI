@@ -79,6 +79,12 @@
                 </div>
             </div>
         </div>
+
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+            <Columns>
+                <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
+            </Columns>
+        </asp:GridView>
     </form>
 
     <footer class="footer azuloscuro">
