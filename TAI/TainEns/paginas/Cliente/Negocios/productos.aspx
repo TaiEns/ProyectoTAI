@@ -49,28 +49,7 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="container">
-            <div class="shadow p-3 mb-5 bg-white rounded">
-                <h1>Mis productos</h1>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal">
-                    <Columns>
-                        <asp:BoundField DataField="NombreProducto" HeaderText="NombreProducto" SortExpression="NombreProducto" />
-                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                        <asp:BoundField DataField="CostoProducto" HeaderText="CostoProducto" SortExpression="CostoProducto" />
-                        <asp:ButtonField ButtonType="Button" HeaderText="Borrar" Text="Borrar" />
-                        <asp:ButtonField ButtonType="Button" HeaderText="Modificar" Text="Modificar" />
-                    </Columns>
-                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#242121" />
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [NombreProducto], [Descripcion], [CostoProducto] FROM [tbProductos]"></asp:SqlDataSource>
-                <div><asp:HyperLink ID="hlAgregarProduto" runat="server" class="btn btn-primary" NavigateUrl="~/paginas/Cliente/Negocios/agregar_producto.aspx">Agregar</asp:HyperLink></div>
-            </div>
+           
         </div>
     </form>
     <footer class="footer azuloscuro">
