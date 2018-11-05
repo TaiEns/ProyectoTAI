@@ -32,7 +32,7 @@ namespace TainEns.paginas.Cliente.Negocios
                 ObjEN.EstadoNegocio = "2";
                 ObjEN.TipoNegocio = Tipo.Text;
                 ObjEN.DiasLaborales = DLaborales.Text;
-                //string msnN = ObjNN.InsertarNegocio(ObjEN);
+                string msnN = ObjNN.InsertarNegocio(ObjEN);
 
                 ObjEN = ObjNN.BuscarUsuarioPorNombre(ObjEN.NombreNegocio);
                 ObjEUN.IdUsuario = Convert.ToInt16(Session["IdUsuario"]);

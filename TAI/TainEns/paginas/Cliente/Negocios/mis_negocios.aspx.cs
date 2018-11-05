@@ -45,14 +45,8 @@ namespace TainEns.paginas.Cliente.Negocios
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int IdNegocio = Convert.ToInt16(GridView1.SelectedDataKey["IdNegocios"]);
-            bandera.Text = GridView1.SelectedRow.ToString();
 
 
-        }
-
-        protected void eliminarrr()
-        {
-            bandera.Text = "holaaaa";
         }
             
             

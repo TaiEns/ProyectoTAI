@@ -91,7 +91,15 @@
                 <asp:ButtonField ButtonType="Button" CommandName="eliminarrr" DataTextField="IdNegocios" HeaderText="elim" Text="Eliminar" />
             </Columns>
         </asp:GridView>
-        <asp:Label ID="bandera" runat="server"></asp:Label>
+
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="IdNegocios" HeaderText="IdNegocios" SortExpression="IdNegocios" />
+                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" SortExpression="IdUsuario" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT * FROM [tbUsuarioNegocios]"></asp:SqlDataSource>
+
     </form>
 
     <footer class="footer azuloscuro">
