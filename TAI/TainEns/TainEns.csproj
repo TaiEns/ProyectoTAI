@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="calis.aspx" />
     <Content Include="css\albun.css" />
     <Content Include="css\floating-labels.css" />
     <Content Include="css\mdb.min.css" />
@@ -88,6 +89,8 @@
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="paginas\Administrador\administrador.aspx" />
+    <Content Include="paginas\Administrador\Productos\agregar_productos.aspx" />
+    <Content Include="paginas\Administrador\Productos\productos.aspx" />
     <Content Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx" />
     <Content Include="paginas\Administrador\Solicitudes\solicitud_negocios.aspx" />
     <Content Include="paginas\Cliente\cliente.aspx" />
@@ -100,6 +103,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calis.aspx.cs">
+      <DependentUpon>calis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calis.aspx.designer.cs">
+      <DependentUpon>calis.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +123,20 @@
     </Compile>
     <Compile Include="paginas\Administrador\administrador.aspx.designer.cs">
       <DependentUpon>administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Administrador\Productos\agregar_productos.aspx.cs">
+      <DependentUpon>agregar_productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Administrador\Productos\agregar_productos.aspx.designer.cs">
+      <DependentUpon>agregar_productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Administrador\Productos\productos.aspx.cs">
+      <DependentUpon>productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Administrador\Productos\productos.aspx.designer.cs">
+      <DependentUpon>productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx.cs">
       <DependentUpon>aprobar_negocio.aspx</DependentUpon>
