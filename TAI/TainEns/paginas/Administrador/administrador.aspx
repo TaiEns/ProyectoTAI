@@ -30,7 +30,7 @@
 	          Solicitudes
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Negocios</a>
+	          <a class="dropdown-item" href="Solicitudes/solicitud_negocios.aspx">Negocios</a>
 	          <a class="dropdown-item" href="#">Productos</a>
             </div>
 	      </li>
