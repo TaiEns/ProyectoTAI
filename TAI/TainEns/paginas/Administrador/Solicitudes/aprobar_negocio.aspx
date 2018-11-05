@@ -134,11 +134,11 @@
     <script>
     $( document ).on("ready",main);
     function main(){
-      $("#Agregar").on("click", Validar);
+      $("#Aprobar").on("click", Validar);
     }
 
     function Validar(){
-        ("#Agregar").attr("data-toggle", "modal");
+        ("#Aprobar").attr("data-toggle", "modal");
     }
   </script>
   <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
