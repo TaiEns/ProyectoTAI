@@ -84,9 +84,9 @@ namespace Entidades
         private string _NombreProducto;
         private string _Marca;
         private string _Descripcion;
-        private int _CostoProducto;
         private int _CantidadProducto;
         private string _EstadoProducto;
+        private string _MedidaProducto;
         #endregion
 
         #region Constructor
@@ -97,8 +97,8 @@ namespace Entidades
             _NombreProducto = string.Empty;
             _Marca = string.Empty;
             _Descripcion = string.Empty;
-            _CostoProducto = 0;
             _CantidadProducto = 0;
+            _MedidaProducto = string.Empty;
         }
         #endregion
 
@@ -108,9 +108,9 @@ namespace Entidades
         public string NombreProducto { get => _NombreProducto; set => _NombreProducto = value; }
         public string Marca { get => _Marca; set => _Marca = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
-        public int CostoProducto { get => _CostoProducto; set => _CostoProducto = value; }
         public int CantidadProducto { get => _CantidadProducto; set => _CantidadProducto = value; }
         public string EstadoProducto { get => _EstadoProducto; set => _EstadoProducto = value; }
+        public string MedidaProducto { get => _MedidaProducto; set => _MedidaProducto = value; }
         #endregion
     }
 
@@ -149,6 +149,7 @@ namespace Entidades
         private string _NombreNegocio;
         private string _DireccionNegocio;
         private string _EstadoNegocio;
+        private string _RFC;
         #endregion
 
         #region Contructor
@@ -161,6 +162,7 @@ namespace Entidades
             _TelefonoNegocio = string.Empty;
             _NombreNegocio = string.Empty;
             _DireccionNegocio = string.Empty;
+            _RFC = string.Empty;
         }
         #endregion
 
@@ -173,9 +175,11 @@ namespace Entidades
         public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
         public string EstadoNegocio { get => _EstadoNegocio; set => _EstadoNegocio = value; }
+        public string RFC { get => _RFC; set => _RFC = value; }
         #endregion
 
     }
+
     public class E_UsuarioNegocios
     {
         #region Atributos
@@ -197,6 +201,96 @@ namespace Entidades
         public string Accion { get => _Accion; set => _Accion = value; }
         public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
         public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
+        #endregion
+    }
+
+    public class E_HorarioNegocios
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdNegocios;
+        private int _LE;
+        private int _LS;
+        private int _ME;
+        private int _MS;
+        private int _MIE;
+        private int _MIS;
+        private int _JE;
+        private int _JS;
+        private int _VE;
+        private int _VS;
+        private int _SE;
+        private int _SS;
+        private int _DE;
+        private int _DS;
+        #endregion
+
+        #region Contructor
+        public E_HorarioNegocios()
+        {
+            _IdNegocios = 0;
+            _LE = 0;
+            _LS = 0;
+            _ME = 0;
+            _MS = 0;
+            _MIE = 0;
+            _MIS = 0;
+            _JE = 0;
+            _JS = 0;
+            _VE = 0;
+            _VS = 0;
+            _SE = 0;
+            _SS = 0;
+            _DE = 0;
+            _DS = 0;
+            _Accion = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public int LE { get => _LE; set => _LE = value; }
+        public int LS { get => _LS; set => _LS = value; }
+        public int ME { get => _ME; set => _ME = value; }
+        public int MS { get => _MS; set => _MS = value; }
+        public int MIE { get => _MIE; set => _MIE = value; }
+        public int MIS { get => _MIS; set => _MIS = value; }
+        public int JE { get => _JE; set => _JE = value; }
+        public int JS { get => _JS; set => _JS = value; }
+        public int VE { get => _VE; set => _VE = value; }
+        public int VS { get => _VS; set => _VS = value; }
+        public int SE { get => _SE; set => _SE = value; }
+        public int SS { get => _SS; set => _SS = value; }
+        public int DE { get => _DE; set => _DE = value; }
+        public int DS { get => _DS; set => _DS = value; }
+        public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
+        #endregion
+    }
+
+    public class E_ProductoNegocios
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdProducto;
+        private int _IdNegocios;
+        private int _Precios;
+        #endregion
+
+        #region Contructor
+        public E_ProductoNegocios()
+        {
+            _IdNegocios = 0;
+            _IdProducto = 0;
+            _Precios = 0;
+            _Accion = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
+        public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
+        public int Precios { get => _Precios; set => _Precios = value; }
         #endregion
     }
 }
