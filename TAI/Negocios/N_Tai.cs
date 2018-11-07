@@ -358,4 +358,108 @@ namespace Negocios
 
     }
 
+    public class N_ProductoNegocios
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_ProductoNegocios";
+
+        //Acciones de insertar, Borrar y Modificar los datos del usuario
+        public string InsertarProductoNegocios(E_ProductoNegocios pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, pEntidad);
+        }
+
+        public string BorraProductoNegocios(int pIdProducto)
+        {
+            E_ProductoNegocios Entidad = new E_ProductoNegocios
+            {
+                Accion = "BORRAR",
+                IdProducto = pIdProducto
+            };
+            return ObjIBM.IBM_Entidad<E_ProductoNegocios>(Sp, Entidad);
+        }
+
+        public string ModoficaProductoNegocios(E_ProductoNegocios pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_ProductoNegocios>(Sp, pEntidad);
+        }
+
+        //listado general de usuario en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_ProductoNegocios()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbProductoNegocios]", "IdProducto");
+        }
+
+        public List<E_ProductoNegocios> LstNegocios()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_ProductoNegocios>(GetDT_ProductoNegocios());
+        }
+
+        // Busqueda de usuarios por diferente creiterio
+
+        public E_ProductoNegocios BuscarProductoNegociosPorIdProducto(int pIdNegocios)
+        {
+            return (from User in LstNegocios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
+        }
+
+        public E_ProductoNegocios BuscarProductoNegociosPorIdNegocio(int pIdProducto)
+        {
+            return (from User in LstNegocios() where User.IdProducto == pIdProducto select User).FirstOrDefault();
+        }
+
+
+    }
+
+    public class N_HorarioNegocios
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_HorarioNegocios";
+
+        //Acciones de insertar, Borrar y Modificar los datos del usuario
+        public string InsertarProductoNegocios(E_HorarioNegocios pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_HorarioNegocios>(Sp, pEntidad);
+        }
+
+        public string BorraHorarioNegocios(int pIdNegocios)
+        {
+            E_HorarioNegocios Entidad = new E_HorarioNegocios
+            {
+                Accion = "BORRAR",
+                IdNegocios = pIdNegocios
+            };
+            return ObjIBM.IBM_Entidad<E_HorarioNegocios>(Sp, Entidad);
+        }
+
+        public string ModoficaHorarioNegocios(E_HorarioNegocios pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_HorarioNegocios>(Sp, pEntidad);
+        }
+
+        //listado general de usuario en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_HorarioNegocios()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbHorarioNegocios]", "IdNegocios");
+        }
+
+        public List<E_HorarioNegocios> LstNegocios()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_HorarioNegocios>(GetDT_HorarioNegocios());
+        }
+
+        // Busqueda de usuarios por diferente creiterio
+
+        public E_HorarioNegocios BuscarHorarioNegociosPorIdNegocio(int pIdNegocios)
+        {
+            return (from User in LstNegocios() where User.IdNegocios == pIdNegocios select User).FirstOrDefault();
+        }
+
+    }
+
 }
