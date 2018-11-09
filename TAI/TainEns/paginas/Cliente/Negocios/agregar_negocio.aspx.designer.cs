@@ -85,13 +85,22 @@ namespace TainEns.paginas.Cliente.Negocios {
         protected global::System.Web.UI.WebControls.DropDownList Tipo;
         
         /// <summary>
-        /// Control DLaborales.
+        /// Control EntradaL.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DLaborales;
+        protected global::System.Web.UI.WebControls.DropDownList EntradaL;
+        
+        /// <summary>
+        /// Control SalidaL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SalidaL;
         
         /// <summary>
         /// Control Telefono.

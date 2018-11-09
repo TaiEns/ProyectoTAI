@@ -24,14 +24,14 @@ namespace TainEns.paginas.Cliente.Negocios
 
         protected void Agregar_Click(object sender, EventArgs e)
         {
-            if(Nombre.Text != "" && RFC.Text != "" && Calle.Text != "" && ColFrac.Text != "" && CP.Text != "" && Numero.Text != "" && Telefono.Text != "" && DLaborales.Text != "")
+            if(Nombre.Text != "" && RFC.Text != "" && Calle.Text != "" && ColFrac.Text != "" && CP.Text != "" && Numero.Text != "" && Telefono.Text != "")
             {
                 ObjEN.NombreNegocio = Nombre.Text;
                 ObjEN.DireccionNegocio = Calle.Text + " " + ColFrac.Text + " " + CP.Text + " " + Numero.Text;
                 ObjEN.TelefonoNegocio = Telefono.Text;
                 ObjEN.EstadoNegocio = "2";
                 ObjEN.TipoNegocio = Tipo.Text;
-                ObjEN.DiasLaborales = DLaborales.Text;
+                //ObjEN.DiasLaborales = DLaborales.Text;
                 string msnN = ObjNN.InsertarNegocio(ObjEN);
 
                 ObjEN = ObjNN.BuscarUsuarioPorNombre(ObjEN.NombreNegocio);

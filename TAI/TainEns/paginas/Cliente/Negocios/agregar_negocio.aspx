@@ -95,8 +95,40 @@
                   </asp:DropDownList>
               </div>
               <div class="col-md-4 mb-3">
-                  <label for="DLaborales">Días laborales</label>
-                  <asp:TextBox ID="DLaborales" runat="server" class="form-control" placeholder="Dias laborales" required></asp:TextBox>
+                  <label for="EntradaL">Horario</label>
+                  Lunes 
+                  <asp:DropDownList ID="EntradaL" runat="server" class="form-control form-control-lg" required>
+                      <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                      <asp:ListItem Value="1">01:00</asp:ListItem>
+                      <asp:ListItem Value="2">02:00</asp:ListItem>
+                      <asp:ListItem Value="3">03:00</asp:ListItem>
+                      <asp:ListItem Value="4">04:00</asp:ListItem>
+                      <asp:ListItem Value="5">05:00</asp:ListItem>
+                      <asp:ListItem Value="6">06:00</asp:ListItem>
+                      <asp:ListItem Value="7">07:00</asp:ListItem>
+                      <asp:ListItem Value="8">08:00</asp:ListItem>
+                      <asp:ListItem Value="9">09:00</asp:ListItem>
+                      <asp:ListItem Value="10">10:00</asp:ListItem>
+                      <asp:ListItem Value="11">11:00</asp:ListItem>
+                      <asp:ListItem Value="12">12:00</asp:ListItem>
+                  </asp:DropDownList>
+                  a.m a 
+                  <asp:DropDownList ID="SalidaL" runat="server" class="form-control form-control-lg" required>
+                      <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                      <asp:ListItem Value="1">01:00</asp:ListItem>
+                      <asp:ListItem Value="2">02:00</asp:ListItem>
+                      <asp:ListItem Value="3">03:00</asp:ListItem>
+                      <asp:ListItem Value="4">04:00</asp:ListItem>
+                      <asp:ListItem Value="5">05:00</asp:ListItem>
+                      <asp:ListItem Value="6">06:00</asp:ListItem>
+                      <asp:ListItem Value="7">07:00</asp:ListItem>
+                      <asp:ListItem Value="8">08:00</asp:ListItem>
+                      <asp:ListItem Value="9">09:00</asp:ListItem>
+                      <asp:ListItem Value="10">10:00</asp:ListItem>
+                      <asp:ListItem Value="11">11:00</asp:ListItem>
+                      <asp:ListItem Value="12">12:00</asp:ListItem>
+                  </asp:DropDownList>
+                  p.m
               </div>
           </div>
           <div class="form-row form-input">
