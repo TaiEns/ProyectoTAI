@@ -63,9 +63,9 @@ namespace Negocios
             return (from User in LstUsuarios() where User.EmailUsuario == pEmail select User).FirstOrDefault();
         }
 
-        public E_Usuario BuscarUsuarioPorNombre(string pNombre)
+        public E_Usuario BuscarUsuarioPorNombre(string pNombre, string pApellido)
         {
-            return (from User in LstUsuarios() where User.NombreUsuario == pNombre select User).FirstOrDefault();
+            return (from User in LstUsuarios() where User.NombreUsuario == pNombre && User.ApellidoUsuario ==  pApellido select User).FirstOrDefault();
         }
 
         public E_Usuario BuscarUsuarioPorUsuario(string pUsuario)
@@ -78,10 +78,6 @@ namespace Negocios
             return (from User in LstUsuarios() where User.NombreUsuario == NombreUsuario && User.PasswordUsuario == Password select User).FirstOrDefault();
         }
 
-        public E_Usuario BuscarUsuarioPorNombreNegocio(string NombreNegocio, int IdUsuario)
-        {
-            return (from User in LstUsuarios() where User.NombreNegocio == NombreNegocio && User.IdUsuarios == IdUsuario select User).FirstOrDefault();
-        }
 
     }
 

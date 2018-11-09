@@ -12,12 +12,12 @@ namespace Entidades
         private string _Accion;
         private int _IdUsuarios;
         private string _NombreUsuario;
+        private string _ApellidoUsuario;
         private string _EmailUsuario;
         private string _PasswordUsuario;
         private string _EstatusUsuario;
         private string _Usuario;
-        private string _NombreNegocio;
-        private string _DireccionNegocio;
+
         #endregion
 
         #region Contructor
@@ -29,8 +29,7 @@ namespace Entidades
             _EmailUsuario = string.Empty;
             _PasswordUsuario = string.Empty;
             _EstatusUsuario = string.Empty;
-            _NombreNegocio = string.Empty;
-            _DireccionNegocio = string.Empty;
+            _ApellidoUsuario = string.Empty;
             _Usuario = string.Empty;
         }
         #endregion
@@ -42,8 +41,7 @@ namespace Entidades
         public string EmailUsuario { get => _EmailUsuario; set => _EmailUsuario = value; }
         public string PasswordUsuario { get => _PasswordUsuario; set => _PasswordUsuario = value; }
         public string EstatusUsuario { get => _EstatusUsuario; set => _EstatusUsuario = value; }
-        public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
-        public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
+        public string ApellidoUsuario { get => _ApellidoUsuario; set => _ApellidoUsuario = value; }
         public string Usuario { get => _Usuario; set => _Usuario = value; }
         #endregion
 
@@ -150,6 +148,10 @@ namespace Entidades
         private string _DireccionNegocio;
         private string _EstadoNegocio;
         private string _RFC;
+        private string _CalleNegocio;
+        private int _NumeroCalle;
+        private string _ColoniaNegocio;
+        private int _CodigioPostal;
         #endregion
 
         #region Contructor
@@ -163,6 +165,10 @@ namespace Entidades
             _NombreNegocio = string.Empty;
             _DireccionNegocio = string.Empty;
             _RFC = string.Empty;
+            _CalleNegocio = string.Empty;
+            _NumeroCalle = 0;
+            _ColoniaNegocio = string.Empty;
+            _CodigioPostal = 0;
         }
         #endregion
 
@@ -176,6 +182,10 @@ namespace Entidades
         public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
         public string EstadoNegocio { get => _EstadoNegocio; set => _EstadoNegocio = value; }
         public string RFC { get => _RFC; set => _RFC = value; }
+        public string CalleNegocio { get => _CalleNegocio; set => _CalleNegocio = value; }
+        public int NumeroCalle { get => _NumeroCalle; set => _NumeroCalle = value; }
+        public string ColoniaNegocio { get => _ColoniaNegocio; set => _ColoniaNegocio = value; }
+        public int CodigioPostal { get => _CodigioPostal; set => _CodigioPostal = value; }
         #endregion
 
     }
