@@ -24,7 +24,6 @@ namespace TainEns.paginas.Administrador.Productos
             if(Nombre.Text != "" && Precio.Text != "" && Cantidad.Text != "" && Descripcion.Value != "" && Presentacion.HasFile)
             {
                 ObjEP.NombreProducto = Nombre.Text;
-                ObjEP.CostoProducto = Convert.ToInt16(Precio.Text);
                 ObjEP.CantidadProducto = Convert.ToInt16(Cantidad.Text);
                 ObjEP.Descripcion = Descripcion.Value;
                 ObjEP.EstadoProducto = "3";
