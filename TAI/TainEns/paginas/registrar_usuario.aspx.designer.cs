@@ -49,6 +49,15 @@ namespace TainEns.paginas {
         protected global::System.Web.UI.WebControls.TextBox Usuario;
         
         /// <summary>
+        /// Control LblUsuarioRep.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUsuarioRep;
+        
+        /// <summary>
         /// Control Correo.
         /// </summary>
         /// <remarks>

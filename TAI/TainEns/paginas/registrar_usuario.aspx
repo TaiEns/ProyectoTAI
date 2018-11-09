@@ -38,7 +38,9 @@
             <div class="col-md-4 mb-3">
               <label for="Usuario">Usuario</label>
               <asp:TextBox ID="Usuario" runat="server" class="form-control" placeholder="Usuario" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Usuario" placeholder="Usuario" required/>-->
+              <div class="invalid-feedback">
+                <asp:Label runat="server" ID="LblUsuarioRep" Text=""></asp:Label>
+              </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="Correo">Correo</label>

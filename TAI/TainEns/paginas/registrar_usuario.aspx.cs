@@ -44,21 +44,29 @@ namespace TainEns.paginas
 
             if(Nombre != "" && Apellido != "" && NombreUsuario != "" && Email != "" && Contra != "" && confContra != "")
             {
-                if (Contrasena.Text == ConfContrasena.Text)
+                if (ObjNU.BuscarUsuarioPorUsuario(NombreUsuario) == null)
                 {
-                    //Agregar atributo al boton para mostrar modal
-                    //Registrarse.Attributes.Add("data-toggle", "modal");
-                    //System.Threading.Thread.Sleep(3000);
-                    ObjEU.NombreUsuario = Nombres.Text + " " + Apellidos.Text;
-                    ObjEU.Usuario = Usuario.Text;
-                    ObjEU.EmailUsuario = Correo.Text;
-                    ObjEU.PasswordUsuario = Contrasena.Text;
-                    string msnU = ObjNU.InsertarUsuario(ObjEU);
-                    ObjEU = ObjNU.BuscarUsuarioPorNombre(ObjEU.NombreUsuario);
-                    ObjEUR.IdUsuario = ObjEU.IdUsuarios;
-                    ObjEUR.IdRol = 2;
-                    string msnUR = ObjNUR.InsertarUsuarioRol(ObjEUR);
-                    Response.Redirect("../index.aspx");
+                    if (Contrasena.Text == ConfContrasena.Text)
+                    {
+                        //Agregar atributo al boton para mostrar modal
+                        //Registrarse.Attributes.Add("data-toggle", "modal");
+                        //System.Threading.Thread.Sleep(3000);
+                        ObjEU.NombreUsuario = Nombres.Text + " " + Apellidos.Text;
+                        ObjEU.Usuario = Usuario.Text;
+                        ObjEU.EmailUsuario = Correo.Text;
+                        ObjEU.PasswordUsuario = Contrasena.Text;
+                        string msnU = ObjNU.InsertarUsuario(ObjEU);
+                        ObjEU = ObjNU.BuscarUsuarioPorNombre(ObjEU.NombreUsuario);
+                        ObjEUR.IdUsuario = ObjEU.IdUsuarios;
+                        ObjEUR.IdRol = 2;
+                        string msnUR = ObjNUR.InsertarUsuarioRol(ObjEUR);
+                        Response.Redirect("../index.aspx");
+                    }
+                }
+                else
+                {
+                    Usuario.Attributes.Add("class", "form-control is-invalid");
+                    LblUsuarioRep.Text = "Este usuario no se encuentra disponible";
                 }
             }
             
