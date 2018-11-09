@@ -63,9 +63,9 @@ namespace Negocios
             return (from User in LstUsuarios() where User.EmailUsuario == pEmail select User).FirstOrDefault();
         }
 
-        public E_Usuario BuscarUsuarioPorNombre(string pNombre, string pApellido)
+        public E_Usuario BuscarUsuarioPorNombre(string pNombre)
         {
-            return (from User in LstUsuarios() where User.NombreUsuario == pNombre && User.ApellidoUsuario ==  pApellido select User).FirstOrDefault();
+            return (from User in LstUsuarios() where User.NombreUsuario == pNombre select User).FirstOrDefault();
         }
 
         public E_Usuario BuscarUsuarioPorUsuario(string pUsuario)
