@@ -56,92 +56,330 @@
             <div class="col-md-4 mb-3">
               <label for="Nombre">Nombre</label>
               <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
+              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" />-->
             </div>
             <div class="col-md-4 mb-3">
               <label for="RFC">RFC</label>
-                <asp:TextBox ID="RFC" runat="server" class="form-control" placeholder="RFC" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" required/>-->
+                <asp:TextBox ID="RFC" runat="server" class="form-control" placeholder="RFC"></asp:TextBox>
+              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" />-->
             </div>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <label for="Calle">Dirección</label>
               <asp:TextBox ID="Calle" runat="server" class="form-control" placeholder="Calle" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
+              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" />-->
             </div>
             <div class="col-md-4 mb-3">
                 <asp:TextBox ID="ColFrac" runat="server" class="form-control" placeholder="Colonia/Fraccionamiento" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" required/>-->
+              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" />-->
             </div>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
               <asp:TextBox ID="CP" runat="server" class="form-control" placeholder="C.P" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
+              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" />-->
             </div>
             <div class="col-md-4 mb-3">
                 <asp:TextBox ID="Numero" runat="server" class="form-control" placeholder="#" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" required/>-->
+              <!--<input type="text" class="form-control" id="RFC" placeholder="RFC" />-->
             </div>
           </div>
           <div class="form-row form-input">
-              <div class="col-md-4 mb-3">
-                  <label for="Tipo">Tipo</label>
-                  <asp:DropDownList ID="Tipo" runat="server" class="form-control form-control-lg" required>
-                      <asp:ListItem Value="Mini Mercado">Mini mercado</asp:ListItem>
-                      <asp:ListItem Value="Fruteria">Fruteria</asp:ListItem>
-                      <asp:ListItem Value="Fruteria">Carniceria</asp:ListItem>
-                  </asp:DropDownList>
+              <div class="col-md-4">
+                  <div class="row">
+                      <label for="Tipo">Tipo</label>
+                      <asp:DropDownList ID="Tipo" runat="server" class="form-control form-control-lg" >
+                          <asp:ListItem Value="Mini Mercado">Mini mercado</asp:ListItem>
+                          <asp:ListItem Value="Fruteria">Fruteria</asp:ListItem>
+                          <asp:ListItem Value="Fruteria">Carniceria</asp:ListItem>
+                      </asp:DropDownList>
+                  </div>
+                  <div class="row">
+                      <label for="Telefono">Telefono</label>
+                    <asp:TextBox ID="Telefono" runat="server" class="form-control" placeholder="(---)--- ----"></asp:TextBox>
+                  </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-md-7 ">
                   <label for="EntradaL">Horario</label>
-                  Lunes 
-                  <asp:DropDownList ID="EntradaL" runat="server" class="form-control form-control-lg" required>
-                      <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
-                      <asp:ListItem Value="1">01:00</asp:ListItem>
-                      <asp:ListItem Value="2">02:00</asp:ListItem>
-                      <asp:ListItem Value="3">03:00</asp:ListItem>
-                      <asp:ListItem Value="4">04:00</asp:ListItem>
-                      <asp:ListItem Value="5">05:00</asp:ListItem>
-                      <asp:ListItem Value="6">06:00</asp:ListItem>
-                      <asp:ListItem Value="7">07:00</asp:ListItem>
-                      <asp:ListItem Value="8">08:00</asp:ListItem>
-                      <asp:ListItem Value="9">09:00</asp:ListItem>
-                      <asp:ListItem Value="10">10:00</asp:ListItem>
-                      <asp:ListItem Value="11">11:00</asp:ListItem>
-                      <asp:ListItem Value="12">12:00</asp:ListItem>
-                  </asp:DropDownList>
-                  a.m a 
-                  <asp:DropDownList ID="SalidaL" runat="server" class="form-control form-control-lg" required>
-                      <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
-                      <asp:ListItem Value="1">01:00</asp:ListItem>
-                      <asp:ListItem Value="2">02:00</asp:ListItem>
-                      <asp:ListItem Value="3">03:00</asp:ListItem>
-                      <asp:ListItem Value="4">04:00</asp:ListItem>
-                      <asp:ListItem Value="5">05:00</asp:ListItem>
-                      <asp:ListItem Value="6">06:00</asp:ListItem>
-                      <asp:ListItem Value="7">07:00</asp:ListItem>
-                      <asp:ListItem Value="8">08:00</asp:ListItem>
-                      <asp:ListItem Value="9">09:00</asp:ListItem>
-                      <asp:ListItem Value="10">10:00</asp:ListItem>
-                      <asp:ListItem Value="11">11:00</asp:ListItem>
-                      <asp:ListItem Value="12">12:00</asp:ListItem>
-                  </asp:DropDownList>
-                  p.m
+                  <div class="row">
+                      <div class="col horario">
+                          Lunes 
+                          <asp:DropDownList ID="EntradaL" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaL" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                  <div class="row">
+                      <div class="col horario">
+                          Martes 
+                          <asp:DropDownList ID="EntradaMa" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaMa" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                 <div class="row">
+                      <div class="col horario">
+                          Miercoles 
+                          <asp:DropDownList ID="EntradaMi" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaMi" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                 <div class="row">
+                      <div class="col horario">
+                          Jueves 
+                          <asp:DropDownList ID="EntradaJ" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaJ" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                 <div class="row">
+                      <div class="col horario">
+                          Viernes 
+                          <asp:DropDownList ID="EntradaV" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaV" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                 <div class="row">
+                      <div class="col horario">
+                          Sábado 
+                          <asp:DropDownList ID="EntradaS" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaS" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
+                 <div class="row">
+                      <div class="col horario">
+                          Domingo 
+                          <asp:DropDownList ID="EntradaD" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          a.m
+                      </div> a 
+                      <div class="col horario">
+                          <asp:DropDownList ID="SalidaD" runat="server" class="" >
+                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="1">01:00</asp:ListItem>
+                              <asp:ListItem Value="2">02:00</asp:ListItem>
+                              <asp:ListItem Value="3">03:00</asp:ListItem>
+                              <asp:ListItem Value="4">04:00</asp:ListItem>
+                              <asp:ListItem Value="5">05:00</asp:ListItem>
+                              <asp:ListItem Value="6">06:00</asp:ListItem>
+                              <asp:ListItem Value="7">07:00</asp:ListItem>
+                              <asp:ListItem Value="8">08:00</asp:ListItem>
+                              <asp:ListItem Value="9">09:00</asp:ListItem>
+                              <asp:ListItem Value="10">10:00</asp:ListItem>
+                              <asp:ListItem Value="11">11:00</asp:ListItem>
+                              <asp:ListItem Value="12">12:00</asp:ListItem>
+                          </asp:DropDownList>
+                          p.m
+                    </div>
+                </div>
               </div>
           </div>
           <div class="form-row form-input">
               <div class="col-md-4 mb-3">
-                  <label for="Telefono">Telefono</label>
-                <asp:TextBox ID="Telefono" runat="server" class="form-control" placeholder="(---)--- ----" required></asp:TextBox>
-              </div>
-              <div class="col-md-4 mb-3">
-              </div>
-          </div>
-          <div class="form-row form-input">
-              <div class="col-md-4 mb-3">
-                    <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Agregar_Click" />
+                    <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle="modal"  data-target="#exampleModal" OnClick="Agregar_Click" />
               </div>
               <div class="col-md-4 mb-3">
                     <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="mis_negocios.aspx" style="margin-top: 0px;">Cancelar</a>
@@ -154,18 +392,31 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Agregado</h2>
+                            <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;"><asp:Label runat="server" ID="lblTituloModal" Text="Fallido"></asp:Label></h2>
                         </div>
-                    <div class="modal-body text-center">
-                        Se ha enviado la Solicitud <br />
-                        En cuanto sea aprobada tu negocio estara disponible.
+                        <div class="modal-body text-center">
+                            <asp:Label runat="server" ID="lblMensajeModal" Text="Campos obligatorios no completados."></asp:Label>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </asp:Panel>
+        <asp:Panel ID="Panel1" runat="server">
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="titulomodal2" style="text-align: center;"><asp:Label runat="server" ID="Label1" Text="Agregado"></asp:Label></h2>
+                        </div>
+                        <div class="modal-body text-center">
+                            <asp:Label runat="server" ID="Label2" Text="Se ha enviado la solicitud. En cuanto sea aceptada tu negocio estara disponible."></asp:Label>
+                        </div>
                     </div>
                 </div>
             </div>
         </asp:Panel>
     </form>    
-
+    <!--
     <footer class="footer azuloscuro">
     	<div class="footer-content">
       		<img src="../../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI<div id="redes">
@@ -177,6 +428,7 @@
       		</div>
     	</div>
     </footer>
+    -->
     <script>
     $( document ).on("ready",main);
     function main(){
@@ -206,14 +458,11 @@
 
     function Validar(){
           var tbNombre = $("#Nombre").val();
-          var tbRFC = $("#RFC").val();
           var tbCalle = $("#Calle").val();
           var tbColonia = $("#ColFrac").val();
           var tbCodigo = $("#CP").val();
           var tbNumero = $("#Numero").val();
           var ddlTipo = $("#Tipo").val();
-          var tbDLaborales = $("#DLaborales").val();
-          var tbTelefono = $("#Telefono").val();
           var cont = 0;
 
           if(tbNombre != ""){
@@ -222,13 +471,6 @@
           }
           else{
             Incorrecto("#Nombre");
-          }
-          if(tbRFC != ""){
-            Correcto("#RFC");
-            cont++;
-          }
-          else{
-            Incorrecto("#RFC");
           }
         if (tbCalle != "") {
             Correcto("#Calle");
@@ -265,30 +507,12 @@
           else{
             Incorrecto("#Tipo");
         }
-
-        if (tbDLaborales != "") {
-            Correcto("#DLaborales");
-            cont++;
-          }
-          else{
-            Incorrecto("#DLaborales");
+        
+        
+        if(cont == 5){
+            $("#Agregar").attr("data-target", "#modal2");
         }
-        if (tbTelefono != "") {
-            Correcto("#Telefono");
-            cont++;
-          }
-          else{
-            Incorrecto("#Telefono");
-          }
-
-     
-        if (cont == 8) {
-            $("#Agregar").attr("data-toggle", "modal");
-            //redireccionar();
-        }
-    }
-    function redireccionar() {
-      setTimeout("location.href='mis_negocios.aspx'", 3000);
+        
     }
   </script>
     <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
