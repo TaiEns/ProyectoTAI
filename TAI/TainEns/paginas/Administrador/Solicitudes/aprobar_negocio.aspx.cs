@@ -50,7 +50,6 @@ namespace TainEns.paginas.Administrador.Solicitudes
             lblNombreNegocio.Text = ObjEN.NombreNegocio;
             Nombre.Text = ObjEU.NombreUsuario;
             Correo.Text = ObjEU.EmailUsuario;
-            Calle.Text = ObjEN.DireccionNegocio;
             Tipo.Text = ObjEN.TelefonoNegocio;
             DLaborales.Text = ObjEN.DiasLaborales;
             Telefono.Text = ObjEN.TelefonoNegocio;

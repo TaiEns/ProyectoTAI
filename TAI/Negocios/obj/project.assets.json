@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santiago\\Desktop\\haha\\ProyectoTAI\\TAI\\Negocios\\Negocios.csproj",
+      "projectUniqueName": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Negocios\\Negocios.csproj",
       "projectName": "Negocios",
-      "projectPath": "C:\\Users\\santiago\\Desktop\\haha\\ProyectoTAI\\TAI\\Negocios\\Negocios.csproj",
+      "projectPath": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Negocios\\Negocios.csproj",
       "packagesPath": "C:\\Users\\santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santiago\\Desktop\\haha\\ProyectoTAI\\TAI\\Negocios\\obj\\",
+      "outputPath": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Negocios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -222,8 +222,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\santiago\\Desktop\\haha\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\santiago\\Desktop\\haha\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj"
+            "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\santiago\\Desktop\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj"
             }
           }
         }

@@ -69,6 +69,28 @@
                     <asp:BoundField DataField="EstadoProducto" HeaderText="EstadoProducto" SortExpression="EstadoProducto" />
                 </Columns>
             </asp:GridView>
+            <br />
+            Horario-Negocio<br />
+            <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource7">
+                <Columns>
+                    <asp:BoundField DataField="IdNegocios" HeaderText="IdNegocios" SortExpression="IdNegocios" />
+                    <asp:BoundField DataField="LE" HeaderText="LE" SortExpression="LE" />
+                    <asp:BoundField DataField="LS" HeaderText="LS" SortExpression="LS" />
+                    <asp:BoundField DataField="ME" HeaderText="ME" SortExpression="ME" />
+                    <asp:BoundField DataField="MS" HeaderText="MS" SortExpression="MS" />
+                    <asp:BoundField DataField="MIE" HeaderText="MIE" SortExpression="MIE" />
+                    <asp:BoundField DataField="MIS" HeaderText="MIS" SortExpression="MIS" />
+                    <asp:BoundField DataField="JE" HeaderText="JE" SortExpression="JE" />
+                    <asp:BoundField DataField="JS" HeaderText="JS" SortExpression="JS" />
+                    <asp:BoundField DataField="VE" HeaderText="VE" SortExpression="VE" />
+                    <asp:BoundField DataField="VS" HeaderText="VS" SortExpression="VS" />
+                    <asp:BoundField DataField="SE" HeaderText="SE" SortExpression="SE" />
+                    <asp:BoundField DataField="SS" HeaderText="SS" SortExpression="SS" />
+                    <asp:BoundField DataField="DE" HeaderText="DE" SortExpression="DE" />
+                    <asp:BoundField DataField="DS" HeaderText="DS" SortExpression="DS" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT * FROM [tbHorarioNegocios]"></asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT * FROM [tbProductos]"></asp:SqlDataSource>
             <br />
             <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT * FROM [tbUsuarioNegocios]"></asp:SqlDataSource>

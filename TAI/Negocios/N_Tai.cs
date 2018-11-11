@@ -416,7 +416,7 @@ namespace Negocios
         private string Sp = "IBM_HorarioNegocios";
 
         //Acciones de insertar, Borrar y Modificar los datos del usuario
-        public string InsertarProductoNegocios(E_HorarioNegocios pEntidad)
+        public string InsertarHorarioNegocios(E_HorarioNegocios pEntidad)
         {
             pEntidad.Accion = "INSERTAR";
             return ObjIBM.IBM_Entidad<E_HorarioNegocios>(Sp, pEntidad);
