@@ -37,7 +37,7 @@
 	    <form class="form-inline my-2 my-lg-0">
 	      <div class="dropdown ">
 			  <button class="btn btn-secondary dropdown-toggle azuloscuro Cantidad" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    <img src="../../../img/Cantidad.png" width="30" height="30"/>
+			    <img src="../../../img/usuario.png" width="30" height="30"/>
 			  </button>
 			  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
 			    <button class="dropdown-item" type="button">Configuración <i class="fas fa-edit"></i></button>
@@ -49,61 +49,60 @@
 	</nav>
 
     <form id="form1" runat="server">
-        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+       <div class="shadow-lg p-3 mb-5 bg-white rounded">
           <div class="text-center mb-4">
             <h1 class="h3 mb-3 font-weight-bold">Agregar Producto</h1>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
-              <label for="Nombre">Nombre</label>
-              <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
+              <label for="Categoria">Categoria</label>
+              <asp:DropDownList ID="ddlCategoria" runat="server" class="form-control" >
+                <asp:ListItem Value="Categoria">Categoria</asp:ListItem>
+                <asp:ListItem Value="Alimentos">Alimentos</asp:ListItem>
+                <asp:ListItem Value="Bebidas">Bebidas</asp:ListItem>
+                <asp:ListItem Value="Limpieza">Limpieza</asp:ListItem>
+                <asp:ListItem Value="Higiene">Higiene</asp:ListItem>
+                <asp:ListItem Value="Fruta">Fruta</asp:ListItem>
+                <asp:ListItem Value="Lacteos">Lacteos</asp:ListItem>
+                <asp:ListItem Value="Snacks">Snacks</asp:ListItem>
+                <asp:ListItem Value="Carnes">Carnes</asp:ListItem>
+                <asp:ListItem Value="Panaderia">Panaderia</asp:ListItem>
+                <asp:ListItem Value="Especias">Especias</asp:ListItem>
+            </asp:DropDownList>
             </div>
             <div class="col-md-4 mb-3">
-              <label for="Precio">Precio</label>
-                <asp:TextBox ID="Precio" runat="server" class="form-control" placeholder="Precio" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Precio" placeholder="Precio" required/>-->
+              <label for="Nombre">Nombre</label>
+              <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
             </div>
           </div>
           <div class="form-row form-input">
-            <div class="col-md-4 mb-3">
-              <label for="Cantidad">Cantidad</label>
-              <asp:TextBox ID="Cantidad" runat="server" class="form-control" placeholder="Cantidad" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Cantidad" placeholder="Cantidad" required/>-->
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="Presentacion">Presentacion</label>
-              <asp:FileUpload ID="Presentacion" runat="server" required/>
-              <!--<input type="text" class="form-control" id="Presentacion" placeholder="Presentacion" required/>-->
-            </div>
+              <div class="col-md-4 mb-3">
+                <label for="Precio">Precio</label>
+                <asp:TextBox ID="Precio" runat="server" class="form-control" placeholder="$" required></asp:TextBox>
+              </div>
           </div>
-          <div class="form-group" style="max-width: 600px; margin: 10px auto;">
-            <label for="Desctipcion">Descripción</label>
-            <textarea class="form-control" id="Desctipcion" rows="3" ></textarea>
-          </div>
-          <div id="botones">
-            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle="modal"  data-target="#exampleModal" />
-            <!--<button id="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Agregar</button>-->
-            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="mis_negocios.aspx" style="margin-top: 0px;">Cancelar</a>
+          
+          <div id="form-row form-input botones">
+            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal"/>
+            <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="productos.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
-    </form>
-    <!-- Modal -->
-    <asp:Panel ID="pnModal" runat="server">
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <img src="../img/happyface.jpg"  width="100" height="100" style="margin: auto;"/>
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Bienvenido</h2>
-                </div>
-                <div class="modal-body text-center">
-                    Su registro se ha realizado con exito
-                </div>
+        </form>
+        <!-- Modal -->
+        <asp:Panel ID="pnModal" runat="server">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Agregado</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        El producto se agrego correctamente
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </asp:Panel>
+        </asp:Panel>
 
     <footer class="footer azuloscuro">
     	<div class="footer-content">
@@ -143,79 +142,64 @@
           }
         }
 
-        function Validar(){
-          var tbNombre = $("#Nombre").val();
-          var tbPrecio = $("#Precio").val();
-          var tbCantidad = $("#Cantidad").val();
-          var tbPresentacion = $("#Presentacion").val();
-          var tbContrasena = $("#Contrasena").val();
-          var tbConfContrasena = $("#ConfContrasena").val();
-          var cont = 0;
+    function Validar(){
+        var tbNombre = $("#Nombre").val();
+        var ddlCategoria = $("#ddlCategoria").val();
+        var tbCantidad = $("#Cantidad").val();
+        var tbPresentacion = $("#Presentacion").val();
+        var ddlMedida = $("#ddlMedida").val();
+        var Marca = $("#Marca").val();
+        var cont = 0;
 
-          if(tbNombre != ""){
-            Correcto("#Nombre");
-            cont++;
-          }
-          else{
-            Incorrecto("#Nombre");
-          }
-          if(tbPrecio != ""){
-            Correcto("#Precio");
-            cont++;
-          }
-          else{
-            Incorrecto("#Precio");
-          }
-
-          if(tbCantidad != ""){
-            Correcto("#Cantidad");
-            cont++;
-          }
-          else{
-            Incorrecto("#Cantidad");
-          }
-
-          if(tbPresentacion != ""){
-            Correcto("#Presentacion");
-            cont++;
-          }
-          else{
-            Incorrecto("#Presentacion");
-          }
-
-          if(tbContrasena != ""){
-            Correcto("#Contrasena");
-            cont++;
-          }
-          else{
-            Incorrecto("#Contrasena");
-          }
-
-          if(tbConfContrasena != ""){
-            Correcto("#ConfContrasena");
-            cont++;
-          }
-          else{
-            Incorrecto("#ConfContrasena");
-            }
-
-            if (tbContrasena != tbConfContrasena) {
-                Incorrecto("#ConfContrasena");
-                Incorrecto("#Contrasena");
-            }
-            else {
-                Correcto("#ConfContrasena");
-                Correcto("#Contrasena");
-            }
-          if(cont == 5){
-            //$("#Agregar").attr("data-toggle", "modal");
-            //redireccionar();
-          }
+        if(tbNombre != ""){
+        Correcto("#Nombre");
+        cont++;
+        }
+        else{
+        Incorrecto("#Nombre");
+        }
+        if(ddlCategoria != "Categoria"){
+        Correcto("#ddlCategoria");
+        cont++;
+        }
+        else{
+        Incorrecto("#ddlCategoria");
         }
 
-        function redireccionar() {
-          setTimeout("location.href='../index.aspx'", 3000);
+        if(tbCantidad != ""){
+        Correcto("#Cantidad");
+        cont++;
         }
+        else{
+        Incorrecto("#Cantidad");
+        }
+
+        if(tbPresentacion != ""){
+        Correcto("#Presentacion");
+        cont++;
+        }
+        else{
+        Incorrecto("#Presentacion");
+        }
+        if (ddlMedida != "Medida") {
+        Correcto("#ddlMedida");
+        cont++;
+        }
+        else{
+        Incorrecto("#ddlMedida");
+        }
+        if (Marca != "") {
+        Correcto("#Marca");
+        cont++;
+        }
+        else{
+        Incorrecto("#Marca");
+        }
+          
+        if(cont == 6){
+        $("#Agregar").attr("data-toggle", "modal");
+        }
+    }
   </script>
   <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../../../js/bootstrap.bundle.js"></script>
