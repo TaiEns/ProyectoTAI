@@ -84,16 +84,23 @@
         </div>
         <asp:GridView ID="GridView1" runat="server"
          OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
-              OnRowDeleting="GridView1_RowDeleting" AutoGenerateColumns="False" DataKeyNames="IdNegocios" CssClass="table table-hover">
+            OnRowDeleting="GridView1_RowDeleting"
+            OnRowEditing="GridView1_RowEditing"
+            AutoGenerateColumns="False" DataKeyNames="IdNegocios" CssClass="table table-hover">
             <Columns>
                 <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
-                <asp:CommandField ShowDeleteButton="True" ButtonType="Button" >                
+                <asp:CommandField ShowDeleteButton="True" ButtonType="Button" HeaderText="Productos" DeleteText="Productos" >                
                 <ControlStyle CssClass="btn btn-primary" />
                 </asp:CommandField>
-                <asp:CommandField ShowSelectButton="True" ButtonType="Button" >
+                <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Modificar" SelectText="Modificar" >
+                <ControlStyle CssClass="btn btn-primary" />
+                </asp:CommandField>
                 
-                <ControlStyle CssClass="btn btn-primary" />
-                </asp:CommandField>
+                <asp:TemplateField HeaderText="Borrar">
+                    <ItemTemplate>
+                        <asp:Button runat="server" ID="btnBorrar"  CssClass="btn btn-primary" Text="Borrar" OnClick="btnBorrar_OnClick" data-toggle="modal" data-target="#exampleModal"/>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 
             </Columns>
  
@@ -102,11 +109,11 @@
         </asp:GridView>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

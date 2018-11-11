@@ -49,7 +49,20 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="container">
-           
+            <div class="row">
+                <h1>Productos</h1>
+                <div class="form-inline" style="float: right;">
+                    <asp:HyperLink ID="hlRegistrarse" class="btn btn-outline-primary" runat="server" NavigateUrl="agregar_productos.aspx">Agregar</asp:HyperLink>
+                </div>
+            </div>  
+            
+            <asp:GridView ID="grvProductosAceptados" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto">
+                <Columns>
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
+                </Columns>
+            </asp:GridView>
+
         </div>
     </form>
     <footer class="footer azuloscuro">
