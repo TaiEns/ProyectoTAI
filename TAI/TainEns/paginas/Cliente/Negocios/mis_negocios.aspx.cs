@@ -25,8 +25,9 @@ namespace TainEns.paginas.Cliente.Negocios
         protected void Iniciar()
         {
             int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
+            //int IdUsuario = 3;
             ObjEU = ObjNE.BuscarUsuarioPorId(IdUsuario);
-            List<E_UsuarioNegocios>  LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
+            List<E_UsuarioNegocios> LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
             List<E_Negocios> LstN = new List<E_Negocios>();
             foreach (E_UsuarioNegocios UN in LstUN)
             {
@@ -42,14 +43,19 @@ namespace TainEns.paginas.Cliente.Negocios
 
         }
 
+        #region Internet
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdNegocio = Convert.ToInt16(GridView1.SelectedDataKey["IdNegocios"]);
-
-
+            Session["IdNegocio"] = Convert.ToInt16(GridView1.SelectedDataKey["IdNegocios"]);
+            Response.Redirect("modificar_negocio.aspx");
         }
-            
-            
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+        }
+        #endregion
+
+
 
     }
 }

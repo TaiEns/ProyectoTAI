@@ -82,24 +82,45 @@
                 </div>
             </div>
         </div>
-
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server"
+         OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+              OnRowDeleting="GridView1_RowDeleting" AutoGenerateColumns="False" DataKeyNames="IdNegocios" CssClass="table table-hover">
             <Columns>
                 <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
-                <asp:CommandField ButtonType="Image" CausesValidation="False" HeaderText="Modificar" InsertVisible="False" ShowCancelButton="False" ShowSelectButton="True" />
-                <asp:CommandField ButtonType="Button" CausesValidation="False" HeaderText="Borrar" InsertVisible="False" ShowCancelButton="False" ShowSelectButton="True" />
-                <asp:ButtonField ButtonType="Button" CommandName="eliminarrr" DataTextField="IdNegocios" HeaderText="elim" Text="Eliminar" />
+                <asp:CommandField ShowDeleteButton="True" ButtonType="Button" >                
+                <ControlStyle CssClass="btn btn-primary" />
+                </asp:CommandField>
+                <asp:CommandField ShowSelectButton="True" ButtonType="Button" >
+                
+                <ControlStyle CssClass="btn btn-primary" />
+                </asp:CommandField>
+                
             </Columns>
+ 
+            <HeaderStyle CssClass="thead-dark" />
+ 
         </asp:GridView>
 
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:BoundField DataField="IdNegocios" HeaderText="IdNegocios" SortExpression="IdNegocios" />
-                <asp:BoundField DataField="IdUsuario" HeaderText="IdUsuario" SortExpression="IdUsuario" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT * FROM [tbUsuarioNegocios]"></asp:SqlDataSource>
-
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </form>
 
     <footer class="footer azuloscuro">
