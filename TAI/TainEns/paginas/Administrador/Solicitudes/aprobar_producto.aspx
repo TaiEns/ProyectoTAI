@@ -81,7 +81,7 @@
                         <asp:Button ID="Aprobar" runat="server" Text="Aprobar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Aprobar_Click" />
                   </div>
                   <div class="col-md-4 mb-3">
-                        <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="solicitud_negocio.aspx" style="margin-top: 0px;">Cancelar</a>
+                        <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="solicitud_productos.aspx" style="margin-top: 0px;">Cancelar</a>
                   </div>
                </div>
         </div>

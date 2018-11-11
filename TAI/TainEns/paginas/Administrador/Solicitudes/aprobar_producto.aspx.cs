@@ -38,7 +38,7 @@ namespace TainEns.paginas.Administrador.Solicitudes
 
         protected void Iniciar()
         {
-            Apagartb();
+            //Apagartb();
             int IdProducto = Convert.ToInt16(Session["IdProducto"]);
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
 

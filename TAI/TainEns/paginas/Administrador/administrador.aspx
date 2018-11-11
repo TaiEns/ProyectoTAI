@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
-	  <a class="navbar-brand text-white" href="#"><img src="../../img/footer.png" width="30" height="30">TAI</a>
+	  <a class="navbar-brand text-white" href="#"><img src="../../img/footer.png" width="30" height="30"/>TAI</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -31,7 +31,7 @@
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="Solicitudes/solicitud_negocios.aspx">Negocios</a>
-	          <a class="dropdown-item" href="#">Productos</a>
+	          <a class="dropdown-item" href="Solicitudes/solicitud_productos.aspx">Productos</a>
             </div>
 	      </li>
 	      <li class="nav-item">
