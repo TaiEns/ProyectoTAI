@@ -53,7 +53,6 @@
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
-                    <asp:BoundField DataField="CostoProducto" HeaderText="Precio" />
                 </Columns>
             </asp:GridView>
 

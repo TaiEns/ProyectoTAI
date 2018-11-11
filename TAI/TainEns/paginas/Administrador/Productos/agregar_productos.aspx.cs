@@ -29,8 +29,9 @@ namespace TainEns.paginas.Administrador.Productos
                 ObjEP.EstadoProducto = "3";
                 ObjEP.Marca = Marca.Text;
                 ObjEP.MedidaProducto = ddlMedida.Text;
+                ObjEP.CategoriaProducto = ddlCategoria.Text;
 
-                //string msn = ObjNP.InsertarProducto(ObjEP);
+                string msn = ObjNP.InsertarProducto(ObjEP);
                 Response.Redirect("productos.aspx");
             }
         }
