@@ -43,8 +43,10 @@ namespace TainEns
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            //Obteniendo IdNegocios
+            int IdNegocio = (int)GridView1.DataKeys[e.RowIndex].Value;
             LabelMensaje.Visible = true;
-            LabelMensaje.Text = "Boton Borrar";
+            LabelMensaje.Text = "Boton Borrar" + IdNegocio;
         }
         #endregion
         
