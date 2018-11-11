@@ -121,10 +121,10 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Agregado</h2>
+                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Solicitud Enviada</h2>
                     </div>
                     <div class="modal-body text-center">
-                        El producto se agrego correctamente
+                        Se ha enviado la solicitud. Una vez aprobada la solicitud usted podra agregar el producto a su negocio.
                     </div>
                     </div>
                 </div>
