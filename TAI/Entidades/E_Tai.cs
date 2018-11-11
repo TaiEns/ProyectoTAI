@@ -145,13 +145,12 @@ namespace Entidades
         private string _TipoNegocio;
         private string _TelefonoNegocio;
         private string _NombreNegocio;
-        private string _DireccionNegocio;
         private string _EstadoNegocio;
         private string _RFC;
         private string _CalleNegocio;
         private int _NumeroCalle;
         private string _ColoniaNegocio;
-        private int _CodigioPostal;
+        private int _CodigoPostal;
         #endregion
 
         #region Contructor
@@ -163,12 +162,11 @@ namespace Entidades
             _TipoNegocio = string.Empty;
             _TelefonoNegocio = string.Empty;
             _NombreNegocio = string.Empty;
-            _DireccionNegocio = string.Empty;
             _RFC = string.Empty;
             _CalleNegocio = string.Empty;
             _NumeroCalle = 0;
             _ColoniaNegocio = string.Empty;
-            _CodigioPostal = 0;
+            _CodigoPostal = 0;
         }
         #endregion
 
@@ -179,13 +177,12 @@ namespace Entidades
         public string TipoNegocio { get => _TipoNegocio; set => _TipoNegocio = value; }
         public string TelefonoNegocio { get => _TelefonoNegocio; set => _TelefonoNegocio = value; }
         public string NombreNegocio { get => _NombreNegocio; set => _NombreNegocio = value; }
-        public string DireccionNegocio { get => _DireccionNegocio; set => _DireccionNegocio = value; }
         public string EstadoNegocio { get => _EstadoNegocio; set => _EstadoNegocio = value; }
         public string RFC { get => _RFC; set => _RFC = value; }
         public string CalleNegocio { get => _CalleNegocio; set => _CalleNegocio = value; }
         public int NumeroCalle { get => _NumeroCalle; set => _NumeroCalle = value; }
         public string ColoniaNegocio { get => _ColoniaNegocio; set => _ColoniaNegocio = value; }
-        public int CodigioPostal { get => _CodigioPostal; set => _CodigioPostal = value; }
+        public int CodigoPostal { get => _CodigoPostal; set => _CodigoPostal = value; }
         #endregion
 
     }
