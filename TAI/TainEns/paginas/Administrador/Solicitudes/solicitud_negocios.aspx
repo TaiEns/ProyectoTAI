@@ -58,7 +58,7 @@
                 <Columns>
                     <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
                     <asp:BoundField DataField="TipoNegocio" HeaderText="Tipo" />
-                    <asp:BoundField DataField="DireccionNegocio" HeaderText="Direccion" />
+                    <asp:BoundField DataField="CalleNegocio" HeaderText="Calle" />
                     <asp:CommandField ButtonType="Button" CausesValidation="False" HeaderText="Ver" InsertVisible="False" SelectText="Ver" ShowCancelButton="False" ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>
