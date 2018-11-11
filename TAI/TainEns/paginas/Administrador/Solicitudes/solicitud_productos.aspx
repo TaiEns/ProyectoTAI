@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="solicitud_negocios.aspx.cs" Inherits="TainEns.paginas.Administrador.Solicitudes.solicitud_negocios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="solicitud_productos.aspx.cs" Inherits="TainEns.paginas.Administrador.Solicitudes.solicitud_productos" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/floating-labels.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <title>Solicitudes Negocios</title>
+    <title>Solicitudes Productos</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
@@ -30,8 +30,8 @@
 	          Solicitudes
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Negocios</a>
-	          <a class="dropdown-item" href="solicitud_productos.aspx">Productos</a>
+	          <a class="dropdown-item" href="solicitud_negocios.aspx">Negocios</a>
+	          <a class="dropdown-item" href="#">Productos</a>
             </div>
 	      </li>
 	      <li class="nav-item">
@@ -54,15 +54,15 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="container">
-            <asp:GridView ID="grvSolicitudesNeg" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="grvSolicitudesNeg_SelectedIndexChanged" DataKeyNames="IdNegocios">
+            <h1>Solicitudes de Productos</h1>
+            <asp:GridView ID="grvSolicitudesProd" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="grvSolicitudesNeg_SelectedIndexChanged" DataKeyNames="IdProducto">
                 <Columns>
-                    <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
-                    <asp:BoundField DataField="TipoNegocio" HeaderText="Tipo" />
-                    <asp:BoundField DataField="CalleNegocio" HeaderText="Calle" />
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                    <asp:BoundField DataField="CategoriaProducto" HeaderText="Categoria" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
                     <asp:CommandField ButtonType="Button" CausesValidation="False" HeaderText="Ver" InsertVisible="False" SelectText="Ver" ShowCancelButton="False" ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>
-
         </div>
     </form>
 
