@@ -29,10 +29,9 @@ namespace TainEns.paginas.Cliente.Negocios
             if (Nombre.Text != ""  && Calle.Text != "" && ColFrac.Text != "" && CP.Text != "" && Numero.Text != "")
             {
                 ObjEN.NombreNegocio = Nombre.Text;
-                ObjEN.DireccionNegocio = Calle.Text + " " + ColFrac.Text + " " + CP.Text + " " + Numero.Text;
                 ObjEN.CalleNegocio = Calle.Text;
                 ObjEN.ColoniaNegocio = ColFrac.Text;
-                ObjEN.CodigioPostal = Convert.ToInt16(CP.Text);
+                ObjEN.CodigoPostal = Convert.ToInt32(CP.Text);
                 ObjEN.NumeroCalle = Convert.ToInt16(Numero.Text);
                 ObjEN.TelefonoNegocio = Telefono.Text;
                 ObjEN.EstadoNegocio = "2";
@@ -48,9 +47,23 @@ namespace TainEns.paginas.Cliente.Negocios
 
                 ObjEHN.IdNegocios = ObjEN.IdNegocios;
                 ObjEHN.LE = Convert.ToInt16(EntradaL.Text);
+                ObjEHN.LS = Convert.ToInt16(SalidaL.Text);
+                ObjEHN.ME = Convert.ToInt16(EntradaMa.Text);
+                ObjEHN.ME = Convert.ToInt16(SalidaMa.Text);
+                ObjEHN.MIE = Convert.ToInt16(EntradaMi.Text);
+                ObjEHN.MIE = Convert.ToInt16(SalidaMi.Text);
+                ObjEHN.JE = Convert.ToInt16(EntradaJ.Text);
+                ObjEHN.JS = Convert.ToInt16(SalidaJ.Text);
+                ObjEHN.VE = Convert.ToInt16(EntradaV.Text);
+                ObjEHN.VS = Convert.ToInt16(SalidaV.Text);
+                ObjEHN.SE = Convert.ToInt16(EntradaS.Text);
+                ObjEHN.SS = Convert.ToInt16(SalidaS.Text);
+                ObjEHN.DE = Convert.ToInt16(EntradaD.Text);
+                ObjEHN.DS = Convert.ToInt16(SalidaD.Text);
+                string msnHN = ObjNHN.InsertarHorarioNegocios(ObjEHN);
 
                 //lblTituloModal.Text = "Agregado";
-               // lblMensajeModal.Text = "Se ha enviado la solicitud. \nEn cuanto sea aceptada tu negocio estara disponible.";
+                // lblMensajeModal.Text = "Se ha enviado la solicitud. \nEn cuanto sea aceptada tu negocio estara disponible.";
                 Response.Redirect("mis_negocios.aspx");
             }
         }

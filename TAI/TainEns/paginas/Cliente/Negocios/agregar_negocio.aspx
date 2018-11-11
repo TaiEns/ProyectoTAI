@@ -106,7 +106,7 @@
                       <div class="col horario">
                           Lunes 
                           <asp:DropDownList ID="EntradaL" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -124,7 +124,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaL" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -145,7 +145,7 @@
                       <div class="col horario">
                           Martes 
                           <asp:DropDownList ID="EntradaMa" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -163,7 +163,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaMa" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -184,7 +184,7 @@
                       <div class="col horario">
                           Miercoles 
                           <asp:DropDownList ID="EntradaMi" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -202,7 +202,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaMi" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -223,7 +223,7 @@
                       <div class="col horario">
                           Jueves 
                           <asp:DropDownList ID="EntradaJ" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -241,7 +241,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaJ" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -262,7 +262,7 @@
                       <div class="col horario">
                           Viernes 
                           <asp:DropDownList ID="EntradaV" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -280,7 +280,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaV" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -301,7 +301,7 @@
                       <div class="col horario">
                           Sábado 
                           <asp:DropDownList ID="EntradaS" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -319,7 +319,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaS" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -340,7 +340,7 @@
                       <div class="col horario">
                           Domingo 
                           <asp:DropDownList ID="EntradaD" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
@@ -358,7 +358,7 @@
                       </div> a 
                       <div class="col horario">
                           <asp:DropDownList ID="SalidaD" runat="server" class="" >
-                              <asp:ListItem Value="Cerrado">--:--</asp:ListItem>
+                              <asp:ListItem Value="0">--:--</asp:ListItem>
                               <asp:ListItem Value="1">01:00</asp:ListItem>
                               <asp:ListItem Value="2">02:00</asp:ListItem>
                               <asp:ListItem Value="3">03:00</asp:ListItem>
