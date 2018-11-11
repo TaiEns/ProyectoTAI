@@ -46,7 +46,7 @@ namespace TainEns
             //Obteniendo IdNegocios
             int IdNegocio = (int)GridView1.DataKeys[e.RowIndex].Value;
             LabelMensaje.Visible = true;
-            LabelMensaje.Text = "Boton Borrar" + IdNegocio;
+            LabelMensaje.Text = "Boton Borrar" + Convert.ToString(IdNegocio);
         }
         #endregion
         
