@@ -45,39 +45,67 @@
     <form id="form1" runat="server">
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
           <div class="text-center mb-4">
-            <h1 class="h3 mb-3 font-weight-bold">Agregar Producto</h1>
+            <h1 class="h3 mb-3 font-weight-bold">Agregar Producto Inicial</h1>
           </div>
           <div class="form-row form-input">
+            <div class="col-md-4 mb-3">
+              <label for="Categoria">Categoria</label>
+              <asp:DropDownList ID="ddlCategoria" runat="server" class="form-control" >
+                <asp:ListItem Value="Categoria">Categoria</asp:ListItem>
+                <asp:ListItem Value="Alimentos">Alimentos</asp:ListItem>
+                <asp:ListItem Value="Bebidas">Bebidas</asp:ListItem>
+                <asp:ListItem Value="Limpieza">Limpieza</asp:ListItem>
+                <asp:ListItem Value="Higiene">Higiene</asp:ListItem>
+                <asp:ListItem Value="Fruta">Fruta</asp:ListItem>
+                <asp:ListItem Value="Lacteos">Lacteos</asp:ListItem>
+                <asp:ListItem Value="Snacks">Snacks</asp:ListItem>
+                <asp:ListItem Value="Carnes">Carnes</asp:ListItem>
+                <asp:ListItem Value="Panaderia">Panaderia</asp:ListItem>
+                <asp:ListItem Value="Especias">Especias</asp:ListItem>
+            </asp:DropDownList>
+            </div>
             <div class="col-md-4 mb-3">
               <label for="Nombre">Nombre</label>
               <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Nombre" placeholder="Nombre" required/>-->
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="Precio">Precio</label>
-                <asp:TextBox ID="Precio" runat="server" class="form-control" placeholder="Precio" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Precio" placeholder="Precio" required/>-->
+          </div>
+          <div class="form-row form-input">
+              <div class="col-md-4 mb-3">
+                <label for="Marca">Marca</label>
+                <asp:TextBox ID="Marca" runat="server" class="form-control" placeholder="Marca" required></asp:TextBox>
+              </div>
+              <div class="col-md-4 mb-3">
+              <label for="Presentacion">Presentacion</label>
+              <asp:FileUpload ID="Presentacion" runat="server" required/>
             </div>
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
-              <label for="Cantidad">Cantidad</label>
-              <asp:TextBox ID="Cantidad" runat="server" class="form-control" placeholder="Cantidad" required></asp:TextBox>
-              <!--<input type="text" class="form-control" id="Cantidad" placeholder="Cantidad" required/>-->
+                <label for="Cantidad">Cantidad</label>
+                <asp:TextBox ID="Cantidad" runat="server" class="form-control" placeholder="Cantidad" required></asp:TextBox>
+                
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="Presentacion">Presentacion</label>
-              <asp:FileUpload ID="Presentacion" runat="server" required/>
-              <!--<input type="text" class="form-control" id="Presentacion" placeholder="Presentacion" required/>-->
-            </div>
+              <div class="col-md-4 md-3">
+                  <label for="ddlMedida">Medida</label>
+                    <asp:DropDownList ID="ddlMedida" runat="server" class="form-control" >
+                        <asp:ListItem Value="Medida">Medida</asp:ListItem>
+                        <asp:ListItem Value="Piezas">Piezas</asp:ListItem>
+                        <asp:ListItem Value="Gramos">Gramos</asp:ListItem>
+                        <asp:ListItem Value="Kilos">Kilos</asp:ListItem>
+                        <asp:ListItem Value="Mililitros">Mililitros</asp:ListItem>
+                        <asp:ListItem Value="Litro">Litro</asp:ListItem>
+                        <asp:ListItem Value="Litros">Litros</asp:ListItem>
+                        <asp:ListItem Value="Galon">Galón</asp:ListItem>
+                        <asp:ListItem Value="Galones">Galones</asp:ListItem>
+                    </asp:DropDownList>
+              </div>
           </div>
           <div class="form-group" style="max-width: 600px; margin: 10px auto;">
             <label for="Descripcion">Descripción</label>
             <textarea class="form-control " id="Descripcion" rows="3" runat="server"></textarea>
           </div>
-          <div id="botones">
+          <div id="form-row form-input botones">
             <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Agregar_Click" />
-            <!--<button id="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" type="submit" data-toggle=""  data-target="#exampleModal">Agregar</button>-->
             <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="productos.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
@@ -137,61 +165,64 @@
           }
         }
 
-        function Validar(){
-          var tbNombre = $("#Nombre").val();
-          var tbPrecio = $("#Precio").val();
-          var tbCantidad = $("#Cantidad").val();
-          var tbPresentacion = $("#Presentacion").val();
-          var tbDescripcion = $("#Descripcion").val();
-          var cont = 0;
+    function Validar(){
+        var tbNombre = $("#Nombre").val();
+        var ddlCategoria = $("#ddlCategoria").val();
+        var tbCantidad = $("#Cantidad").val();
+        var tbPresentacion = $("#Presentacion").val();
+        var ddlMedida = $("#ddlMedida").val();
+        var Marca = $("#Marca").val();
+        var cont = 0;
 
-          if(tbNombre != ""){
-            Correcto("#Nombre");
-            cont++;
-          }
-          else{
-            Incorrecto("#Nombre");
-          }
-          if(tbPrecio != ""){
-            Correcto("#Precio");
-            cont++;
-          }
-          else{
-            Incorrecto("#Precio");
-          }
+        if(tbNombre != ""){
+        Correcto("#Nombre");
+        cont++;
+        }
+        else{
+        Incorrecto("#Nombre");
+        }
+        if(ddlCategoria != "Categoria"){
+        Correcto("#ddlCategoria");
+        cont++;
+        }
+        else{
+        Incorrecto("#ddlCategoria");
+        }
 
-          if(tbCantidad != ""){
-            Correcto("#Cantidad");
-            cont++;
-          }
-          else{
-            Incorrecto("#Cantidad");
-          }
+        if(tbCantidad != ""){
+        Correcto("#Cantidad");
+        cont++;
+        }
+        else{
+        Incorrecto("#Cantidad");
+        }
 
-          if(tbPresentacion != ""){
-            Correcto("#Presentacion");
-            cont++;
-          }
-          else{
-            Incorrecto("#Presentacion");
-            }
-            if (tbDescripcion != "") {
-            Correcto("#Descripcion");
-            cont++;
-          }
-          else{
-            Incorrecto("#Descripcion");
-          }
+        if(tbPresentacion != ""){
+        Correcto("#Presentacion");
+        cont++;
+        }
+        else{
+        Incorrecto("#Presentacion");
+        }
+        if (ddlMedida != "Medida") {
+        Correcto("#ddlMedida");
+        cont++;
+        }
+        else{
+        Incorrecto("#ddlMedida");
+        }
+        if (Marca != "") {
+        Correcto("#Marca");
+        cont++;
+        }
+        else{
+        Incorrecto("#Marca");
+        }
           
-          if(cont == 5){
-            $("#Agregar").attr("data-toggle", "modal");
-            //redireccionar();
-          }
+        if(cont == 6){
+        $("#Agregar").attr("data-toggle", "modal");
         }
-
-        function redireccionar() {
-          setTimeout("location.href='../index.aspx'", 3000);
-        }
+    }
   </script>
   <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../../../js/bootstrap.bundle.js"></script>

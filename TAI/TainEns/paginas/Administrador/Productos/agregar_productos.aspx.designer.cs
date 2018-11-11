@@ -22,6 +22,15 @@ namespace TainEns.paginas.Administrador.Productos {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Control ddlCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        
+        /// <summary>
         /// Control Nombre.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,22 @@ namespace TainEns.paginas.Administrador.Productos {
         protected global::System.Web.UI.WebControls.TextBox Nombre;
         
         /// <summary>
-        /// Control Precio.
+        /// Control Marca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Precio;
+        protected global::System.Web.UI.WebControls.TextBox Marca;
+        
+        /// <summary>
+        /// Control Presentacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload Presentacion;
         
         /// <summary>
         /// Control Cantidad.
@@ -49,13 +67,13 @@ namespace TainEns.paginas.Administrador.Productos {
         protected global::System.Web.UI.WebControls.TextBox Cantidad;
         
         /// <summary>
-        /// Control Presentacion.
+        /// Control ddlMedida.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload Presentacion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMedida;
         
         /// <summary>
         /// Control Descripcion.

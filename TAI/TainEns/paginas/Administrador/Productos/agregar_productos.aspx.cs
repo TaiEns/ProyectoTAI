@@ -21,15 +21,16 @@ namespace TainEns.paginas.Administrador.Productos
 
         protected void Agregar_Click(object sender, EventArgs e)
         {
-            if(Nombre.Text != "" && Precio.Text != "" && Cantidad.Text != "" && Descripcion.Value != "" && Presentacion.HasFile)
+            if(Nombre.Text != ""  && Cantidad.Text != "" && Presentacion.HasFile && ddlCategoria.Text != "Categoria" && ddlMedida.Text != "Medida" && Marca.Text != "")
             {
                 ObjEP.NombreProducto = Nombre.Text;
                 ObjEP.CantidadProducto = Convert.ToInt16(Cantidad.Text);
                 ObjEP.Descripcion = Descripcion.Value;
                 ObjEP.EstadoProducto = "3";
-                ObjEP.Marca = ".";
+                ObjEP.Marca = Marca.Text;
+                ObjEP.MedidaProducto = ddlMedida.Text;
 
-                string msn = ObjNP.InsertarProducto(ObjEP);
+                //string msn = ObjNP.InsertarProducto(ObjEP);
                 Response.Redirect("productos.aspx");
             }
         }
