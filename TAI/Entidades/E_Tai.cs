@@ -85,6 +85,7 @@ namespace Entidades
         private int _CantidadProducto;
         private string _EstadoProducto;
         private string _MedidaProducto;
+        private string _CategoriaProducto;
         #endregion
 
         #region Constructor
@@ -97,6 +98,7 @@ namespace Entidades
             _Descripcion = string.Empty;
             _CantidadProducto = 0;
             _MedidaProducto = string.Empty;
+            _CategoriaProducto = string.Empty;
         }
         #endregion
 
@@ -109,6 +111,7 @@ namespace Entidades
         public int CantidadProducto { get => _CantidadProducto; set => _CantidadProducto = value; }
         public string EstadoProducto { get => _EstadoProducto; set => _EstadoProducto = value; }
         public string MedidaProducto { get => _MedidaProducto; set => _MedidaProducto = value; }
+        public string CategoriaProducto { get => _CategoriaProducto; set => _CategoriaProducto = value; }
         #endregion
     }
 

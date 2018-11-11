@@ -187,6 +187,10 @@ namespace Negocios
             return (from User in LstProductos() where User.NombreProducto == pNombreProducto select User).FirstOrDefault();
         }
 
+        public E_Producto BuscarProductoPorCategoria(String pCategoriaProducto)
+        {
+            return (from User in LstProductos() where User.CategoriaProducto == pCategoriaProducto select User).FirstOrDefault();
+        }
 
     }
 
