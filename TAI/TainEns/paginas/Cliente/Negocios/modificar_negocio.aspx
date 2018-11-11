@@ -392,7 +392,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;"><asp:Label runat="server" ID="lblTituloModal" Text="Fallido"></asp:Label></h2>
+                            <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;"><asp:Label runat="server" ID="lblTituloModal" Text="Modificación Fallida"></asp:Label></h2>
                         </div>
                         <div class="modal-body text-center">
                             <asp:Label runat="server" ID="lblMensajeModal" Text="Campos obligatorios no completados."></asp:Label>
@@ -406,10 +406,10 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title" id="titulomodal2" style="text-align: center;"><asp:Label runat="server" ID="Label1" Text="Agregado"></asp:Label></h2>
+                            <h2 class="modal-title" id="titulomodal2" style="text-align: center;"><asp:Label runat="server" ID="Label1" Text="Modificado"></asp:Label></h2>
                         </div>
                         <div class="modal-body text-center">
-                            <asp:Label runat="server" ID="Label2" Text="Se ha enviado la solicitud. En cuanto sea aceptada tu negocio estara disponible."></asp:Label>
+                            <asp:Label runat="server" ID="Label2" Text="Los cambios se han guardado correctamente"></asp:Label>
                         </div>
                     </div>
                 </div>

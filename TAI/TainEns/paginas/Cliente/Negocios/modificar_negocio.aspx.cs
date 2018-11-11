@@ -44,22 +44,18 @@ namespace TainEns.paginas.Cliente.Negocios
         {
             if (Nombre.Text != "" && Calle.Text != "" && ColFrac.Text != "" && CP.Text != "" && Numero.Text != "")
             {
+                ObjEN.IdNegocios = Convert.ToInt16(Session["IdNegocio"]);
                 ObjEN.NombreNegocio = Nombre.Text;
                 ObjEN.CalleNegocio = Calle.Text;
                 ObjEN.ColoniaNegocio = ColFrac.Text;
                 ObjEN.CodigoPostal = Convert.ToInt32(CP.Text);
                 ObjEN.NumeroCalle = Convert.ToInt16(Numero.Text);
                 ObjEN.TelefonoNegocio = Telefono.Text;
-                ObjEN.EstadoNegocio = "2";
+                ObjEN.EstadoNegocio = "3";
                 ObjEN.TipoNegocio = Tipo.Text;
                 ObjEN.RFC = RFC.Text;
                 ObjEN.DiasLaborales = "1";
                 string msnN = ObjNN.ModoficaNegocio(ObjEN);
-
-                ObjEN = ObjNN.BuscarUsuarioPorNombre(ObjEN.NombreNegocio);
-                ObjEUN.IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
-                ObjEUN.IdNegocios = ObjEN.IdNegocios;
-                string msnUN = ObjNUN.InsertarUsuarioNegocios(ObjEUN);
 
                 ObjEHN.IdNegocios = ObjEN.IdNegocios;
                 ObjEHN.LE = Convert.ToInt16(EntradaL.Text);
@@ -76,7 +72,7 @@ namespace TainEns.paginas.Cliente.Negocios
                 ObjEHN.SS = Convert.ToInt16(SalidaS.Text);
                 ObjEHN.DE = Convert.ToInt16(EntradaD.Text);
                 ObjEHN.DS = Convert.ToInt16(SalidaD.Text);
-                string msnHN = ObjNHN.InsertarHorarioNegocios(ObjEHN);
+                string msnHN = ObjNHN.ModoficaHorarioNegocios(ObjEHN);
 
                 //lblTituloModal.Text = "Agregado";
                 // lblMensajeModal.Text = "Se ha enviado la solicitud. \nEn cuanto sea aceptada tu negocio estara disponible.";
