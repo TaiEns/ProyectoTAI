@@ -31,6 +31,15 @@ namespace TainEns.paginas.Cliente.Negocios {
         protected global::System.Web.UI.WebControls.GridView grvProductosAceptados;
         
         /// <summary>
+        /// Control hlSolicitar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlSolicitar;
+        
+        /// <summary>
         /// Control hlAgregar.
         /// </summary>
         /// <remarks>

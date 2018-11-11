@@ -56,6 +56,7 @@
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
                 </Columns>
             </asp:GridView>
+            <asp:HyperLink ID="hlSolicitar" class="btn btn-outline-primary" runat="server" NavigateUrl="solicitar_producto.aspx">Solicitar</asp:HyperLink>
             <asp:HyperLink ID="hlAgregar" class="btn btn-outline-primary" runat="server" NavigateUrl="agregar_producto.aspx">Agregar</asp:HyperLink>
         </div>
     </form>
