@@ -287,6 +287,7 @@ namespace Entidades
         private int _IdProducto;
         private int _IdNegocios;
         private int _Precios;
+        private int _IdProductoNegocio;
         #endregion
 
         #region Contructor
@@ -295,6 +296,7 @@ namespace Entidades
             _IdNegocios = 0;
             _IdProducto = 0;
             _Precios = 0;
+            _IdProductoNegocio = 0;
             _Accion = string.Empty;
         }
         #endregion
@@ -304,6 +306,7 @@ namespace Entidades
         public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
         public int IdNegocios { get => _IdNegocios; set => _IdNegocios = value; }
         public int Precios { get => _Precios; set => _Precios = value; }
+        public int IdProductoNegocio { get => _IdProductoNegocio; set => _IdProductoNegocio = value; }
         #endregion
     }
 }
