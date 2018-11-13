@@ -26,3 +26,17 @@ C:\Users\santiago\Desktop\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Nego
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.dll
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.pdb
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.deps.json
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Negocios.pdb
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\DatosSQL.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\itextsharp.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csprojAssemblyReference.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.AssemblyInfo.cs
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.csproj.CopyComplete
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Negocios\obj\Debug\netstandard2.0\Negocios.pdb

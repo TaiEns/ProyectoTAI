@@ -49,7 +49,7 @@ namespace TainEns.paginas.Cliente.Negocios
 
 
         }
-
+        
         #region Metodos
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -77,7 +77,82 @@ namespace TainEns.paginas.Cliente.Negocios
             GridViewRow row = btn.NamingContainer as GridViewRow;
             string pk = GridView1.DataKeys[row.RowIndex].Values[0].ToString();
         }
+        
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            string comando = e.CommandName;
+            string str = e.CommandArgument.ToString();
+            string nombrenegocio = GridView1.Rows[Convert.ToInt16(str)].Cells[0].Text;
+            int idNegocio = (new N_Negocio().BuscarUsuarioPorNombre(nombrenegocio)).IdNegocios;
+            Session["IdNegocio"] = idNegocio;
+            switch (comando)
+            {
+                case "productos":
+                    {
+                        Response.Redirect("productos.aspx");
+                        break;
+                    };
+                case "modificar":
+                    {
+                        Response.Redirect("modificar_negocio.aspx");
+                        break;
+                    };
 
+                case "eliminar":
+                    {
+                        //eliminando negocio de usuario negocios
+                        //modificar el stored procedure de DELETE dbo.[tbUsuarioNegocios] WHERE IdUsuario = @IdUsuario
+                        // a DELETE dbo.[tbUsuarioNegocios] WHERE IdNegocios = @IdUsuario
+                        List<E_UsuarioNegocios> LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
+                        foreach (E_UsuarioNegocios UN in LstUN)
+                        {
+                            if (UN.IdNegocios == idNegocio)
+                            {
+                                N_UsuarioNegocios ObjUN = new N_UsuarioNegocios();
+                                ObjUN.BorraUsuarioNegocio(idNegocio);
+                            }
+                        }
+
+                        //eliminando productos de tabla productos negocio
+                        //modificar el stored procedure de DELETE dbo.[tbProductoNegocios] WHERE IdUsuario = @IdProducto
+                        // a DELETE dbo.[tbProductoNegocios] WHERE IdNegocios = @IdProducto
+                        List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
+                        foreach (E_ProductoNegocios PN in LstPN)
+                        {
+                            if (PN.IdNegocios == idNegocio)
+                            {
+                                N_ProductoNegocios ObjPN = new N_ProductoNegocios();
+                                ObjPN.BorraProductoNegocios(idNegocio);
+                            }
+                        }
+
+                        //Eliminando horarios de la tabla horarionegocios
+                        //este stored procedure esta bien
+                        List<E_HorarioNegocios> LstHN = new N_HorarioNegocios().LstNegocios();
+                        foreach (E_HorarioNegocios HN in LstHN)
+                        {
+                            if (HN.IdNegocios == idNegocio)
+                            {
+                                N_HorarioNegocios ObjHN = new N_HorarioNegocios();
+                                ObjHN.BorraHorarioNegocios(idNegocio);
+                            }
+                        }
+
+                        //finalmente eliminar el negocio
+                        //cambio en el metodo N_Negocio.BorraNegocio, pedia solo la id del negocio, ahora debe pedir la entidad completa
+                        //la entidad debe tener todos los campos llenos
+                        N_Negocio N = new N_Negocio();
+                        //N.BorraNegocio(new N_Negocio().BuscarNegocioPorId(idNegocio));
+                        Response.Redirect("mis_negocios.aspx");
+                        break;
+                    };
+                default:
+                    {
+                        break;
+                    };
+            }
+            // Response.Redirect("productos.aspx");
+        }
 
     }
 }

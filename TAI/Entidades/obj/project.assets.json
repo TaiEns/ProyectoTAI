@@ -176,23 +176,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arces\\.nuget\\packages\\": {},
+    "C:\\Users\\GatewayPC\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arces\\OneDrive\\Desktop\\Prueba\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\GatewayPC\\Documents\\repos\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\arces\\OneDrive\\Desktop\\Prueba\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\arces\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arces\\OneDrive\\Desktop\\Prueba\\ProyectoTAI\\TAI\\Entidades\\obj\\",
+      "projectPath": "C:\\Users\\GatewayPC\\Documents\\repos\\ProyectoTAI\\TAI\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\GatewayPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GatewayPC\\Documents\\repos\\ProyectoTAI\\TAI\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\arces\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GatewayPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

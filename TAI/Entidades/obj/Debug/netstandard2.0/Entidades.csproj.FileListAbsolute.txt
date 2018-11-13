@@ -16,3 +16,12 @@ C:\Users\santiago\Desktop\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Ent
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.dll
 C:\Users\santiago\Desktop\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\GatewayPC\Documents\repos\ProyectoTAI\TAI\Entidades\obj\Debug\netstandard2.0\Entidades.pdb

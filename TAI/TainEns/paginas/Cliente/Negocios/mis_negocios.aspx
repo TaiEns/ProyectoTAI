@@ -86,21 +86,13 @@
          OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
             OnRowDeleting="GridView1_RowDeleting"
             OnRowEditing="GridView1_RowEditing"
-            AutoGenerateColumns="False" DataKeyNames="IdNegocios" CssClass="table table-hover">
+            AutoGenerateColumns="False" DataKeyNames="IdNegocios" CssClass="table table-hover"
+            OnRowCommand="GridView1_RowCommand">
             <Columns>
                 <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
-                <asp:CommandField ShowDeleteButton="True" ButtonType="Button" HeaderText="Productos" DeleteText="Productos" >                
-                <ControlStyle CssClass="btn btn-primary" />
-                </asp:CommandField>
-                <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Modificar" SelectText="Modificar" >
-                <ControlStyle CssClass="btn btn-primary" />
-                </asp:CommandField>
-                
-                <asp:TemplateField HeaderText="Borrar">
-                    <ItemTemplate>
-                        <asp:Button runat="server" ID="btnBorrar"  CssClass="btn btn-primary" Text="Borrar" OnClick="btnBorrar_OnClick" data-toggle="modal" data-target="#exampleModal"/>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                <asp:ButtonField ButtonType="Button" CommandName="productos" HeaderText="Productos" Text="Productos" />
+                <asp:ButtonField ButtonType="Button" CommandName="modificar" HeaderText="Modificar" Text="Modificar" />
+                <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Eliminar" Text="Eliminar" />
                 
             </Columns>
  
