@@ -50,11 +50,23 @@
     <form id="form1" runat="server">
         <div class="container">
             <h1>Productos</h1>
-            <asp:GridView ID="grvProductosAceptados" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto">
+            <asp:GridView ID="grvProductosAceptados" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto"
+                OnRowCommand="grvProductosAceptados_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
+                    <asp:BoundField DataField="PrecioProducto" HeaderText="Precio" />
+                    <asp:ButtonField ButtonType="Button" CommandName="editar" HeaderText="Editar" Text="Editar" />
+                    <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Eliminar" Text="Eliminar" />
                 </Columns>
+                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
             <asp:HyperLink ID="hlSolicitar" class="btn btn-outline-primary" runat="server" NavigateUrl="solicitar_producto.aspx">Solicitar</asp:HyperLink>
             <asp:HyperLink ID="hlAgregar" class="btn btn-outline-primary" runat="server" NavigateUrl="agregar_producto.aspx">Agregar</asp:HyperLink>
