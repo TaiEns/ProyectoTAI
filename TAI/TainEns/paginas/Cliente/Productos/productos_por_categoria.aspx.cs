@@ -39,5 +39,19 @@ namespace TainEns.paginas.Cliente.Productos
             grvProductos.DataSource = LstNT;
             grvProductos.DataBind();
         }
+
+        #region Botones
+        protected void btnConsultar_Click(object sender, EventArgs e)
+        {
+            //int IdNegocio = (int)grvProductos.DataKeys[e.RowIndex].Value;
+            lblTituloModal.Text = "Holaaaaaaa";
+            System.Threading.Thread.Sleep(3000);
+        }
+        #endregion
+
+        protected void grvProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int IdProducto = Convert.ToInt32(grvProductos.SelectedDataKey["IdProducto"]);
+        }
     }
 }
