@@ -36,7 +36,7 @@ namespace TainEns.paginas.Cliente.Negocios
                 {
                     //E_ProductoNegocios pnaux = new N_ProductoNegocios().BuscarProductoNegociosPorIdNegocio(IdNegocio);
                     E_Producto producto = new N_Producto().BuscarProductoPorId(PN.IdProducto);
-                    producto.PrecioProducto = PN.Precios;
+                    //producto.PrecioProducto = PN.Precios;
                     LstP.Add(producto);
                 }
             }
