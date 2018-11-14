@@ -462,4 +462,32 @@ namespace Negocios
 
     }
 
+    public class N_Email
+    {
+        MailMessage mensaje = new MailMessage();
+        SmtpClient smtp = new SmtpClient();
+
+        public void EnviarCorreo(E_Email ObjEE)
+        {
+            try
+            {
+                mensaje.From = new MailAddress(ObjEE.From);
+                mensaje.To.Add(new MailAddress(ObjEE.To));
+                mensaje.Body = ObjEE.Msn;
+                mensaje.Subject = "Codigo Verificación";
+
+                smtp.Host = "smtp.gmail.com"; //Para enviar correos por gmail
+                smtp.Port = 587; //Puerto que utiliza Gmail por defecto
+                smtp.Credentials = new NetworkCredential(ObjEE.From, ObjEE.Password);
+                smtp.EnableSsl = true;
+                smtp.Send(mensaje);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+
 }
