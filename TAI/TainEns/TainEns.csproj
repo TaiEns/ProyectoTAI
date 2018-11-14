@@ -111,6 +111,8 @@
     <Content Include="paginas\Cliente\Negocios\productos.aspx" />
     <Content Include="paginas\Cliente\Negocios\solicitar_producto.aspx" />
     <Content Include="paginas\Cliente\Productos\categorias_productos.aspx" />
+    <Content Include="paginas\Cliente\Productos\productos_por_categoria.aspx" />
+    <Content Include="paginas\Olvide_Contrasena\olvide_contrasena.aspx" />
     <Content Include="paginas\registrar_usuario.aspx" />
     <Content Include="tablas.aspx" />
     <Content Include="Web.config" />
@@ -220,6 +222,20 @@
     </Compile>
     <Compile Include="paginas\Cliente\Productos\categorias_productos.aspx.designer.cs">
       <DependentUpon>categorias_productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\productos_por_categoria.aspx.cs">
+      <DependentUpon>productos_por_categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\productos_por_categoria.aspx.designer.cs">
+      <DependentUpon>productos_por_categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Olvide_Contrasena\olvide_contrasena.aspx.cs">
+      <DependentUpon>olvide_contrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Olvide_Contrasena\olvide_contrasena.aspx.designer.cs">
+      <DependentUpon>olvide_contrasena.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\registrar_usuario.aspx.cs">
       <DependentUpon>registrar_usuario.aspx</DependentUpon>
