@@ -100,6 +100,7 @@
     <Content Include="paginas\Cliente\Negocios\mis_negocios.aspx" />
     <Content Include="paginas\Cliente\Negocios\modificar_negocio.aspx" />
     <Content Include="paginas\Cliente\Negocios\productos.aspx" />
+    <Content Include="paginas\Cliente\Productos\categorias_productos.aspx" />
     <Content Include="paginas\registrar_usuario.aspx" />
     <Content Include="tablas.aspx" />
     <Content Include="Web.config" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\productos.aspx.designer.cs">
       <DependentUpon>productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\categorias_productos.aspx.cs">
+      <DependentUpon>categorias_productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\categorias_productos.aspx.designer.cs">
+      <DependentUpon>categorias_productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\registrar_usuario.aspx.cs">
       <DependentUpon>registrar_usuario.aspx</DependentUpon>
