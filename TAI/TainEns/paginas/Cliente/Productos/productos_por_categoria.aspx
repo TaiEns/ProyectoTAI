@@ -69,25 +69,23 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle"><asp:Label ID="lblTituloModal" Text="" runat="server"></asp:Label></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <asp:Panel runat="server" class="modal fade" ID="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <asp:Panel ID="Panel1" runat="server" class="modal-dialog modal-dialog-centered" role="document">
+                <asp:Panel ID="Panel2" runat="server"  class="modal-content">
+                    <asp:Panel ID="Panel3" runat="server" class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle"><asp:Label ID="lblTituloModal" Text="" runat="server"></asp:Label></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </asp:Panel>
+                    <asp:Panel ID="Panel4" runat="server" class="modal-body"></asp:Panel>
+                    <asp:Panel ID="Panel5" runat="server" class="modal-footer">
+                        <asp:Button ID="btnGuardar" runat="server" Text="Close"  class="btn btn-secondary" data-dismiss="modal" />
+                        <asp:Button ID="Button1" runat="server" Text="Save" class="btn btn-primary"/>
+                    </asp:Panel>
+            </asp:Panel>
+          </asp:Panel>
+        </asp:Panel>
     </form>
 
     <!--

@@ -45,7 +45,7 @@ namespace TainEns.paginas.Cliente.Productos
         {
             //int IdNegocio = (int)grvProductos.DataKeys[e.RowIndex].Value;
             lblTituloModal.Text = "Holaaaaaaa";
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
         }
         #endregion
 
