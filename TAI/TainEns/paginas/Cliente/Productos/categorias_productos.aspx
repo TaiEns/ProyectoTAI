@@ -47,7 +47,124 @@
 	  </div>
 	</nav>
     <form id="form1" runat="server">
-        <div>
+        <div class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Productos</h1>
+            </div>  
+            <div class="row">
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/carnes.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Carnes</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnCarnes" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/bebidas.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Bebidas</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnBebidas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/higiene.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Higiene</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnHigiene" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/fruta.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Frutas</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnFrutas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/lacteos.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Lacteos</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnLacteos" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/snacks.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Snacks</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnSnacks" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/pan.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Panaderia</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnPanaderia" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/Especias.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Especias</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnEspecias" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="col-md-auto">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="../../../img/categorias/cereal.jpg" alt="Carnes"/>
+                          <div class="card-body">
+                            <h5 class="card-title text-center">Cereales</h5>
+                            <p class="card-text"></p>
+                            <asp:Button ID="btnCereales" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 
