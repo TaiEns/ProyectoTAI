@@ -74,6 +74,15 @@
     <Content Include="css\style.css" />
     <Content Include="DLL\DatosSQL.dll" />
     <Content Include="DLL\itextsharp.dll" />
+    <Content Include="img\categorias\bebidas.jpg" />
+    <Content Include="img\categorias\carnes.jpg" />
+    <Content Include="img\categorias\cereal.jpg" />
+    <Content Include="img\categorias\especias.jpg" />
+    <Content Include="img\categorias\fruta.jpg" />
+    <Content Include="img\categorias\higiene.jpg" />
+    <Content Include="img\categorias\lacteos.jpg" />
+    <Content Include="img\categorias\pan.jpg" />
+    <Content Include="img\categorias\snacks.jpg" />
     <Content Include="img\facebook-logo.png" />
     <Content Include="img\footer.png" />
     <Content Include="img\gmail-logo.png" />
@@ -100,6 +109,7 @@
     <Content Include="paginas\Cliente\Negocios\mis_negocios.aspx" />
     <Content Include="paginas\Cliente\Negocios\modificar_negocio.aspx" />
     <Content Include="paginas\Cliente\Negocios\productos.aspx" />
+    <Content Include="paginas\Cliente\Negocios\solicitar_producto.aspx" />
     <Content Include="paginas\Cliente\Productos\categorias_productos.aspx" />
     <Content Include="paginas\registrar_usuario.aspx" />
     <Content Include="tablas.aspx" />
@@ -196,6 +206,13 @@
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\productos.aspx.designer.cs">
       <DependentUpon>productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Negocios\solicitar_producto.aspx.cs">
+      <DependentUpon>solicitar_producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Negocios\solicitar_producto.aspx.designer.cs">
+      <DependentUpon>solicitar_producto.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\Productos\categorias_productos.aspx.cs">
       <DependentUpon>categorias_productos.aspx</DependentUpon>
