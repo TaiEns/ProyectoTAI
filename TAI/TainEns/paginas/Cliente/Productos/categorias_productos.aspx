@@ -54,7 +54,7 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" aria-label="Search"/>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
         </div>
         <div class="container">
@@ -141,7 +141,7 @@
                           <div class="card-body">
                             <h5 class="card-title text-center">Panaderia</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnPanaderia" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnPan_Click"/>
+                            <asp:Button ID="btnPanaderia" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnPanaderia_Click"/>
                           </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                           <div class="card-body">
                             <h5 class="card-title text-center">Cereales</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnCereales" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnCereal_Click"/>
+                            <asp:Button ID="btnCereales" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnCereales_Click"/>
                           </div>
                         </div>
                     </div>
