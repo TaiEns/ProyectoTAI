@@ -42,7 +42,7 @@
                 </div>
                 <div class="checkbox mb-3">
                     <label>
-                    <a href="#">Olvide mi Contraseña</a>
+                    <a href="paginas/Olvide_Contrasena/olvide_contrasena.aspx">Olvide mi Contraseña</a>
                     </label>
                 </div>
                 <asp:Button ID="IniciarSesion" runat="server" Text="Iniciar Sesión" class="btn btn-lg btn-primary btn-block azuloscuro" OnClick="IniciarSesion_Click"/>
