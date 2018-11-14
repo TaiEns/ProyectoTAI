@@ -32,6 +32,12 @@
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="#">Lista</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="../Productos/categorias_productos.aspx">Productos</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="#">Negocios</a>
+	      </li>
 	    </ul>
 
 	    <form class="form-inline my-2 my-lg-0">
