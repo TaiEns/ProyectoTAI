@@ -31,6 +31,12 @@
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="#">Lista</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="#">Productos</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="#">Negocios</a>
+	      </li>
 	    </ul>
 
 	    <form class="form-inline my-2 my-lg-0">
@@ -63,7 +69,7 @@
                           <div class="card-body">
                             <h5 class="card-title text-center">Carnes</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnCarnes" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnCarnes" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnCarnes_Click"/>
                           </div>
                         </div>
                     </div>
@@ -71,11 +77,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/bebidas.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/bebidas.jpg" alt="Bebidas"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Bebidas</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnBebidas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnBebidas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnBebidas_Click"/>
                           </div>
                         </div>
                     </div>
@@ -83,11 +89,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/higiene.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/higiene.jpg" alt="Higiene"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Higiene</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnHigiene" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnHigiene" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnHigiene_Click"/>
                           </div>
                         </div>
                     </div>
@@ -95,11 +101,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/fruta.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/fruta.jpg" alt="Fruta"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Frutas</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnFrutas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnFrutas" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnFruta_Click"/>
                           </div>
                         </div>
                     </div>
@@ -107,11 +113,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/lacteos.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/lacteos.jpg" alt="Lacteos"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Lacteos</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnLacteos" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnLacteos" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnLacteos_Click"/>
                           </div>
                         </div>
                     </div>
@@ -119,11 +125,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/snacks.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/snacks.jpg" alt="Snacks"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Snacks</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnSnacks" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnSnacks" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnSnacks_Click"/>
                           </div>
                         </div>
                     </div>
@@ -131,11 +137,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/pan.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/pan.jpg" alt="Pan"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Panaderia</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnPanaderia" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnPanaderia" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnPan_Click"/>
                           </div>
                         </div>
                     </div>
@@ -143,11 +149,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/Especias.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/Especias.jpg" alt="Especias"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Especias</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnEspecias" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnEspecias" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnEspecias_Click"/>
                           </div>
                         </div>
                     </div>
@@ -155,11 +161,11 @@
                 <div class="columna shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="../../../img/categorias/cereal.jpg" alt="Carnes"/>
+                          <img class="card-img-top" src="../../../img/categorias/cereal.jpg" alt="Cereal"/>
                           <div class="card-body">
                             <h5 class="card-title text-center">Cereales</h5>
                             <p class="card-text"></p>
-                            <asp:Button ID="btnCereales" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;"/>
+                            <asp:Button ID="btnCereales" runat="server" Text="Mirar" CssClass="btn btn-primary" style="margin-left: 38%;" OnClick="btnCereal_Click"/>
                           </div>
                         </div>
                     </div>
