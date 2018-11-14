@@ -57,9 +57,8 @@
               <label for="Categoria">Categoria</label>
               <asp:DropDownList ID="ddlCategoria" runat="server" class="form-control" >
                 <asp:ListItem Value="Categoria">Categoria</asp:ListItem>
-                <asp:ListItem Value="Alimentos">Alimentos</asp:ListItem>
+                <asp:ListItem Value="Cereales">Cereales</asp:ListItem>
                 <asp:ListItem Value="Bebidas">Bebidas</asp:ListItem>
-                <asp:ListItem Value="Limpieza">Limpieza</asp:ListItem>
                 <asp:ListItem Value="Higiene">Higiene</asp:ListItem>
                 <asp:ListItem Value="Fruta">Fruta</asp:ListItem>
                 <asp:ListItem Value="Lacteos">Lacteos</asp:ListItem>
