@@ -76,29 +76,6 @@
                     <asp:Label runat="server" ID="lblMarca" Text=""></asp:Label><br />
                     <asp:Label runat="server" ID="lblCantidad" Text=""></asp:Label>
                     <asp:Label runat="server" ID="lblMedida" Text=""></asp:Label>
-                    <!--<div class="col">
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblLunes" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblMartes" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblMiercoles" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblJueves" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblViernes" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblSabado" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblDomingo" Text=""></asp:Label>
-                        </div>
-                    </div>-->
                 </div>
                 <asp:DropDownList ID="ddlListasProductos" runat="server" CssClass="form-control" >
                 </asp:DropDownList>
