@@ -24,7 +24,7 @@ namespace TainEns.paginas.Cliente.Productos
 
         protected void Iniciar()
         {
-            pProducto.Visible = false;
+            ApagarComponentes();
             string Categoria = Convert.ToString(Session["Categoria"]);
             List<E_Producto> LstP = new N_Producto().LstProductos();
             List<E_Producto> LstNT = new List<E_Producto>();
@@ -41,27 +41,39 @@ namespace TainEns.paginas.Cliente.Productos
             grvProductos.DataBind();
         }
 
-        #region Botones
-        protected void btnConsultar_Click(object sender, EventArgs e)
+        #region Metodos
+        protected void ApagarComponentes()
         {
-            pProducto.Visible = true;
-            //int IdNegocio = (int)grvProductos.DataKeys[e.RowIndex].Value;
-            //System.Threading.Thread.Sleep(3000);
+            pProducto.Visible = false;
+            ddlListasProductos.Visible = false;
         }
         #endregion
 
+        #region Botones
         protected void grvProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int IdProducto = Convert.ToInt32(grvProductos.SelectedDataKey["IdProducto"]);
+            ApagarComponentes();
+            int IdProducto = Convert.ToInt16(grvProductos.SelectedDataKey["IdProducto"]);
+            pProducto.Visible = true;
+            ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
+
+            lblCardTitle.Text = ObjEP.NombreProducto;
+            lblMarca.Text = ObjEP.Marca;
+            lblCantidad.Text = Convert.ToString(ObjEP.CantidadProducto);
+            lblMedida.Text = ObjEP.MedidaProducto;
+
         }
 
-        protected void grvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void btnAgregaraLista_Click(object sender, EventArgs e)
         {
-            string comando = e.CommandName;
-            string str = e.CommandArgument.ToString();
-            string IdProducto = grvProductos.Rows[Convert.ToInt16(str)].Cells[0].Text;
-            //ObjEP = ObjNP.
-            msnCalis.Text = IdProducto;
+            ddlListasProductos.Visible = true;
         }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            ApagarComponentes();
+        }
+        #endregion
+        
     }
 }

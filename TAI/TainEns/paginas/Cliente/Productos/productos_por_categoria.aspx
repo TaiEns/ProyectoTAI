@@ -55,22 +55,16 @@
     <form id="form1" runat="server">
         <div class="container">
             
-            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto"
-                OnRowCommand="grvProductos_RowCommand">
+            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto" OnSelectedIndexChanged="grvProductos_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="IdProducto" InsertVisible="False" />
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
-                    <asp:TemplateField>
-                        <ItemTemplate><asp:Button ID="btnConsultar" runat="server" Text="Consultar" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" OnClick="btnConsultar_Click"/></ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Mostrar" Text="Mostrar" >
+                    <asp:CommandField ButtonType="Button" HeaderText="Mostrar" SelectText="Mostrar" ShowSelectButton="True">
                     <ControlStyle CssClass="btn btn-primary" />
-                    </asp:ButtonField>
+                    </asp:CommandField>
                 </Columns>
             </asp:GridView>
-            <asp:Label runat="server" ID="msnCalis" Text=""></asp:Label>
         </div>
 
         <!-- Modal -->
@@ -78,9 +72,38 @@
             <img class="card-img-top" src="../../../img/calis_producto.jpg" alt="Card image cap"/>
             <div class="card-body">
                 <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text=""></asp:Label></h5>
-                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control"></asp:DropDownList>
-                <asp:Button ID="btnAgregaraLista" runat="server" Text="Agregar" class="btn btn-primary" />
-                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-primary cancelar" />
+                <div class="text-center">
+                    <asp:Label runat="server" ID="lblMarca" Text=""></asp:Label><br />
+                    <asp:Label runat="server" ID="lblCantidad" Text=""></asp:Label>
+                    <asp:Label runat="server" ID="lblMedida" Text=""></asp:Label>
+                    <!--<div class="col">
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblLunes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblMartes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblMiercoles" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblJueves" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblViernes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblSabado" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblDomingo" Text=""></asp:Label>
+                        </div>
+                    </div>-->
+                </div>
+                <asp:DropDownList ID="ddlListasProductos" runat="server" CssClass="form-control" >
+                </asp:DropDownList>
+                <asp:Button ID="btnAgregaraLista" runat="server" Text="Agregar" class="btn btn-primary" OnClick="btnAgregaraLista_Click" />
+                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-primary cancelar" OnClick="btnCerrar_Click" />
             </div>
         </asp:Panel>
     </form>
