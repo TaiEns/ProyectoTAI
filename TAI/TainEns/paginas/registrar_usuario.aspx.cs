@@ -51,7 +51,8 @@ namespace TainEns.paginas
                         //Agregar atributo al boton para mostrar modal
                         //Registrarse.Attributes.Add("data-toggle", "modal");
                         //System.Threading.Thread.Sleep(3000);
-                        ObjEU.NombreUsuario = Nombres.Text + " " + Apellidos.Text;
+                        ObjEU.NombreUsuario = Nombres.Text;
+                        ObjEU.ApellidoUsuario = Apellidos.Text; ;
                         ObjEU.Usuario = Usuario.Text;
                         ObjEU.EmailUsuario = Correo.Text;
                         ObjEU.PasswordUsuario = Contrasena.Text;
