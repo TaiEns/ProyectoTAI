@@ -35,7 +35,7 @@
 	        <a class="nav-link text-white active" href="#">Productos</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link text-white active" href="#">Negocios</a>
+	        <a class="nav-link text-white active" href="../Negocios/buscar_negocio.aspx">Negocios</a>
 	      </li>
 	    </ul>
 
