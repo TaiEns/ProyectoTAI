@@ -74,26 +74,32 @@
                 <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text=""></asp:Label></h5>
                 <div class="text-center">
                     <asp:Label runat="server" ID="lblTipo" Text=""></asp:Label><br />
-                    <asp:Label runat="server" ID="lblUbicacion" Text=""></asp:Label>
+                    <asp:Label runat="server" ID="lblUbicacion" Text=""></asp:Label><br />
                     <asp:Label runat="server" ID="lblTelefono" Text=""></asp:Label>
                     <div class="col">
                         <div class="row">
-                            <asp:Label runat="server" ID="lblLunes" Text=""></asp:Label>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblLunes" Text=""></asp:Label>
+                            </div>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblMartes" Text=""></asp:Label>
+                            </div>
                         </div>
                         <div class="row">
-                            <asp:Label runat="server" ID="lblMartes" Text=""></asp:Label>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblMiercoles" Text=""></asp:Label>
+                            </div>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblJueves" Text=""></asp:Label>
+                            </div>
                         </div>
                         <div class="row">
-                            <asp:Label runat="server" ID="lblMiercoles" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblJueves" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblViernes" Text=""></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:Label runat="server" ID="lblSabado" Text=""></asp:Label>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblViernes" Text=""></asp:Label>
+                            </div>
+                            <div class="col">
+                                <asp:Label runat="server" ID="lblSabado" Text=""></asp:Label>
+                            </div>
                         </div>
                         <div class="row">
                             <asp:Label runat="server" ID="lblDomingo" Text=""></asp:Label>

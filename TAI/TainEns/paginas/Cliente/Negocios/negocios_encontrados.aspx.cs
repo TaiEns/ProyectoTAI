@@ -14,6 +14,8 @@ namespace TainEns.paginas.Cliente.Negocios
     {
         E_Negocios ObjEN = new E_Negocios();
         N_Negocio ObjNN = new N_Negocio();
+        E_HorarioNegocios ObjEHN = new E_HorarioNegocios();
+        N_HorarioNegocios ObjNHN = new N_HorarioNegocios();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -53,15 +55,22 @@ namespace TainEns.paginas.Cliente.Negocios
         protected void grvNegocios_SelectedIndexChanged(object sender, EventArgs e)
         {
             ApagarComponentes();
-            int IdProducto = Convert.ToInt16(grvNegocios.SelectedDataKey["IdNegocios"]);
+            int IdNegocio = Convert.ToInt16(grvNegocios.SelectedDataKey["IdNegocios"]);
             pProducto.Visible = true;
-            ObjEN = ObjNN.BuscarNegocioPorId(IdProducto);
+            ObjEN = ObjNN.BuscarNegocioPorId(IdNegocio);
+            ObjEHN = ObjNHN.BuscarHorarioNegociosPorIdNegocio(IdNegocio);
 
             lblCardTitle.Text = ObjEN.NombreNegocio;
             lblTipo.Text = ObjEN.TipoNegocio;
             lblTelefono.Text = ObjEN.TelefonoNegocio;
             lblUbicacion.Text = ObjEN.CalleNegocio + " " + ObjEN.ColoniaNegocio + " " + ObjEN.CodigoPostal + " " + ObjEN.NumeroCalle;
-
+            lblLunes.Text = "Lunes " + Convert.ToString(ObjEHN.LE) + "a.m a " + Convert.ToString(ObjEHN.LS);
+            lblMartes.Text = "Martes " + Convert.ToString(ObjEHN.ME) + "a.m a " + Convert.ToString(ObjEHN.MS);
+            lblMiercoles.Text = "Miercoles " + Convert.ToString(ObjEHN.MIE) + "a.m a " + Convert.ToString(ObjEHN.MIS);
+            lblJueves.Text = "Jueves " + Convert.ToString(ObjEHN.JE) + "a.m a " + Convert.ToString(ObjEHN.JS);
+            lblViernes.Text = "Viernes " + Convert.ToString(ObjEHN.VE) + "a.m a " + Convert.ToString(ObjEHN.VS);
+            lblSabado.Text = "Sabado " + Convert.ToString(ObjEHN.SE) + "a.m a " + Convert.ToString(ObjEHN.SS);
+            lblDomingo.Text = "Domingo " + Convert.ToString(ObjEHN.DE) + "a.m a " + Convert.ToString(ObjEHN.DS);
 
         }
 
