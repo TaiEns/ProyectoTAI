@@ -30,7 +30,7 @@
 	        <a class="nav-link text-white active" href="#">Mis Negocios</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link text-white active" href="#">Lista</a>
+	        <a class="nav-link text-white active" href="../Listas/listas.aspx">Lista</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="../Productos/categorias_productos.aspx">Productos</a>
