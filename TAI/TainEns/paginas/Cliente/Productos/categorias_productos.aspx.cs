@@ -5,15 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using Entidades;
+using Negocios;
+
 namespace TainEns.paginas.Cliente.Productos
 {
     public partial class categorias_productos : System.Web.UI.Page
     {
+        E_Producto ObjEP = new E_Producto();
+        N_Producto ObjNP = new N_Producto();
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        #region Botones
         protected void btnCarnes_Click(object sender, EventArgs e)
         {
             Session["Categoria"] = "Carnes";
@@ -67,5 +73,21 @@ namespace TainEns.paginas.Cliente.Productos
             Session["Categoria"] = "Cereales";
             Response.Redirect("productos_por_categoria.aspx");
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ObjEP = ObjNP.BuscarProductoPorNombre(tbBuscarProducto.Text);
+            if(ObjEP != null)
+            {
+                Session["Producto"] = ObjEP.NombreProducto;
+                Response.Redirect("busqueda_producto.aspx");
+            }
+            else
+            {
+                tbBuscarProducto.Attributes.Add("class", "form-control mr-sm-2 is-invalid");
+                lblProductoNoEncontrado.Text = "Producto no registrado en el sistema";
+            }
+        }
+        #endregion
     }
 }

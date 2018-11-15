@@ -54,9 +54,13 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" aria-label="Search"/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            <asp:TextBox ID="tbBuscarProducto" runat="server" class="form-control mr-sm-2" type="search" placeholder="Buscar Producto" aria-label="Search"></asp:TextBox>
+            <button runat="server" id="btnRun" onserverclick="btnBuscar_Click" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
+            <div class="invalid-feedback">
+                <asp:Label runat="server" ID="lblProductoNoEncontrado" Text=""></asp:Label>
+            </div>
         </div>
+        <asp:Label ID="msn" Text="" runat="server"></asp:Label>
         <div class="container">
             <div class="row">
                 <h1 class="text-center">Productos</h1>
