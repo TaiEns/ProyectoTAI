@@ -190,6 +190,7 @@ namespace Entidades
 
     }
 
+
     public class E_UsuarioNegocios
     {
         #region Atributos
@@ -349,6 +350,54 @@ namespace Entidades
         }
         #endregion
 
+    }
+
+    public class E_ListaUsuario
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdUsuario;
+        private int _IdLista;
+        #endregion
+
+        #region Contructor
+        public E_ListaUsuario()
+        {
+            _IdLista = 0;
+            _IdUsuario = 0;
+            _Accion = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
+        public int IdLista { get => _IdLista; set => _IdLista = value; }
+        #endregion
+    }
+
+    public class E_ListaProducto
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdProducto;
+        private int _IdLista;
+        #endregion
+
+        #region Contructor
+        public E_ListaProducto()
+        {
+            _IdLista = 0;
+            _IdProducto = 0;
+            _Accion = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
+        public int IdLista { get => _IdLista; set => _IdLista = value; }
+        #endregion
     }
 
 }

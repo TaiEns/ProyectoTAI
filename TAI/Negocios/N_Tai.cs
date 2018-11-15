@@ -368,7 +368,7 @@ namespace Negocios
         public string InsertarProductoNegocios(E_ProductoNegocios pEntidad)
         {
             pEntidad.Accion = "INSERTAR";
-            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, pEntidad);
+            return ObjIBM.IBM_Entidad<E_ProductoNegocios>(Sp, pEntidad);
         }
 
         public string BorraProductoNegocios(int pIdProducto)
@@ -489,5 +489,111 @@ namespace Negocios
             }
         }
     }
+
+    public class N_ListaUsuario
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_ListaUsuario";
+
+        public string InsertarListaUsuario(E_ListaUsuario pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, pEntidad);
+        }
+
+        public string BorraListaUsuario(int pIdUsuario)
+        {
+            E_ListaUsuario Entidad = new E_ListaUsuario
+            {
+                Accion = "BORRAR",
+                IdUsuario = pIdUsuario
+            };
+            return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, Entidad);
+        }
+
+        public string ModoficaListaUsuario(E_ListaUsuario pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, pEntidad);
+        }
+
+        //listado general de usuario en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_ListaUsuario()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdLista");
+        }
+
+        public List<E_ListaUsuario> LstUsuarios()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_ListaUsuario>(GetDT_ListaUsuario());
+        }
+
+        // Busqueda de usuarios por diferente creiterio
+
+        public E_ListaUsuario BuscarListaUsuarioporLista(int pIdLista)
+        {
+            return (from User in LstUsuarios() where User.IdLista == pIdLista select User).FirstOrDefault();
+        }
+
+        public E_ListaUsuario BuscarListaUsuarioporUsuario(int pIdUsuario)
+        {
+            return (from User in LstUsuarios() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
+        }
+    }
+
+    public class N_ListaProducto
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_ListaProducto";
+
+        public string InsertarListaProductol(E_ListaProducto pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_ListaProducto>(Sp, pEntidad);
+        }
+
+        public string BorraListaProducto(int pIdLista)
+        {
+            E_ListaProducto Entidad = new E_ListaProducto
+            {
+                Accion = "BORRAR",
+                IdLista = pIdLista
+            };
+            return ObjIBM.IBM_Entidad<E_ListaProducto>(Sp, Entidad);
+        }
+
+        public string ModoficaListaProducto(E_ListaProducto pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_ListaProducto>(Sp, pEntidad);
+        }
+
+        //listado general de usuario en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_ListaProducto()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdLista");
+        }
+
+        public List<E_ListaProducto> LstUsuarios()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_ListaProducto>(GetDT_ListaProducto());
+        }
+
+        // Busqueda de usuarios por diferente creiterio
+
+        public E_ListaProducto BuscarListaProductoporlista(int pIdLista)
+        {
+            return (from User in LstUsuarios() where User.IdLista == pIdLista select User).FirstOrDefault();
+        }
+
+        public E_ListaProducto BuscarListaProductoporproducto(int pIdProducto)
+        {
+            return (from User in LstUsuarios() where User.IdProducto == pIdProducto select User).FirstOrDefault();
+        }
+    }
+
+
 
 }
