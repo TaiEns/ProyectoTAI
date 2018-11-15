@@ -14,6 +14,10 @@ namespace TainEns.paginas.Cliente.Productos
     {
         E_Producto ObjEP = new E_Producto();
         N_Producto ObjNP = new N_Producto();
+        E_ListaUsuario ObjELU = new E_ListaUsuario();
+        N_ListaUsuario ObjNLU = new N_ListaUsuario();
+        E_ListaProducto ObjELP = new E_ListaProducto();
+        N_ListaProducto ObjNLP = new N_ListaProducto();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -45,7 +49,8 @@ namespace TainEns.paginas.Cliente.Productos
         protected void ApagarComponentes()
         {
             pProducto.Visible = false;
-            ddlListasProductos.Visible = false;
+            pListas.Visible = false;
+            pFormLista.Visible = false;
         }
         #endregion
 
@@ -54,6 +59,7 @@ namespace TainEns.paginas.Cliente.Productos
         {
             ApagarComponentes();
             int IdProducto = Convert.ToInt16(grvProductos.SelectedDataKey["IdProducto"]);
+            Session["IdProducto"] = IdProducto;
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
 
@@ -66,7 +72,7 @@ namespace TainEns.paginas.Cliente.Productos
 
         protected void btnAgregaraLista_Click(object sender, EventArgs e)
         {
-            ddlListasProductos.Visible = true;
+            pListas.Visible = true;
         }
 
         protected void btnCerrar_Click(object sender, EventArgs e)
@@ -74,6 +80,38 @@ namespace TainEns.paginas.Cliente.Productos
             ApagarComponentes();
         }
         #endregion
-        
+
+        protected void btnAgregarLista1_Click(object sender, EventArgs e)
+        {
+            pFormLista.Visible = true;
+        }
+
+        protected void btnListo_Click(object sender, EventArgs e)
+        {
+            int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
+            ObjELU.IdUsuario = IdUsuario;
+            ObjELU.NombreLista = tbNombreLista.Text;
+
+            string msn = ObjNLU.InsertarListaUsuario(ObjELU);
+            grvListas.DataBind();
+            pFormLista.Visible = false;
+        }
+
+        protected void btnCerrar2_Click(object sender, EventArgs e)
+        {
+            pListas.Visible = false;
+        }
+
+        protected void grvListas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            int IdLista = Convert.ToInt16(grvListas.SelectedDataKey["IdLista"]);
+            ObjELP.IdProducto = IdProducto;
+            ObjELP.IdProducto = IdProducto;
+
+            string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+
+            ApagarComponentes();
+        }
     }
 }

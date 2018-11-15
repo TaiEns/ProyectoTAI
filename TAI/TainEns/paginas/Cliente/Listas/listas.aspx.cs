@@ -51,9 +51,9 @@ namespace TainEns.paginas.Cliente.Listas
             Session["IdLista"] = IdLista;
             switch (comando)
             {
-                case "productos":
+                case "colsultar":
                     {
-                        Response.Redirect("productos.aspx");
+                        Response.Redirect("consultar_lista.aspx");
                         break;
                     };
                 case "modificar":
