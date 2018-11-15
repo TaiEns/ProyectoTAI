@@ -1,17 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscar_negocio.aspx.cs" Inherits="TainEns.paginas.Cliente.Negocios.buscar_negocio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="negocios_encontrados.aspx.cs" Inherits="TainEns.paginas.Cliente.Negocios.negocios_encontrados" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="../../../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../../../css/floating-labels.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <title>Buscar Negocio</title>
+    <title>Negocios</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
@@ -53,17 +53,61 @@
 	  </div>
 	</nav>
     <form id="form1" runat="server">
-        <div class="form-signin">
-            <div class="form-inline my-2 my-lg-0">
-                <asp:TextBox ID="tbBuscarNegocio" runat="server" class="form-control mr-sm-2" type="search" placeholder="Buscar Negocio" aria-label="Search"></asp:TextBox>
-                <button runat="server" id="btnBuscar" onserverclick="btnBuscar_Click" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
-                <div class="invalid-feedback">
-                    <asp:Label runat="server" ID="lblNegocioNoEncontrado" Text=""></asp:Label>
-                </div>
-            </div>
+       <div class="container">
+            <h1>Negocios</h1>
+            <asp:GridView ID="grvNegocios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios" OnSelectedIndexChanged="grvNegocios_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
+                    <asp:BoundField DataField="TipoNegocio" HeaderText="Tipo" />
+                    <asp:BoundField DataField="TelefonoNegocio" HeaderText="Telefono" />
+                    <asp:CommandField ButtonType="Button" HeaderText="Mostrar" SelectText="Mostrar" ShowSelectButton="True">
+                    <ControlStyle CssClass="btn btn-primary" />
+                    </asp:CommandField>
+                </Columns>
+            </asp:GridView>
         </div>
+
+        <!-- Modal -->
+        <asp:Panel ID="pProducto" runat="server"  class="card form-signin" style="width: 25rem;">
+            <img class="card-img-top" src="../../../img/calis_producto.jpg" alt="Card image cap"/>
+            <div class="card-body">
+                <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text=""></asp:Label></h5>
+                <div class="text-center">
+                    <asp:Label runat="server" ID="lblTipo" Text=""></asp:Label><br />
+                    <asp:Label runat="server" ID="lblUbicacion" Text=""></asp:Label>
+                    <asp:Label runat="server" ID="lblTelefono" Text=""></asp:Label>
+                    <div class="col">
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblLunes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblMartes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblMiercoles" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblJueves" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblViernes" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblSabado" Text=""></asp:Label>
+                        </div>
+                        <div class="row">
+                            <asp:Label runat="server" ID="lblDomingo" Text=""></asp:Label>
+                        </div>
+                    </div>
+                </div>
+                <asp:DropDownList ID="ddlListasProductos" runat="server" CssClass="form-control" >
+                </asp:DropDownList>
+                <asp:Button ID="btnAgregaraLista" runat="server" Text="Agregar" class="btn btn-primary" OnClick="btnAgregaraLista_Click" />
+                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-primary cancelar" OnClick="btnCerrar_Click" />
+            </div>
+        </asp:Panel>
     </form>
-    <!--
+      <!--
     <footer class="footer azuloscuro">
     	<div class="footer-content">
       		<img src="../../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI<div id="redes">
