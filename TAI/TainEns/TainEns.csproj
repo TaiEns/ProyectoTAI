@@ -104,6 +104,8 @@
     <Content Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx" />
     <Content Include="paginas\Administrador\Solicitudes\solicitud_negocios.aspx" />
     <Content Include="paginas\Cliente\cliente.aspx" />
+    <Content Include="paginas\Cliente\Listas\consultar_lista.aspx" />
+    <Content Include="paginas\Cliente\Listas\listas.aspx" />
     <Content Include="paginas\Cliente\Negocios\agregar_negocio.aspx" />
     <Content Include="paginas\Cliente\Negocios\agregar_producto.aspx" />
     <Content Include="paginas\Cliente\Negocios\mis_negocios.aspx" />
@@ -173,6 +175,20 @@
     </Compile>
     <Compile Include="paginas\Cliente\cliente.aspx.designer.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Listas\consultar_lista.aspx.cs">
+      <DependentUpon>consultar_lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Listas\consultar_lista.aspx.designer.cs">
+      <DependentUpon>consultar_lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Listas\listas.aspx.cs">
+      <DependentUpon>listas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Listas\listas.aspx.designer.cs">
+      <DependentUpon>listas.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\agregar_negocio.aspx.cs">
       <DependentUpon>agregar_negocio.aspx</DependentUpon>

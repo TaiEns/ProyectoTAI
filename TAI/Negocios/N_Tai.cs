@@ -540,6 +540,11 @@ namespace Negocios
         {
             return (from User in LstUsuarios() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
+
+        public E_ListaUsuario BuscarListaUsuarioporNombre(string nNombreLista)
+        {
+            return (from User in LstUsuarios() where User.NombreLista == nNombreLista select User).FirstOrDefault();
+        }
     }
 
     public class N_ListaProducto
