@@ -77,7 +77,8 @@
             </div>
             <div class="col-md-4 mb-3">
               <label for="Nombre">Nombre</label>
-              <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre" required></asp:TextBox>
+                <asp:DropDownList ID="ddlNombre" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="NombreProducto" DataValueField="NombreProducto"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [NombreProducto] FROM [tbProductos] WHERE [EstadoProducto] = 3"></asp:SqlDataSource>
             </div>
           </div>
           <div class="form-row form-input">
@@ -88,7 +89,7 @@
           </div>
           
           <div id="form-row form-input botones">
-            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal"/>
+            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Agregar_Click"/>
             <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="productos.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
