@@ -358,7 +358,7 @@ namespace Entidades
         private string _Accion;
         private int _IdUsuario;
         private int _IdLista;
-        private string _NombreLista;
+       // private string _NombreLista;
         #endregion
 
         #region Contructor
@@ -367,7 +367,7 @@ namespace Entidades
             _Accion = string.Empty;
             _IdLista = 0;
             _IdUsuario = 0;
-            _NombreLista = string.Empty;
+           // _NombreLista = string.Empty;
         }
         #endregion
 
@@ -375,7 +375,7 @@ namespace Entidades
         public string Accion { get => _Accion; set => _Accion = value; }
         public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
         public int IdLista { get => _IdLista; set => _IdLista = value; }
-        public string NombreLista { get => _NombreLista; set => _NombreLista = value; }
+        //public string NombreLista { get => _NombreLista; set => _NombreLista = value; }
         #endregion
     }
 

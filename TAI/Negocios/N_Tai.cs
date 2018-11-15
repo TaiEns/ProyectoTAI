@@ -502,12 +502,12 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, pEntidad);
         }
 
-        public string BorraListaUsuario(int pIdUsuario)
+        public string BorraListaUsuario(int pIdLista)
         {
             E_ListaUsuario Entidad = new E_ListaUsuario
             {
                 Accion = "BORRAR",
-                IdUsuario = pIdUsuario
+                IdUsuario = pIdLista
             };
             return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, Entidad);
         }
@@ -541,10 +541,10 @@ namespace Negocios
             return (from User in LstUsuarios() where User.IdUsuario == pIdUsuario select User).FirstOrDefault();
         }
 
-        public E_ListaUsuario BuscarListaUsuarioporNombre(string nNombreLista)
+        /*public E_ListaUsuario BuscarListaUsuarioporNombre(string nNombreLista)
         {
             return (from User in LstUsuarios() where User.NombreLista == nNombreLista select User).FirstOrDefault();
-        }
+        }*/
     }
 
     public class N_ListaProducto
