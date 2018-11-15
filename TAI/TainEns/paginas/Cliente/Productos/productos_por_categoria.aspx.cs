@@ -24,6 +24,7 @@ namespace TainEns.paginas.Cliente.Productos
 
         protected void Iniciar()
         {
+            pProducto.Visible = false;
             string Categoria = Convert.ToString(Session["Categoria"]);
             List<E_Producto> LstP = new N_Producto().LstProductos();
             List<E_Producto> LstNT = new List<E_Producto>();
@@ -43,8 +44,8 @@ namespace TainEns.paginas.Cliente.Productos
         #region Botones
         protected void btnConsultar_Click(object sender, EventArgs e)
         {
+            pProducto.Visible = true;
             //int IdNegocio = (int)grvProductos.DataKeys[e.RowIndex].Value;
-            lblTituloModal.Text = "Holaaaaaaa";
             //System.Threading.Thread.Sleep(3000);
         }
         #endregion
@@ -52,6 +53,15 @@ namespace TainEns.paginas.Cliente.Productos
         protected void grvProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             int IdProducto = Convert.ToInt32(grvProductos.SelectedDataKey["IdProducto"]);
+        }
+
+        protected void grvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            string comando = e.CommandName;
+            string str = e.CommandArgument.ToString();
+            string IdProducto = grvProductos.Rows[Convert.ToInt16(str)].Cells[0].Text;
+            //ObjEP = ObjNP.
+            msnCalis.Text = IdProducto;
         }
     }
 }

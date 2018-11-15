@@ -55,36 +55,33 @@
     <form id="form1" runat="server">
         <div class="container">
             
-            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto">
+            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto"
+                OnRowCommand="grvProductos_RowCommand">
                 <Columns>
+                    <asp:BoundField DataField="IdProducto" InsertVisible="False" />
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
                     <asp:TemplateField>
                         <ItemTemplate><asp:Button ID="btnConsultar" runat="server" Text="Consultar" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" OnClick="btnConsultar_Click"/></ItemTemplate>
                     </asp:TemplateField>
+                    <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Mostrar" Text="Mostrar" >
+                    <ControlStyle CssClass="btn btn-primary" />
+                    </asp:ButtonField>
                 </Columns>
             </asp:GridView>
-            
+            <asp:Label runat="server" ID="msnCalis" Text=""></asp:Label>
         </div>
 
         <!-- Modal -->
-        <asp:Panel runat="server" class="modal fade" ID="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <asp:Panel ID="Panel1" runat="server" class="modal-dialog modal-dialog-centered" role="document">
-                <asp:Panel ID="Panel2" runat="server"  class="modal-content">
-                    <asp:Panel ID="Panel3" runat="server" class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle"><asp:Label ID="lblTituloModal" Text="" runat="server"></asp:Label></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                    </asp:Panel>
-                    <asp:Panel ID="Panel4" runat="server" class="modal-body"></asp:Panel>
-                    <asp:Panel ID="Panel5" runat="server" class="modal-footer">
-                        <asp:Button ID="btnGuardar" runat="server" Text="Close"  class="btn btn-secondary" data-dismiss="modal" />
-                        <asp:Button ID="Button1" runat="server" Text="Save" class="btn btn-primary"/>
-                    </asp:Panel>
-            </asp:Panel>
-          </asp:Panel>
+        <asp:Panel ID="pProducto" runat="server"  class="card form-signin" style="width: 25rem;">
+            <img class="card-img-top" src="../../../img/calis_producto.jpg" alt="Card image cap"/>
+            <div class="card-body">
+                <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text=""></asp:Label></h5>
+                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control"></asp:DropDownList>
+                <asp:Button ID="btnAgregaraLista" runat="server" Text="Agregar" class="btn btn-primary" />
+                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-primary cancelar" />
+            </div>
         </asp:Panel>
     </form>
 
