@@ -56,8 +56,8 @@
         <div class="container">
             <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto" OnSelectedIndexChanged="grvProductos_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="NombreProducto" HeaderText="Producto" />
-                    <asp:CommandField ButtonType="Button" HeaderText="Borrar" SelectText="Borrar" ShowSelectButton="True" />
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                    <asp:CommandField ButtonType="Button" SelectText="-" ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>
         </div>

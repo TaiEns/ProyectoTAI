@@ -86,7 +86,7 @@
                 <h5 class="card-title"><asp:Label runat="server" ID="lblListasTitulo" Text="Listas de Productos"></asp:Label></h5>
                 <asp:GridView ID="grvListas" runat="server" AutoGenerateColumns="False" DataKeyNames="IdLista" OnSelectedIndexChanged="grvListas_SelectedIndexChanged">
                     <Columns>
-                        <asp:BoundField DataField="NombreLista" />
+                        <asp:BoundField DataField="IdLista" />
                         <asp:CommandField ButtonType="Button" SelectText="-" ShowSelectButton="True" />
                     </Columns>
                 </asp:GridView>

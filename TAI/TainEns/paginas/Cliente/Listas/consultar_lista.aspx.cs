@@ -26,6 +26,7 @@ namespace TainEns.paginas.Cliente.Listas
         {
             int IdLista = Convert.ToInt16(Session["IdLista"]);
             List<E_ListaProducto> LstUN = new N_ListaProducto().LstUsuarios();
+            List<E_Usuario> LstEU = new N_Usuario().LstUsuarios();
             List<E_Producto> LstN = new List<E_Producto>();
             foreach (E_ListaProducto UN in LstUN)
             {

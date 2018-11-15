@@ -14,6 +14,8 @@ namespace TainEns.paginas.Cliente.Listas
     {
         E_Usuario ObjEU = new E_Usuario();
         N_Usuario ObjNE = new N_Usuario();
+        E_ListaUsuario ObjELU = new E_ListaUsuario();
+        N_ListaUsuario ObjNLU = new N_ListaUsuario();
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -33,7 +35,7 @@ namespace TainEns.paginas.Cliente.Listas
             {
                 if (UN.IdUsuario == IdUsuario)
                 {
-                     LstN.Add(new N_ListaUsuario().BuscarListaUsuarioporUsuario(UN.IdUsuario));
+                     LstN.Add(UN);
 
                 }
             }
@@ -46,8 +48,9 @@ namespace TainEns.paginas.Cliente.Listas
         {
             string comando = e.CommandName;
             string str = e.CommandArgument.ToString();
-            string nombrenegocio = grvListas.Rows[Convert.ToInt16(str)].Cells[0].Text;
-            int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(nombrenegocio)).IdLista;
+            int lista = Convert.ToInt16(grvListas.Rows[Convert.ToInt16(str)].Cells[0].Text);
+            //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(nombrenegocio)).IdLista;
+            int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporLista(lista)).IdLista;
             Session["IdLista"] = IdLista;
             switch (comando)
             {
@@ -64,6 +67,8 @@ namespace TainEns.paginas.Cliente.Listas
 
                 case "eliminar":
                     {
+                        string msnB = ObjNLU.BorraListaUsuario(IdLista);
+                        grvListas.DataBind();
                         break;
                     };
                 default:

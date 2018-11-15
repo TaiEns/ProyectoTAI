@@ -43,6 +43,20 @@ namespace TainEns.paginas.Cliente.Productos
 
             grvProductos.DataSource = LstNT;
             grvProductos.DataBind();
+
+            int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
+            List<E_ListaUsuario> LstELU = new N_ListaUsuario().LstUsuarios();
+            List<E_ListaUsuario> LstELN = new List<E_ListaUsuario>();
+            foreach (E_ListaUsuario P in LstELU)
+            {
+                if (P.IdUsuario == IdUsuario)
+                {
+                    LstELN.Add(P);
+                }
+            }
+
+            grvListas.DataSource = LstELN;
+            grvListas.DataBind();
         }
 
         #region Metodos
@@ -90,7 +104,7 @@ namespace TainEns.paginas.Cliente.Productos
         {
             int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
             ObjELU.IdUsuario = IdUsuario;
-            ObjELU.NombreLista = tbNombreLista.Text;
+            //ObjELU.NombreLista = tbNombreLista.Text;
 
             string msn = ObjNLU.InsertarListaUsuario(ObjELU);
             grvListas.DataBind();
@@ -107,7 +121,7 @@ namespace TainEns.paginas.Cliente.Productos
             int IdProducto = Convert.ToInt16(Session["IdProducto"]);
             int IdLista = Convert.ToInt16(grvListas.SelectedDataKey["IdLista"]);
             ObjELP.IdProducto = IdProducto;
-            ObjELP.IdProducto = IdProducto;
+            ObjELP.IdLista = IdLista;
 
             string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
 
