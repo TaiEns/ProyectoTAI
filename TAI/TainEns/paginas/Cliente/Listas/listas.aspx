@@ -53,8 +53,40 @@
 	  </div>
 	</nav>
     <form id="form1" runat="server">
-        <div>
+        <div class="container">
+            <asp:GridView ID="grvListas" runat="server"
+                AutoGenerateColumns="False" DataKeyNames="IdLista" CssClass="table table-hover"
+                OnRowCommand="GridView1_RowCommand">
+                <Columns>
+                    <asp:BoundField DataField="NombreLista" HeaderText="Nombre" />
+                    <asp:ButtonField ButtonType="Button" CommandName="colsultar" HeaderText="Productos" Text="Consultar" />
+                    <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Eliminar" Text="Eliminar" />
+                    <asp:ButtonField ButtonType="Button" CommandName="comparar" HeaderText="Modificar" Text="Comparar" />
+                
+                </Columns>
+ 
+                <HeaderStyle CssClass="thead-dark" />
+ 
+            </asp:GridView>
         </div>
     </form>
+
+    <!--
+    <footer class="footer azuloscuro">
+    	<div class="footer-content">
+      		<img src="../../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI<div id="redes">
+        		<div id="enlaces-redes">
+          			<a href="#"><img src="../../../img/facebook-logo.png" width="30" height="30"/></a>
+          			<a href="#"><img src="../../../img/instagram-logo.png" width="30" height="30"/></a>
+          			<a href="#"><img src="../../../img/gmail-logo.png" width="30" height="30"/></a>
+        		</div>
+      		</div>
+    	</div>
+    </footer>
+    -->
+    <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="../../../js/bootstrap.bundle.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 </body>
 </html>
