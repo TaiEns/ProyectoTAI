@@ -109,7 +109,7 @@ namespace TainEns.paginas.Cliente.Negocios
                             if (UN.IdNegocios == idNegocio)
                             {
                                 N_UsuarioNegocios ObjUN = new N_UsuarioNegocios();
-                                ObjUN.BorraUsuarioNegocio(idNegocio);
+                                string msnUn = ObjUN.BorraUsuarioNegocio(idNegocio);
                             }
                         }
 
@@ -122,7 +122,7 @@ namespace TainEns.paginas.Cliente.Negocios
                             if (PN.IdNegocios == idNegocio)
                             {
                                 N_ProductoNegocios ObjPN = new N_ProductoNegocios();
-                                ObjPN.BorraProductoNegocios(idNegocio);
+                                string msnPN = ObjPN.BorraProductoNegocios(idNegocio);
                             }
                         }
 
@@ -134,7 +134,7 @@ namespace TainEns.paginas.Cliente.Negocios
                             if (HN.IdNegocios == idNegocio)
                             {
                                 N_HorarioNegocios ObjHN = new N_HorarioNegocios();
-                                ObjHN.BorraHorarioNegocios(idNegocio);
+                                string msnHN = ObjHN.BorraHorarioNegocios(idNegocio);
                             }
                         }
 
@@ -143,6 +143,8 @@ namespace TainEns.paginas.Cliente.Negocios
                         //la entidad debe tener todos los campos llenos
                         N_Negocio N = new N_Negocio();
                         //N.BorraNegocio(new N_Negocio().BuscarNegocioPorId(idNegocio));
+                        string msnBN = N.BorraNegocio(idNegocio);
+                        GridView1.DataBind();
                         Response.Redirect("mis_negocios.aspx");
                         break;
                     };
