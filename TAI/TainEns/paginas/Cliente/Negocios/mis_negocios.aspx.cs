@@ -26,6 +26,7 @@ namespace TainEns.paginas.Cliente.Negocios
 
         protected void Iniciar()
         {
+            ApagarComponentes();
             int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
             //int IdUsuario = 3;
             ObjEU = ObjNE.BuscarUsuarioPorId(IdUsuario);
@@ -53,6 +54,11 @@ namespace TainEns.paginas.Cliente.Negocios
         }
         
         #region Metodos
+        protected void ApagarComponentes()
+        {
+            pELiminar.Visible = false;
+        }
+
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["IdNegocio"] = Convert.ToInt16(GridView1.SelectedDataKey["IdNegocios"]);
@@ -149,10 +155,8 @@ namespace TainEns.paginas.Cliente.Negocios
 
                         //string msnBN = N.BorraNegocio(idNegocio);
                         #endregion
-                        ObjEN = ObjNN.BuscarNegocioPorId(idNegocio);
-                        string msnBN = ObjNN.BorrarNegocio2(ObjEN);
-                        GridView1.DataBind();
-                        Response.Redirect("mis_negocios.aspx");
+                        pELiminar.Visible = true;
+                        
                         break;
                     };
                 default:
@@ -163,5 +167,18 @@ namespace TainEns.paginas.Cliente.Negocios
             // Response.Redirect("productos.aspx");
         }
 
+        protected void btnSi_Click(object sender, EventArgs e)
+        {
+            int idNegocio = Convert.ToInt16(Session["IdNegocio"]);
+            ObjEN = ObjNN.BuscarNegocioPorId(idNegocio);
+            string msnBN = ObjNN.BorrarNegocio2(ObjEN);
+            GridView1.DataBind();
+            Response.Redirect("mis_negocios.aspx");
+        }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            ApagarComponentes();
+        }
     }
 }

@@ -55,13 +55,13 @@
 	</nav>
     <form id="form1" runat="server">
         <div class="container">
-            <!--<div class="row">
+            <div class="row">
                 <h1>Mis Negocios</h1>
                 <div class="form-inline" style="float: right;">
                     <asp:HyperLink ID="hlRegistrarse" class="btn btn-outline-primary" runat="server" NavigateUrl="~/paginas/Cliente/Negocios/agregar_negocio.aspx">Agregar</asp:HyperLink>
                 </div>
             </div>  
-            <div class="row">
+            <!--<div class="row">
                 <div id="tarjeta" class="columna shadow-lg p-3 mb-5 bg-white rounded" runat="server">
                     <div class="col-md-auto">
                         <div class="card" style="width: 18rem;">
