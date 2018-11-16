@@ -42,7 +42,6 @@ namespace TainEns.paginas.Cliente.Negocios
             }
             //Label2.Text = "cantidad de elementos " + LstP.Count;
             return LstP;
-
         }
 
         protected void grvProductosAceptados_RowCommand(object sender, GridViewCommandEventArgs e)

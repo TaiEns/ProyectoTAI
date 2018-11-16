@@ -60,8 +60,7 @@
                 OnRowCommand="grvProductosAceptados_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
-                    <asp:BoundField DataField="PrecioProducto" HeaderText="Precio" />
+                    <asp:BoundField DataField="Marca" HeaderText="Marca" />
                     <asp:ButtonField ButtonType="Button" CommandName="editar" HeaderText="Editar" Text="Editar" />
                     <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Eliminar" Text="Eliminar" />
                 </Columns>

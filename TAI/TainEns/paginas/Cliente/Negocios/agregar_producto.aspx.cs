@@ -57,6 +57,7 @@ namespace TainEns.paginas.Cliente.Negocios
             ObjEPN.Precios = Convert.ToInt16(Precio.Text);
 
             string msnPN = ObjNPN.InsertarProductoNegocios(ObjEPN);
+            Response.Redirect("productos.aspx");
         }
     }
 }
