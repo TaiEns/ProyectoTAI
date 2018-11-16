@@ -50,8 +50,8 @@ namespace TainEns.paginas.Cliente.Listas
             string str = e.CommandArgument.ToString();
             int lista = Convert.ToInt16(grvListas.Rows[Convert.ToInt16(str)].Cells[0].Text);
             //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(nombrenegocio)).IdLista;
-            int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporLista(lista)).IdLista;
-            Session["IdLista"] = IdLista;
+            //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporLista(lista)).IdLista;
+            //Session["IdLista"] = IdLista;
             switch (comando)
             {
                 case "colsultar":
@@ -67,7 +67,7 @@ namespace TainEns.paginas.Cliente.Listas
 
                 case "eliminar":
                     {
-                        string msnB = ObjNLU.BorraListaUsuario(IdLista);
+                        //string msnB = ObjNLU.BorraListaUsuario(IdLista);
                         grvListas.DataBind();
                         break;
                     };
