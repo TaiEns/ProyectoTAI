@@ -51,7 +51,6 @@
             <asp:GridView ID="grvProductosAceptados" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto">
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
                 </Columns>
             </asp:GridView>
 

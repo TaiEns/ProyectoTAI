@@ -110,10 +110,6 @@
                     </asp:DropDownList>
               </div>
           </div>
-          <div class="form-group" style="max-width: 600px; margin: 10px auto;">
-            <label for="Descripcion">Descripción</label>
-            <textarea class="form-control " id="Descripcion" rows="3" runat="server"></textarea>
-          </div>
           <div id="form-row form-input botones">
             <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Agregar_Click" />
             <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="productos.aspx" style="margin-top: 0px;">Cancelar</a>
