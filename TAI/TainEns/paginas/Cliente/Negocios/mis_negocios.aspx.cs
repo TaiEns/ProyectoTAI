@@ -14,6 +14,8 @@ namespace TainEns.paginas.Cliente.Negocios
     {
         E_Usuario ObjEU = new E_Usuario();
         N_Usuario ObjNE = new N_Usuario();
+        E_Negocios ObjEN = new E_Negocios();
+        N_Negocio ObjNN = new N_Negocio();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -100,50 +102,55 @@ namespace TainEns.paginas.Cliente.Negocios
 
                 case "eliminar":
                     {
+                        #region Dani
                         //eliminando negocio de usuario negocios
                         //modificar el stored procedure de DELETE dbo.[tbUsuarioNegocios] WHERE IdUsuario = @IdUsuario
                         // a DELETE dbo.[tbUsuarioNegocios] WHERE IdNegocios = @IdUsuario
-                        List<E_UsuarioNegocios> LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
-                        foreach (E_UsuarioNegocios UN in LstUN)
-                        {
-                            if (UN.IdNegocios == idNegocio)
-                            {
-                                N_UsuarioNegocios ObjUN = new N_UsuarioNegocios();
-                                string msnUn = ObjUN.BorraUsuarioNegocio(idNegocio);
-                            }
-                        }
+                        /* List<E_UsuarioNegocios> LstUN = new N_UsuarioNegocios().LstUsuarioNegocio();
+                         foreach (E_UsuarioNegocios UN in LstUN)
+                         {
+                             if (UN.IdNegocios == idNegocio)
+                             {
+                                 N_UsuarioNegocios ObjUN = new N_UsuarioNegocios();
+                                 string msnUn = ObjUN.BorraUsuarioNegocio(idNegocio);
+                             }
+                         }
 
-                        //eliminando productos de tabla productos negocio
-                        //modificar el stored procedure de DELETE dbo.[tbProductoNegocios] WHERE IdUsuario = @IdProducto
-                        // a DELETE dbo.[tbProductoNegocios] WHERE IdNegocios = @IdProducto
-                        List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
-                        foreach (E_ProductoNegocios PN in LstPN)
-                        {
-                            if (PN.IdNegocios == idNegocio)
-                            {
-                                N_ProductoNegocios ObjPN = new N_ProductoNegocios();
-                                string msnPN = ObjPN.BorraProductoNegocios(idNegocio);
-                            }
-                        }
+                         //eliminando productos de tabla productos negocio
+                         //modificar el stored procedure de DELETE dbo.[tbProductoNegocios] WHERE IdUsuario = @IdProducto
+                         // a DELETE dbo.[tbProductoNegocios] WHERE IdNegocios = @IdProducto
+                         List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
+                         foreach (E_ProductoNegocios PN in LstPN)
+                         {
+                             if (PN.IdNegocios == idNegocio)
+                             {
+                                 N_ProductoNegocios ObjPN = new N_ProductoNegocios();
+                                 string msnPN = ObjPN.BorraProductoNegocios(idNegocio);
+                             }
+                         }
 
-                        //Eliminando horarios de la tabla horarionegocios
-                        //este stored procedure esta bien
-                        List<E_HorarioNegocios> LstHN = new N_HorarioNegocios().LstNegocios();
-                        foreach (E_HorarioNegocios HN in LstHN)
-                        {
-                            if (HN.IdNegocios == idNegocio)
-                            {
-                                N_HorarioNegocios ObjHN = new N_HorarioNegocios();
-                                string msnHN = ObjHN.BorraHorarioNegocios(idNegocio);
-                            }
-                        }
+                         //Eliminando horarios de la tabla horarionegocios
+                         //este stored procedure esta bien
+                         List<E_HorarioNegocios> LstHN = new N_HorarioNegocios().LstNegocios();
+                         foreach (E_HorarioNegocios HN in LstHN)
+                         {
+                             if (HN.IdNegocios == idNegocio)
+                             {
+                                 N_HorarioNegocios ObjHN = new N_HorarioNegocios();
+                                 string msnHN = ObjHN.BorraHorarioNegocios(idNegocio);
+                             }
+                         }
 
-                        //finalmente eliminar el negocio
-                        //cambio en el metodo N_Negocio.BorraNegocio, pedia solo la id del negocio, ahora debe pedir la entidad completa
-                        //la entidad debe tener todos los campos llenos
-                        N_Negocio N = new N_Negocio();
-                        //N.BorraNegocio(new N_Negocio().BuscarNegocioPorId(idNegocio));
-                        string msnBN = N.BorraNegocio(idNegocio);
+                         //finalmente eliminar el negocio
+                         //cambio en el metodo N_Negocio.BorraNegocio, pedia solo la id del negocio, ahora debe pedir la entidad completa
+                         //la entidad debe tener todos los campos llenos
+                         N_Negocio N = new N_Negocio();
+                         //N.BorraNegocio(new N_Negocio().BuscarNegocioPorId(idNegocio));*/
+
+                        //string msnBN = N.BorraNegocio(idNegocio);
+                        #endregion
+                        ObjEN = ObjNN.BuscarNegocioPorId(idNegocio);
+                        string msnBN = ObjNN.BorrarNegocio2(ObjEN);
                         GridView1.DataBind();
                         Response.Redirect("mis_negocios.aspx");
                         break;
