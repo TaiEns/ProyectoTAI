@@ -57,7 +57,7 @@ namespace TainEns.paginas.Cliente.Negocios
                 case "editar":
                     {
                         //Label2.Text = "editando producto " + pro.IdProducto;
-                        // Response.Redirect("modificar_negocio.aspx");
+                        Response.Redirect("modificar_producto.aspx");
                         break;
                     };
 
