@@ -110,6 +110,7 @@
     <Content Include="paginas\Cliente\Negocios\agregar_producto.aspx" />
     <Content Include="paginas\Cliente\Negocios\mis_negocios.aspx" />
     <Content Include="paginas\Cliente\Negocios\modificar_negocio.aspx" />
+    <Content Include="paginas\Cliente\Negocios\modificar_producto.aspx" />
     <Content Include="paginas\Cliente\Negocios\productos.aspx" />
     <Content Include="paginas\Cliente\Negocios\solicitar_producto.aspx" />
     <Content Include="paginas\Cliente\Productos\busqueda_producto.aspx" />
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\modificar_negocio.aspx.designer.cs">
       <DependentUpon>modificar_negocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Negocios\modificar_producto.aspx.cs">
+      <DependentUpon>modificar_producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Negocios\modificar_producto.aspx.designer.cs">
+      <DependentUpon>modificar_producto.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\productos.aspx.cs">
       <DependentUpon>productos.aspx</DependentUpon>
