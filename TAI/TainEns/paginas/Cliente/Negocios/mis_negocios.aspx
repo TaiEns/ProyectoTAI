@@ -107,25 +107,16 @@
         </asp:GridView>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+        <asp:Panel ID="pELiminar" runat="server"  class="card form-signin" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text="Seguro"></asp:Label></h5>
+                <div class="text-center">
+                    <p>¿Seguro que quieres eliminar este producto de tu negocio?</p>
+                </div>
+                <asp:Button ID="btnSi" runat="server" Text="Si" class="btn btn-primary" OnClick="btnSi_Click" />
+                <asp:Button ID="btnNo" runat="server" Text="No" class="btn btn-primary cancelar" OnClick="btnNo_Click" />
             </div>
-          </div>
-        </div>
+        </asp:Panel>
     </form>
 
     <footer class="footer azuloscuro">

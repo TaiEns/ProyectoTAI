@@ -321,6 +321,12 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_Negocios>(Sp, Entidad);
         }
 
+        public string BorrarNegocio2(E_Negocios pEntidad)
+        {
+            pEntidad.Accion = "BORRAR";
+            return ObjIBM.IBM_Entidad<E_Negocios>(Sp, pEntidad);
+        }
+
         public string ModoficaNegocio(E_Negocios pEntidad)
         {
             pEntidad.Accion = "MODIFICAR";

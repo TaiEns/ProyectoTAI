@@ -58,7 +58,6 @@
             <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto" OnSelectedIndexChanged="grvProductos_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
                     <asp:CommandField ButtonType="Button" HeaderText="Mostrar" SelectText="Mostrar" ShowSelectButton="True">
                     <ControlStyle CssClass="btn btn-primary" />
