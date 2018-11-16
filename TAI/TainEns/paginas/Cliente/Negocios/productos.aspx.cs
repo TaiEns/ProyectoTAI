@@ -101,8 +101,10 @@ namespace TainEns.paginas.Cliente.Negocios
                     ObjEPN = PN;
                 }
             }
+            //ObjEPN = ObjNPN.BuscarProductoNegociosPorIdProducto(IdProducto);
             string msnBPN = ObjNPN.BorraProductoNegocios(ObjEPN.IdProductoNegocio);
-            grvProductosAceptados.DataBind();
+            //grvProductosAceptados.DataBind();
+            Response.Redirect("productos.aspx");
             ApagarComponentes();
         }
 
@@ -110,5 +112,6 @@ namespace TainEns.paginas.Cliente.Negocios
         {
             ApagarComponentes();
         }
+        
     }
 }

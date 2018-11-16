@@ -57,7 +57,7 @@
         <div class="container">
             <h1>Productos</h1>
             <asp:GridView ID="grvProductosAceptados" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto"
-                OnRowCommand="grvProductosAceptados_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+                OnRowCommand="grvProductosAceptados_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" >
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Marca" HeaderText="Marca" />
