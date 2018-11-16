@@ -56,6 +56,7 @@ namespace TainEns.paginas.Cliente.Negocios
             {
                 case "editar":
                     {
+                        Session["IdProducto"] = pro.IdProducto;
                         //Label2.Text = "editando producto " + pro.IdProducto;
                         Response.Redirect("modificar_producto.aspx");
                         break;

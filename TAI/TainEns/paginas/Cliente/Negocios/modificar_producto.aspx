@@ -59,7 +59,7 @@
           </div>
           <div class="form-row form-input">
             <div class="col-md-4 mb-3">
-              <label for="Categoria">Categoria</label>
+              <label for="ddlCategoria">Categoria</label>
               <asp:DropDownList ID="ddlCategoria" runat="server" class="form-control" >
                 <asp:ListItem Value="Categoria">Categoria</asp:ListItem>
                 <asp:ListItem Value="Cereales">Cereales</asp:ListItem>
@@ -87,7 +87,7 @@
           </div>
           
           <div id="form-row form-input botones">
-            <asp:Button ID="Agregar" runat="server" Text="Agregar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal"/>
+            <asp:Button ID="Modificar" runat="server" Text="Modificar" class="btn btn-lg btn-primary btn-block azuloscuro botones" data-toggle=""  data-target="#exampleModal" OnClick="Modificar_Click" />
             <a id="Cancelar" class="btn btn-lg btn-primary btn-block azuloscuro botones cancelar" href="productos.aspx" style="margin-top: 0px;">Cancelar</a>
           </div>
         </div>
@@ -98,10 +98,10 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Agregado</h2>
+                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">Modificado</h2>
                     </div>
                     <div class="modal-body text-center">
-                        El producto se agrego correctamente
+                        El producto se modifico correctamente
                     </div>
                     </div>
                 </div>
@@ -111,7 +111,8 @@
 
         <footer class="footer azuloscuro">
     	<div class="footer-content">
-      		<img src="../../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI<div id="redes">
+      		<img src="../../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI</p>
+            <div id="redes">
         		<div id="enlaces-redes">
           			<a href="#"><img src="../../../img/facebook-logo.png" width="30" height="30"/></a>
           			<a href="#"><img src="../../../img/instagram-logo.png" width="30" height="30"/></a>
@@ -124,7 +125,7 @@
         $( document ).on("ready",main);
         function main(){
           var cont = 0;
-          $("#Agregar").on("click", Validar);
+          $("#Modificar").on("click", Validar);
         }
 
         function Incorrecto(tb){
@@ -150,10 +151,7 @@
     function Validar(){
         var tbNombre = $("#Nombre").val();
         var ddlCategoria = $("#ddlCategoria").val();
-        var tbCantidad = $("#Cantidad").val();
-        var tbPresentacion = $("#Presentacion").val();
-        var ddlMedida = $("#ddlMedida").val();
-        var Marca = $("#Marca").val();
+        var tbPrecio = $("Precio").val();
         var cont = 0;
 
         if(tbNombre != ""){
@@ -171,38 +169,17 @@
         Incorrecto("#ddlCategoria");
         }
 
-        if(tbCantidad != ""){
-        Correcto("#Cantidad");
+        if (tbPrecio != "") {
+        Correcto("#Precio");
         cont++;
         }
         else{
-        Incorrecto("#Cantidad");
+        Incorrecto("#Precio");
         }
-
-        if(tbPresentacion != ""){
-        Correcto("#Presentacion");
-        cont++;
-        }
-        else{
-        Incorrecto("#Presentacion");
-        }
-        if (ddlMedida != "Medida") {
-        Correcto("#ddlMedida");
-        cont++;
-        }
-        else{
-        Incorrecto("#ddlMedida");
-        }
-        if (Marca != "") {
-        Correcto("#Marca");
-        cont++;
-        }
-        else{
-        Incorrecto("#Marca");
-        }
+        
           
-        if(cont == 6){
-        $("#Agregar").attr("data-toggle", "modal");
+        if(cont == 3){
+         $("#Modificar").attr("data-toggle", "modal");
         }
     }
   </script>

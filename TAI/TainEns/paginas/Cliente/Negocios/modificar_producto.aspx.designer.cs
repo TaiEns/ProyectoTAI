@@ -58,13 +58,13 @@ namespace TainEns.paginas.Cliente.Negocios {
         protected global::System.Web.UI.WebControls.TextBox Precio;
         
         /// <summary>
-        /// Control Agregar.
+        /// Control Modificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Agregar;
+        protected global::System.Web.UI.WebControls.Button Modificar;
         
         /// <summary>
         /// Control pnModal.
