@@ -34,7 +34,7 @@ namespace TainEns.paginas.Cliente.Negocios
                 ObjEN.CodigoPostal = Convert.ToInt32(CP.Text);
                 ObjEN.NumeroCalle = Convert.ToInt16(Numero.Text);
                 ObjEN.TelefonoNegocio = Telefono.Text;
-                ObjEN.EstadoNegocio = "2";
+                ObjEN.EstadoNegocio = "3";
                 ObjEN.TipoNegocio = Tipo.Text;
                 ObjEN.RFC = RFC.Text;
                 ObjEN.DiasLaborales = "1";
