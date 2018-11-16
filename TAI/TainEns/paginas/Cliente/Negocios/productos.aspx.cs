@@ -14,14 +14,24 @@ namespace TainEns.paginas.Cliente.Negocios
     {
         List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
         //List<E_Producto> LstPp = new List<E_Producto>();
+        E_ProductoNegocios ObjEPN = new E_ProductoNegocios();
+        N_ProductoNegocios ObjNPN = new N_ProductoNegocios();
+        E_Producto ObjEP = new E_Producto();
+        N_Producto ObjNP = new N_Producto();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                ApagarComponentes();
                 List<E_Producto> LstPp = Iniciar();
                 grvProductosAceptados.DataSource = LstPp;
                 grvProductosAceptados.DataBind();
             }
+        }
+
+        protected void ApagarComponentes()
+        {
+            pELiminar.Visible = false;
         }
 
         protected List<E_Producto> Iniciar()
@@ -65,20 +75,8 @@ namespace TainEns.paginas.Cliente.Negocios
                 case "eliminar":
                     {
                         //Label2.Text = "eliminando producto " + pro.IdProducto;
-                        List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
-                        foreach (E_ProductoNegocios PN in LstPN)
-                        {
-                            if ((PN.IdProducto == pro.IdProducto) && (PN.IdNegocios == Convert.ToInt16(Session["IdNegocio"])))
-                            {
-                                N_ProductoNegocios ObjPN = new N_ProductoNegocios();
-                                //faltaria agregar el campo idNegocioProducto en tablas de base de datos, stored procedures, Entidades y Negocios
-                                //para poder borrar un solo registro con id especifico
-                                //en este caso inclusio con la validacion del &&  se borra todos los productos del mismo idproducto en cualquier tienda
-                                //o se borran todos los productos de una sola tienda
-
-                                // ObjPN.BorraProductoNegocios(PN.IdNegocios);
-                            }
-                        }
+                        Session["IdProducto"] = pro.IdProducto;
+                        pELiminar.Visible = true;
                         break;
                     };
                 default:
@@ -87,6 +85,30 @@ namespace TainEns.paginas.Cliente.Negocios
                         break;
                     };
             }
+        }
+
+        protected void btnSi_Click(object sender, EventArgs e)
+        {
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            int IdNegocio = Convert.ToInt16(Session["IdNegocio"]);
+            List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
+
+            foreach (E_ProductoNegocios PN in LstPN)
+            {
+                if (PN.IdNegocios == IdNegocio && PN.IdProducto == IdProducto)
+                {
+                    ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
+                    ObjEPN = PN;
+                }
+            }
+            string msnBPN = ObjNPN.BorraProductoNegocios(ObjEPN.IdProductoNegocio);
+            grvProductosAceptados.DataBind();
+            ApagarComponentes();
+        }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            ApagarComponentes();
         }
     }
 }

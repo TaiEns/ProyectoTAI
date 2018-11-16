@@ -75,6 +75,17 @@
             </asp:GridView>
             <asp:HyperLink ID="hlSolicitar" class="btn btn-outline-primary" runat="server" NavigateUrl="solicitar_producto.aspx">Solicitar</asp:HyperLink>
             <asp:HyperLink ID="hlAgregar" class="btn btn-outline-primary" runat="server" NavigateUrl="agregar_producto.aspx">Agregar</asp:HyperLink>
+
+            <asp:Panel ID="pELiminar" runat="server"  class="card form-signin" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text="Seguro"></asp:Label></h5>
+                    <div class="text-center">
+                        <p>¿Seguro que quieres eliminar este producto de tu negocio?</p>
+                    </div>
+                    <asp:Button ID="btnSi" runat="server" Text="Si" class="btn btn-primary" OnClick="btnSi_Click" />
+                    <asp:Button ID="btnNo" runat="server" Text="No" class="btn btn-primary cancelar" OnClick="btnNo_Click" />
+                </div>
+            </asp:Panel>
         </div>
     </form>
     <footer class="footer azuloscuro">
