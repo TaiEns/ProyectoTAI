@@ -101,8 +101,8 @@
     <Content Include="paginas\Administrador\administrador.aspx" />
     <Content Include="paginas\Administrador\Productos\agregar_productos.aspx" />
     <Content Include="paginas\Administrador\Productos\productos.aspx" />
-    <Content Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx" />
-    <Content Include="paginas\Administrador\Solicitudes\solicitud_negocios.aspx" />
+    <Content Include="paginas\Administrador\Solicitudes\aprobar_producto.aspx" />
+    <Content Include="paginas\Administrador\Solicitudes\solicitud_productos.aspx" />
     <Content Include="paginas\Cliente\cliente.aspx" />
     <Content Include="paginas\Cliente\Listas\consultar_lista.aspx" />
     <Content Include="paginas\Cliente\Listas\listas.aspx" />
@@ -112,6 +112,7 @@
     <Content Include="paginas\Cliente\Negocios\modificar_negocio.aspx" />
     <Content Include="paginas\Cliente\Negocios\productos.aspx" />
     <Content Include="paginas\Cliente\Negocios\solicitar_producto.aspx" />
+    <Content Include="paginas\Cliente\Productos\busqueda_producto.aspx" />
     <Content Include="paginas\Cliente\Productos\categorias_productos.aspx" />
     <Content Include="paginas\Cliente\Productos\productos_por_categoria.aspx" />
     <Content Include="paginas\Olvide_Contrasena\olvide_contrasena.aspx" />
@@ -155,19 +156,19 @@
     <Compile Include="paginas\Administrador\Productos\productos.aspx.designer.cs">
       <DependentUpon>productos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx.cs">
-      <DependentUpon>aprobar_negocio.aspx</DependentUpon>
+    <Compile Include="paginas\Administrador\Solicitudes\aprobar_producto.aspx.cs">
+      <DependentUpon>aprobar_producto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="paginas\Administrador\Solicitudes\aprobar_negocio.aspx.designer.cs">
-      <DependentUpon>aprobar_negocio.aspx</DependentUpon>
+    <Compile Include="paginas\Administrador\Solicitudes\aprobar_producto.aspx.designer.cs">
+      <DependentUpon>aprobar_producto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="paginas\Administrador\Solicitudes\solicitud_negocios.aspx.cs">
-      <DependentUpon>solicitud_negocios.aspx</DependentUpon>
+    <Compile Include="paginas\Administrador\Solicitudes\solicitud_productos.aspx.cs">
+      <DependentUpon>solicitud_productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="paginas\Administrador\Solicitudes\solicitud_negocios.aspx.designer.cs">
-      <DependentUpon>solicitud_negocios.aspx</DependentUpon>
+    <Compile Include="paginas\Administrador\Solicitudes\solicitud_productos.aspx.designer.cs">
+      <DependentUpon>solicitud_productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\cliente.aspx.cs">
       <DependentUpon>cliente.aspx</DependentUpon>
@@ -231,6 +232,13 @@
     </Compile>
     <Compile Include="paginas\Cliente\Negocios\solicitar_producto.aspx.designer.cs">
       <DependentUpon>solicitar_producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\busqueda_producto.aspx.cs">
+      <DependentUpon>busqueda_producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\Productos\busqueda_producto.aspx.designer.cs">
+      <DependentUpon>busqueda_producto.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\Productos\categorias_productos.aspx.cs">
       <DependentUpon>categorias_productos.aspx</DependentUpon>
