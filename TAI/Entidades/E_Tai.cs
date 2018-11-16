@@ -81,7 +81,6 @@ namespace Entidades
         private int _IdProducto;
         private string _NombreProducto;
         private string _Marca;
-        private string _Descripcion;
         private int _CantidadProducto;
         private string _EstadoProducto;
         private string _MedidaProducto;
@@ -95,7 +94,6 @@ namespace Entidades
             _IdProducto = 0;
             _NombreProducto = string.Empty;
             _Marca = string.Empty;
-            _Descripcion = string.Empty;
             _CantidadProducto = 0;
             _MedidaProducto = string.Empty;
             _CategoriaProducto = string.Empty;
@@ -107,7 +105,6 @@ namespace Entidades
         public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
         public string NombreProducto { get => _NombreProducto; set => _NombreProducto = value; }
         public string Marca { get => _Marca; set => _Marca = value; }
-        public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
         public int CantidadProducto { get => _CantidadProducto; set => _CantidadProducto = value; }
         public string EstadoProducto { get => _EstadoProducto; set => _EstadoProducto = value; }
         public string MedidaProducto { get => _MedidaProducto; set => _MedidaProducto = value; }
@@ -358,7 +355,7 @@ namespace Entidades
         private string _Accion;
         private int _IdUsuario;
         private int _IdLista;
-       // private string _NombreLista;
+        private string _NombreLista;
         #endregion
 
         #region Contructor
@@ -367,7 +364,7 @@ namespace Entidades
             _Accion = string.Empty;
             _IdLista = 0;
             _IdUsuario = 0;
-           // _NombreLista = string.Empty;
+            _NombreLista = string.Empty;
         }
         #endregion
 
@@ -375,7 +372,7 @@ namespace Entidades
         public string Accion { get => _Accion; set => _Accion = value; }
         public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
         public int IdLista { get => _IdLista; set => _IdLista = value; }
-        //public string NombreLista { get => _NombreLista; set => _NombreLista = value; }
+        public string NombreLista { get => _NombreLista; set => _NombreLista = value; }
         #endregion
     }
 

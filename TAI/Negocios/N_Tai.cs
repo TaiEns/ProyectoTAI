@@ -371,12 +371,12 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_ProductoNegocios>(Sp, pEntidad);
         }
 
-        public string BorraProductoNegocios(int pIdProducto)
+        public string BorraProductoNegocios(int pIdProductoNegocio)
         {
             E_ProductoNegocios Entidad = new E_ProductoNegocios
             {
                 Accion = "BORRAR",
-                IdProducto = pIdProducto
+                IdProductoNegocio = pIdProductoNegocio
             };
             return ObjIBM.IBM_Entidad<E_ProductoNegocios>(Sp, Entidad);
         }
@@ -410,7 +410,10 @@ namespace Negocios
             return (from User in LstNegocios() where User.IdProducto == pIdProducto select User).FirstOrDefault();
         }
 
-
+        public E_ProductoNegocios BuscarProductoNegociosPorIdProductoNegocio(int pIdProductoNegocio)
+        {
+            return (from User in LstNegocios() where User.IdProductoNegocio == pIdProductoNegocio select User).FirstOrDefault();
+        }
     }
 
     public class N_HorarioNegocios
