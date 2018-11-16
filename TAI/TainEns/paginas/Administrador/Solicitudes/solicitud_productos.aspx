@@ -59,7 +59,6 @@
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="CategoriaProducto" HeaderText="Categoria" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
                     <asp:CommandField ButtonType="Button" CausesValidation="False" HeaderText="Ver" InsertVisible="False" SelectText="Ver" ShowCancelButton="False" ShowSelectButton="True" />
                 </Columns>
             </asp:GridView>
