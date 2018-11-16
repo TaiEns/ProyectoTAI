@@ -25,7 +25,6 @@ namespace TainEns.paginas.Administrador.Productos
             {
                 ObjEP.NombreProducto = Nombre.Text;
                 ObjEP.CantidadProducto = Convert.ToInt16(Cantidad.Text);
-                ObjEP.Descripcion = Descripcion.Value;
                 ObjEP.EstadoProducto = "3";
                 ObjEP.Marca = Marca.Text;
                 ObjEP.MedidaProducto = ddlMedida.Text;
