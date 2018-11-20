@@ -39,10 +39,14 @@ namespace TainEns.paginas.Cliente.Negocios
                 if (UN.IdUsuario == IdUsuario)
                 {
                     Neg = NNeg.BuscarNegocioPorId(UN.IdNegocios);
-                    if( Neg.EstadoNegocio == "3")
+                    if (Neg != null) 
                     {
-                        LstN.Add(new N_Negocio().BuscarNegocioPorId(UN.IdNegocios));
+                        if (Neg.EstadoNegocio == "3")
+                        {
+                            LstN.Add(new N_Negocio().BuscarNegocioPorId(UN.IdNegocios));
+                        }
                     }
+                    
                     
                 }
             }
@@ -57,6 +61,7 @@ namespace TainEns.paginas.Cliente.Negocios
         protected void ApagarComponentes()
         {
             pELiminar.Visible = false;
+            pELiminarConf.Visible = false;
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,6 +174,17 @@ namespace TainEns.paginas.Cliente.Negocios
 
         protected void btnSi_Click(object sender, EventArgs e)
         {
+            pELiminarConf.Visible = true;
+            pELiminar.Visible = false;
+        }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            ApagarComponentes();
+        }
+
+        protected void btnSiC_Click(object sender, EventArgs e)
+        {
             int idNegocio = Convert.ToInt16(Session["IdNegocio"]);
             ObjEN = ObjNN.BuscarNegocioPorId(idNegocio);
             string msnBN = ObjNN.BorrarNegocio2(ObjEN);
@@ -176,7 +192,7 @@ namespace TainEns.paginas.Cliente.Negocios
             Response.Redirect("mis_negocios.aspx");
         }
 
-        protected void btnNo_Click(object sender, EventArgs e)
+        protected void btnNoC_Click(object sender, EventArgs e)
         {
             ApagarComponentes();
         }

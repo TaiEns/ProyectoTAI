@@ -117,6 +117,17 @@
                 <asp:Button ID="btnNo" runat="server" Text="No" class="btn btn-primary cancelar" OnClick="btnNo_Click" />
             </div>
         </asp:Panel>
+
+        <asp:Panel ID="pELiminarConf" runat="server"  class="card form-signin" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title"><asp:Label runat="server" ID="Label1" Text="Seguro"></asp:Label></h5>
+                <div class="text-center">
+                    <p>¿Realmente Seguro que quieres eliminar este producto de tu negocio?, No habrá otra oportunidad</p>
+                </div>
+                <asp:Button ID="Button3" runat="server" Text="Si" class="btn btn-primary" OnClick="btnSiC_Click" />
+                <asp:Button ID="Button4" runat="server" Text="No" class="btn btn-primary cancelar" OnClick="btnNoC_Click" />
+            </div>
+        </asp:Panel>
     </form>
 
     <footer class="footer azuloscuro">
