@@ -48,6 +48,8 @@
                 <asp:Button ID="IniciarSesion" runat="server" Text="Iniciar Sesión" class="btn btn-lg btn-primary btn-block azuloscuro" OnClick="IniciarSesion_Click"/>
                 <!--<button id="IniciarSesion" class="btn btn-lg btn-primary btn-block azuloscuro" type="submit">Iniciar Sesión</button>-->
 
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+
                 <asp:Panel ID="pnErrorUsuarioContra" runat="server" class="alert alert-warning alert-dismissible fade show bg-danger" role="alert" style="margin-bottom: 0; height: 40px;">
                     <p style="color: #fff; font-family: Roboto; margin-bottom: 0; display: inline; margin: auto;">Usuario o contraseña incorrectos</p>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color: #fff;">

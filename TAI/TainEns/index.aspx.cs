@@ -18,16 +18,20 @@ namespace TainEns
         N_Rol ObjNR = new N_Rol();
         E_UsuarioRol ObjEUR = new E_UsuarioRol();
         N_UsuarioRol ObjNUR = new N_UsuarioRol();
-
+        int intentos;//si lo pongo aqui siempre lo actualiza a 3
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack){
+            intentos = 3;//si lo pongo aqui siempre se actualiza a 3
+            if (!IsPostBack)
+            {
+               // intentos = 3;/// si lo pongo aqui no hace nada
                 Inicio();
             }
         }
 
         protected void Inicio()
         {
+            intentos = 3;/// si lo pongo aqui no hace nada
             ApagarComponentes();
         }
 
@@ -46,7 +50,7 @@ namespace TainEns
                 Response.Redirect("paginas/Administrador/administrador.aspx");
             }
             if (ObjEUR.IdRol == 2)
-            { 
+            {
                 Response.Redirect("paginas/Cliente/cliente.aspx");
             }
             if (ObjEUR.IdRol == 3)
@@ -65,17 +69,51 @@ namespace TainEns
         protected void IniciarSesion_Click(object sender, EventArgs e)
         {
             ObjEU = ObjNU.BuscarUsuarioPorUsuario(Usuario.Text);
-            if(ObjEU != null)
+            if (ObjEU != null)
             {
-                if(ObjEU.PasswordUsuario == Contrasena.Text)
+                if (intentos > 0)
                 {
-                    Direccionar(ObjEU);
+                    if (ObjEU.PasswordUsuario == Contrasena.Text)
+                    {
+                        intentos = 3;
+                        Direccionar(ObjEU);
+                    }
+                    else
+                    {
+                        pnErrorUsuarioContra.Visible = true;
+
+                        switch (intentos)
+                        {
+                            case 3:
+                                {
+                                    Label1.Text = "quedan 2 intentos";
+                                    intentos = 2;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Label1.Text = "quedan 1 intentos";
+                                    intentos = 1;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Label1.Text = "quedan 0 intentos";
+                                    intentos = 0;
+                                    break;
+                                }
+                            case 0:
+                                {
+                                    Label1.Text = "espera 5 minutos";
+                                    break;
+                                }
+                        }
+                    }
                 }
                 else
                 {
-                    pnErrorUsuarioContra.Visible = true;
+                    Label1.Text = "no quedan intentos";
                 }
-                
             }
             else
             {
