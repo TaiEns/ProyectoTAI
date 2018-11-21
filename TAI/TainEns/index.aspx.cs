@@ -24,7 +24,8 @@ namespace TainEns
             intentos = 3;//si lo pongo aqui siempre se actualiza a 3
             if (!IsPostBack)
             {
-               // intentos = 3;/// si lo pongo aqui no hace nada
+                Session["Intentos"] = 3;
+                // intentos = 3;/// si lo pongo aqui no hace nada
                 Inicio();
             }
         }
@@ -68,6 +69,7 @@ namespace TainEns
 
         protected void IniciarSesion_Click(object sender, EventArgs e)
         {
+            intentos = Convert.ToInt16(Session["Intentos"]);
             ObjEU = ObjNU.BuscarUsuarioPorUsuario(Usuario.Text);
             if (ObjEU != null)
             {
@@ -87,18 +89,21 @@ namespace TainEns
                             case 3:
                                 {
                                     Label1.Text = "quedan 2 intentos";
+                                    Session["Intentos"] = 2;
                                     intentos = 2;
                                     break;
                                 }
                             case 2:
                                 {
                                     Label1.Text = "quedan 1 intentos";
+                                    Session["Intentos"] = 1;
                                     intentos = 1;
                                     break;
                                 }
                             case 1:
                                 {
                                     Label1.Text = "quedan 0 intentos";
+                                    Session["Intentos"] = 0;
                                     intentos = 0;
                                     break;
                                 }
