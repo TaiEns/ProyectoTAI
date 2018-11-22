@@ -68,7 +68,7 @@
 
         <!-- Modal -->
         <asp:Panel ID="pProducto" runat="server"  class="card form-signin" style="width: 25rem;">
-            <asp:Image ID="Image1" runat="server" ImageUrl="../../../img/categorias/pan.jpg"/>
+            <asp:Image ID="Image1" runat="server" ImageUrl="../../../img/categorias/pan.jpg" Height="300px" Width="300px"/>
             <div class="card-body">
                 <h5 class="card-title"><asp:Label runat="server" ID="lblCardTitle" Text=""></asp:Label></h5>
                 <div class="text-center">

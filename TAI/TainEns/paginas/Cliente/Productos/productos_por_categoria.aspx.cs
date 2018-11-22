@@ -74,6 +74,7 @@ namespace TainEns.paginas.Cliente.Productos
             ApagarComponentes();
             int IdProducto = Convert.ToInt16(grvProductos.SelectedDataKey["IdProducto"]);
             Session["IdProducto"] = IdProducto;
+            /*
             switch (Convert.ToString(Session["Categoria"]))
             {
                 case "Carnes":
@@ -122,7 +123,8 @@ namespace TainEns.paginas.Cliente.Productos
                         break;
                     }
             }
-            //string rutaimagen = "../../../img/categorias"+ Convert.ToString(Session["Categoria"]).ToLower()+".jpg";
+            */
+            Image1.ImageUrl = "../../../img/productos/"+IdProducto+".jpg";
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
 

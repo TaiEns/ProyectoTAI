@@ -91,6 +91,18 @@
     <Content Include="img\instagram-logo.png" />
     <Content Include="img\LOGO-1.png" />
     <Content Include="img\negocio.jpg" />
+    <Content Include="img\productos\1.jpg" />
+    <Content Include="img\productos\10.jpg" />
+    <Content Include="img\productos\1005.jpg" />
+    <Content Include="img\productos\11.jpg" />
+    <Content Include="img\productos\2.jpg" />
+    <Content Include="img\productos\3.jpg" />
+    <Content Include="img\productos\4.jpg" />
+    <Content Include="img\productos\5.jpg" />
+    <Content Include="img\productos\6.jpg" />
+    <Content Include="img\productos\7.jpg" />
+    <Content Include="img\productos\8.jpg" />
+    <Content Include="img\productos\9.jpg" />
     <Content Include="img\usuario.png" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -304,6 +316,7 @@
       <Name>Negocios</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
