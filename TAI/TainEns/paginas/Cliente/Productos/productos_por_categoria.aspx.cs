@@ -37,7 +37,7 @@ namespace TainEns.paginas.Cliente.Productos
             {
                 if (P.CategoriaProducto == Categoria)
                 {
-                    LstNT.Add(new N_Producto().BuscarProductoPorCategoria(P.CategoriaProducto));
+                    LstNT.Add(new N_Producto().BuscarProductoPorId(P.IdProducto));
                 }
             }
 
@@ -74,6 +74,55 @@ namespace TainEns.paginas.Cliente.Productos
             ApagarComponentes();
             int IdProducto = Convert.ToInt16(grvProductos.SelectedDataKey["IdProducto"]);
             Session["IdProducto"] = IdProducto;
+            switch (Convert.ToString(Session["Categoria"]))
+            {
+                case "Carnes":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/carnes.jpg";
+                        break;
+                    }
+                case "Bebidas":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/bebidas.jpg";
+                        break;
+                    }
+                case "Higiene":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/higiene.jpg";
+                        break;
+                    }
+                case "Fruta":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/fruta.jpg";
+                        break;
+                    }
+                case "Lacteos":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/lacteos.jpg";
+                        break;
+                    }
+                case "Snacks":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/snacks.jpg";
+                        break;
+                    }
+                case "Panaderia":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/pan.jpg";
+                        break;
+                    }
+                case "Especias":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/especias.jpg";
+                        break;
+                    }
+                case "Cereales":
+                    {
+                        Image1.ImageUrl = "../../../img/categorias/cereal.jpg";
+                        break;
+                    }
+            }
+            //string rutaimagen = "../../../img/categorias"+ Convert.ToString(Session["Categoria"]).ToLower()+".jpg";
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text.RegularExpressions;
+
 
 using Entidades;
 using Negocios;
@@ -76,10 +78,24 @@ namespace TainEns.paginas.Cliente.Productos
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            ObjEP = ObjNP.BuscarProductoPorNombre(tbBuscarProducto.Text);
-            if(ObjEP != null)
+            List<E_Producto> lista = new N_Producto().LstProductos();
+            List<E_Producto> lista2 = new List<E_Producto>();
+            string pattern = tbBuscarProducto.Text;
+            pattern = pattern.ToUpper();
+            foreach(E_Producto producto in lista)
             {
-                Session["Producto"] = ObjEP.NombreProducto;
+                if(Regex.IsMatch(producto.NombreProducto.ToUpper(), pattern))
+                {
+                    lista2.Add(producto);
+                }
+            }
+
+
+
+            //ObjEP = ObjNP.BuscarProductoPorNombre(tbBuscarProducto.Text);
+            if(lista2.Count != 0)
+            {
+                Session["ListaProductos"] = lista2;
                 Response.Redirect("busqueda_producto.aspx");
             }
             else
