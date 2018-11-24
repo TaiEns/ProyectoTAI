@@ -110,10 +110,19 @@ namespace TainEns.paginas.Cliente.Productos
             string msn = ObjNLU.InsertarListaUsuario(ObjELU);
             //grvListas.DataBind();
             int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            //int IdLista;
             //faltaba descomentar funcion buscar lista por nombre de lista
-            int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(tbNombreLista.Text)).IdLista;
+            List<E_ListaUsuario> lstU = new N_ListaUsuario().LstUsuarios();
+            foreach(E_ListaUsuario lista in lstU)
+            {
+                if(lista.IdUsuario == IdUsuario && lista.NombreLista == tbNombreLista.Text)
+                {
+                    ObjELP.IdLista = lista.IdLista;
+                }
+            }
+            //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(tbNombreLista.Text)).IdLista;
             ObjELP.IdProducto = IdProducto;
-            ObjELP.IdLista = IdLista;
+            //ObjELP.IdLista = Idlista;
             pFormLista.Visible = false;
             string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
             Iniciar();
