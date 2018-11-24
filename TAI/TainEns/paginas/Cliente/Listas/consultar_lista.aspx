@@ -53,13 +53,18 @@
 	  </div>
 	</nav>
     <form id="form1" runat="server">
+        <h1>
+            <asp:Label ID="nombrelista" runat="server" Text=""></asp:Label>
+        </h1>
         <div class="container">
             <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto" OnSelectedIndexChanged="grvProductos_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
-                    <asp:CommandField ButtonType="Button" SelectText="-" ShowSelectButton="True" />
+                    <asp:CommandField ButtonType="Button" SelectText="Eliminar" ShowSelectButton="True" HeaderText="Eliminar" />
                 </Columns>
             </asp:GridView>
+            <br />
+            <asp:Label ID="Label1" runat="server"></asp:Label>
         </div>
     </form>
 

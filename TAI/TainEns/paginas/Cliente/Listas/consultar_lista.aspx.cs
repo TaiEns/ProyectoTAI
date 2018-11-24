@@ -24,24 +24,16 @@ namespace TainEns.paginas.Cliente.Listas
 
         protected void Iniciar()
         {
-            int IdLista = Convert.ToInt16(Session["IdLista"]);
-            List<E_ListaProducto> LstUN = new N_ListaProducto().LstUsuarios();
-            List<E_Usuario> LstEU = new N_Usuario().LstUsuarios();
-            List<E_Producto> LstN = new List<E_Producto>();
-            foreach (E_ListaProducto UN in LstUN)
-            {
-                if (UN.IdLista == IdLista)
-                {
-                    ObjEP = ObjNP.BuscarProductoPorId(UN.IdProducto);
-                    // LstN.Add(new N_Producto().BuscarListaProductoporlista(UN.IdLista));
-                    if(ObjEP != null)
-                    {
-                        LstN.Add(ObjEP);
-                    }
-                }
-            }
+            int IdLista = Convert.ToInt16(Session["idlista"]);
+            nombrelista.Text = (new N_ListaUsuario().BuscarListaUsuarioporLista(IdLista)).NombreLista;
+            List<E_ListaProducto> LstLP = new N_ListaProducto().LstUsuarios(); 
+            List < E_Producto > LstP = new List<E_Producto>();
 
-            grvProductos.DataSource = LstN;
+            LstP.Add((new N_Producto().BuscarProductoPorId(1)));
+            LstP.Add((new N_Producto().BuscarProductoPorId(2)));
+            //el id producto siempre es 0, no agarra bien ese parametro
+            Label1.Text = "id producto "+LstLP[2].IdProducto+" id lista "+ LstLP[2].IdLista;
+            grvProductos.DataSource = LstP;
             grvProductos.DataBind();
         }
 

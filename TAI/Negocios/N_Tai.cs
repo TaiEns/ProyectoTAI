@@ -589,6 +589,7 @@ namespace Negocios
         public DataTable GetDT_ListaProducto()
         {
             return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdLista");
+            //return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdProducto");
         }
 
         public List<E_ListaProducto> LstUsuarios()
