@@ -58,7 +58,7 @@
                 AutoGenerateColumns="False" DataKeyNames="IdLista" CssClass="table table-hover"
                 OnRowCommand="GridView1_RowCommand">
                 <Columns>
-                    <asp:BoundField DataField="IdLista" HeaderText="Nombre" />
+                    <asp:BoundField DataField="NombreLista" HeaderText="Nombre" />
                     <asp:ButtonField ButtonType="Button" CommandName="colsultar" HeaderText="Productos" Text="Consultar" />
                     <asp:ButtonField ButtonType="Button" CommandName="eliminar" HeaderText="Eliminar" Text="Eliminar" />
                     <asp:ButtonField ButtonType="Button" CommandName="comparar" HeaderText="Modificar" Text="Comparar" />

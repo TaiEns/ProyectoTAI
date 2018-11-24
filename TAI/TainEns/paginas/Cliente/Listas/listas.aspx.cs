@@ -46,9 +46,19 @@ namespace TainEns.paginas.Cliente.Listas
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
             string comando = e.CommandName;
             string str = e.CommandArgument.ToString();
-            int lista = Convert.ToInt16(grvListas.Rows[Convert.ToInt16(str)].Cells[0].Text);
+            string nombrelista = grvListas.Rows[Convert.ToInt16(str)].Cells[0].Text;
+            //int lista;
+            List<E_ListaUsuario> lstLU = new N_ListaUsuario().LstUsuarios();
+            foreach(E_ListaUsuario ls in lstLU)
+            {
+                if (ls.NombreLista==nombrelista && ls.IdUsuario == IdUsuario)
+                {
+                    Session["idlista"] = ls.IdLista;
+                }
+            }
             //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(nombrenegocio)).IdLista;
             //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporLista(lista)).IdLista;
             //Session["IdLista"] = IdLista;
@@ -68,7 +78,23 @@ namespace TainEns.paginas.Cliente.Listas
                 case "eliminar":
                     {
                         //string msnB = ObjNLU.BorraListaUsuario(IdLista);
-                        grvListas.DataBind();
+
+                        //eliminando elementos de listaproducto
+                        N_ListaProducto NLP = new N_ListaProducto();
+                        List<E_ListaProducto> lstLP = new N_ListaProducto().LstUsuarios();
+                        foreach(E_ListaProducto LP in lstLP)
+                        {
+                            if(LP.IdLista == Convert.ToInt16(Session["idlista"]))
+                            {
+                                NLP.BorraListaProducto(Convert.ToInt16(Session["idlista"]));
+                            }
+                        }
+
+                        // Eliminando lista
+                        N_ListaUsuario LU = new N_ListaUsuario();
+                        LU.BorraListaUsuario(Convert.ToInt16(Session["idlista"]));
+                        //grvListas.DataBind();
+                        Iniciar();
                         break;
                     };
                 default:

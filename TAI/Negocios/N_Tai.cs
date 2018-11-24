@@ -516,6 +516,7 @@ namespace Negocios
             E_ListaUsuario Entidad = new E_ListaUsuario
             {
                 Accion = "BORRAR",
+                IdLista = pIdLista,
                 IdUsuario = pIdLista
             };
             return ObjIBM.IBM_Entidad<E_ListaUsuario>(Sp, Entidad);
