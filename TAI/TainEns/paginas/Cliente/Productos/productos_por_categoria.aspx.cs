@@ -74,56 +74,7 @@ namespace TainEns.paginas.Cliente.Productos
             ApagarComponentes();
             int IdProducto = Convert.ToInt16(grvProductos.SelectedDataKey["IdProducto"]);
             Session["IdProducto"] = IdProducto;
-            /*
-            switch (Convert.ToString(Session["Categoria"]))
-            {
-                case "Carnes":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/carnes.jpg";
-                        break;
-                    }
-                case "Bebidas":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/bebidas.jpg";
-                        break;
-                    }
-                case "Higiene":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/higiene.jpg";
-                        break;
-                    }
-                case "Fruta":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/fruta.jpg";
-                        break;
-                    }
-                case "Lacteos":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/lacteos.jpg";
-                        break;
-                    }
-                case "Snacks":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/snacks.jpg";
-                        break;
-                    }
-                case "Panaderia":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/pan.jpg";
-                        break;
-                    }
-                case "Especias":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/especias.jpg";
-                        break;
-                    }
-                case "Cereales":
-                    {
-                        Image1.ImageUrl = "../../../img/categorias/cereal.jpg";
-                        break;
-                    }
-            }
-            */
+            
             Image1.ImageUrl = "../../../img/productos/"+IdProducto+".jpg";
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
@@ -155,11 +106,17 @@ namespace TainEns.paginas.Cliente.Productos
         {
             int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
             ObjELU.IdUsuario = IdUsuario;
-            //ObjELU.NombreLista = tbNombreLista.Text;
-
+            ObjELU.NombreLista = tbNombreLista.Text;
             string msn = ObjNLU.InsertarListaUsuario(ObjELU);
-            grvListas.DataBind();
+            //grvListas.DataBind();
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            //faltaba descomentar funcion buscar lista por nombre de lista
+            int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(tbNombreLista.Text)).IdLista;
+            ObjELP.IdProducto = IdProducto;
+            ObjELP.IdLista = IdLista;
             pFormLista.Visible = false;
+            string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+            Iniciar();
         }
 
         protected void btnCerrar2_Click(object sender, EventArgs e)

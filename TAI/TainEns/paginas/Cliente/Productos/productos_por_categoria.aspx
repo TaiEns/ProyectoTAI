@@ -85,11 +85,11 @@
                 <h5 class="card-title"><asp:Label runat="server" ID="lblListasTitulo" Text="Listas de Productos"></asp:Label></h5>
                 <asp:GridView ID="grvListas" runat="server" AutoGenerateColumns="False" DataKeyNames="IdLista" OnSelectedIndexChanged="grvListas_SelectedIndexChanged">
                     <Columns>
-                        <asp:BoundField DataField="IdLista" />
-                        <asp:CommandField ButtonType="Button" SelectText="-" ShowSelectButton="True" />
+                        <asp:BoundField DataField="IdLista" Visible="False" />
+                        <asp:BoundField DataField="NombreLista" HeaderText="Lista" />
+                        <asp:CommandField ButtonType="Button" HeaderText="Agregar" InsertText="" SelectText="Agregar" ShowSelectButton="True" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                 <asp:Panel ID="pFormLista" runat="server">
                     <asp:TextBox ID="tbNombreLista" runat="server" CssClass="form-control"></asp:TextBox>
                     <asp:Button ID="btnListo" runat="server" Text="Listo" CssClass="btn btn-primary" OnClick="btnListo_Click"/>
