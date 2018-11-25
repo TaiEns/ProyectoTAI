@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscar_negocio.aspx.cs" Inherits="TainEns.paginas.Cliente.Negocios.buscar_negocio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="consultar_negocio.aspx.cs" Inherits="TainEns.paginas.Cliente.Negocios.consultar_negocio" %>
 
 <!DOCTYPE html>
 
@@ -52,33 +52,48 @@
 	    </form>
 	  </div>
 	</nav>
-    <form id="form1" runat="server">
 
-        <div class="form-signin">
-            <div class="form-inline my-2 my-lg-0">
-                <asp:TextBox ID="tbBuscarNegocio" runat="server" class="form-control mr-sm-2" type="search" placeholder="Buscar Negocio" aria-label="Search"></asp:TextBox>
-                <button runat="server" id="btnBuscar" onserverclick="btnBuscar_Click" class="btn btn-outline-success my-2 my-sm-0"><i class="fas fa-search"></i></button>
-                <div class="invalid-feedback">
-                    <asp:Label runat="server" ID="lblNegocioNoEncontrado" Text=""></asp:Label>
+    <asp:Panel ID="Panel1" runat="server">
+        <div class="container">
+            <div class="row">
+                <h1><asp:Label ID="lbnegocio" runat="server" Text=""></asp:Label></h1>   
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                            <asp:Label ID="lbnombreneg" runat="server" Text="Label"></asp:Label>
+                        </h5>
+                        <p class="card-text">
+                            <asp:Label ID="lbubicacionneg" runat="server" Text="Label"></asp:Label>
+                        </p>
+                        <p class="card-text">
+                            <asp:Label ID="lbtiponeg" runat="server" Text="Label"></asp:Label>
+                        </p>
+                        <p class="card-text">
+                            <asp:Label ID="lbnumneg" runat="server" Text="Label"></asp:Label>
+                        </p>
+                         <p class="card-text">Horario</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <h2>Lista de Productos</h2>
+                    <form id="form1" runat="server">
+                        <asp:GridView ID="gridNombreP" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:BoundField DataField="NombreProducto" HeaderText="Producto" />
+                                <asp:BoundField DataField="MedidaProducto" HeaderText="Precio" />
+                            </Columns>
+                        </asp:GridView>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <asp:Button ID="regresar" runat="server" Text="Regresar" OnClick="regresar_Click"/>
-
-        <asp:Panel ID="Panel1" runat="server">
-            <asp:GridView ID="gridnegocios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios" OnSelectedIndexChanged="gridnegocios_SelectedIndexChanged">
-                <Columns>
-                    <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
-                    <asp:BoundField DataField="CalleNegocio" HeaderText="Ubicación" />
-                    <asp:BoundField DataField="TipoNegocio" HeaderText="Tipo" />
-                    <asp:BoundField DataField="TelefonoNegocio" HeaderText="Teléfono" />
-                    <asp:CommandField ButtonType="Button" HeaderText="Mostrar" SelectText="Mostrar" ShowSelectButton="True" />
-                </Columns>
-            </asp:GridView>
-        </asp:Panel>
-
-    </form>
+    </asp:Panel>
     <!--
     <footer class="footer azuloscuro">
     	<div class="footer-content">

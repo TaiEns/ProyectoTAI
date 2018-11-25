@@ -66,5 +66,11 @@ namespace TainEns.paginas.Cliente.Negocios
         {
             Iniciar();
         }
+
+        protected void gridnegocios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["IdNegocio"] = Convert.ToInt16(gridnegocios.SelectedDataKey["IdNegocios"]);
+            Response.Redirect("consultar_negocio.aspx");
+        }
     }
 }
