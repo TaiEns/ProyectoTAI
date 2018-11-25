@@ -16,6 +16,10 @@ namespace TainEns.paginas.Cliente.Productos
     {
         E_Producto ObjEP = new E_Producto();
         N_Producto ObjNP = new N_Producto();
+        E_ListaUsuario ObjELU = new E_ListaUsuario();
+        N_ListaUsuario ObjNLU = new N_ListaUsuario();
+        E_ListaProducto ObjELP = new E_ListaProducto();
+        N_ListaProducto ObjNLP = new N_ListaProducto();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,6 +32,7 @@ namespace TainEns.paginas.Cliente.Productos
             Panelbusqueda.Visible = false;
             Panelcategorias.Visible = true;
             pProducto.Visible = false;
+            pListas.Visible = false;
         }
         #region Botones
         protected void btnCarnes_Click(object sender, EventArgs e)
@@ -125,16 +130,32 @@ namespace TainEns.paginas.Cliente.Productos
         #endregion
 
         #region Botones
-        
+
 
         protected void btnAgregaraLista_Click(object sender, EventArgs e)
         {
             //ddlListasProductos.Visible = true;
+            //grvListas.DataSource =;
+            int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
+            List<E_ListaUsuario> LstELU = new N_ListaUsuario().LstUsuarios();
+            List<E_ListaUsuario> LstELN = new List<E_ListaUsuario>();
+            foreach (E_ListaUsuario P in LstELU)
+            {
+                if (P.IdUsuario == IdUsuario)
+                {
+                    LstELN.Add(P);
+                }
+            }
+
+            grvListas.DataSource = LstELN;
+            grvListas.DataBind();
+            pListas.Visible = true;
         }
 
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
             //ApagarComponentes();
+            pProducto.Visible = false;
         }
         #endregion
 
@@ -142,12 +163,63 @@ namespace TainEns.paginas.Cliente.Productos
         {
             // Panelcategorias.Visible = true;
             int IdProducto = Convert.ToInt16(gridbusqueda.SelectedDataKey["IdProducto"]);
+            Session["IdProducto"] = IdProducto;
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
             lblCardTitle.Text = ObjEP.NombreProducto;
             lblMarca.Text = ObjEP.Marca;
             lblCantidad.Text = Convert.ToString(ObjEP.CantidadProducto);
             lblMedida.Text = ObjEP.MedidaProducto;
+        }
+
+        protected void grvListas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            int IdLista = Convert.ToInt16(grvListas.SelectedDataKey["IdLista"]);
+            E_ListaProducto ObjELP = new E_ListaProducto();
+            ObjELP.IdProducto = IdProducto;
+            ObjELP.IdLista = IdLista;
+
+            string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+            Iniciar();
+
+        }
+
+        protected void btnAgregarLista1_Click(object sender, EventArgs e)
+        {
+            pFormLista.Visible = true;
+        }
+
+        protected void btnListo_Click(object sender, EventArgs e)
+        {
+            
+            int IdUsuario = Convert.ToInt16(Session["IdUsuario"]);
+            ObjELU.IdUsuario = IdUsuario;
+            ObjELU.NombreLista = tbNombreLista.Text;
+            string msn = ObjNLU.InsertarListaUsuario(ObjELU);
+            //grvListas.DataBind();
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            //int IdLista;
+            //faltaba descomentar funcion buscar lista por nombre de lista
+            List<E_ListaUsuario> lstU = new N_ListaUsuario().LstUsuarios();
+            foreach (E_ListaUsuario lista in lstU)
+            {
+                if (lista.IdUsuario == IdUsuario && lista.NombreLista == tbNombreLista.Text)
+                {
+                    ObjELP.IdLista = lista.IdLista;
+                }
+            }
+            //int IdLista = (new N_ListaUsuario().BuscarListaUsuarioporNombre(tbNombreLista.Text)).IdLista;
+            ObjELP.IdProducto = IdProducto;
+            //ObjELP.IdLista = Idlista;
+            pFormLista.Visible = false;
+            string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+            Iniciar();
+        }
+
+        protected void btnCerrar2_Click(object sender, EventArgs e)
+        {
+            pListas.Visible = false;
         }
     }
 }

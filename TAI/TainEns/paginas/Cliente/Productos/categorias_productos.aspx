@@ -197,12 +197,31 @@
                     <asp:Label runat="server" ID="lblCantidad" Text=""></asp:Label>
                     <asp:Label runat="server" ID="lblMedida" Text=""></asp:Label>
                 </div>
-                <asp:DropDownList ID="ddlListasProductos" runat="server" CssClass="form-control" >
-                </asp:DropDownList>
                 <asp:Button ID="btnAgregaraLista" runat="server" Text="Agregar" class="btn btn-primary" OnClick="btnAgregaraLista_Click" />
                 <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-primary cancelar" OnClick="btnCerrar_Click" />
             </div>
         </asp:Panel>
+
+        <asp:Panel ID="pListas" runat="server"  class="card form-signin" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title"><asp:Label runat="server" ID="lblListasTitulo" Text="Listas de Productos"></asp:Label></h5>
+                <asp:GridView ID="grvListas" runat="server" AutoGenerateColumns="False" DataKeyNames="IdLista" OnSelectedIndexChanged="grvListas_SelectedIndexChanged">
+                    <Columns>
+                        <asp:BoundField DataField="IdLista" Visible="False" />
+                        <asp:BoundField DataField="NombreLista" HeaderText="Lista" />
+                        <asp:CommandField ButtonType="Button" HeaderText="Agregar" InsertText="" SelectText="Agregar" ShowSelectButton="True" />
+                    </Columns>
+                </asp:GridView>
+                <asp:Panel ID="pFormLista" runat="server">
+                    <asp:Label ID="Label1" runat="server" Text="Nueva Lista"></asp:Label>
+                    <asp:TextBox ID="tbNombreLista" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:Button ID="btnListo" runat="server" Text="Listo" CssClass="btn btn-primary" OnClick="btnListo_Click"/>
+                </asp:Panel>
+                <asp:Button ID="btnAgregarLista1" runat="server" Text="Agregar Lista" class="btn btn-primary" OnClick="btnAgregarLista1_Click"/>
+                <asp:Button ID="btnCerrar2" runat="server" Text="Cerrar" class="btn btn-primary cancelar" OnClick="btnCerrar2_Click"/>
+            </div>
+        </asp:Panel>
+
     </form>
 
      <!--
