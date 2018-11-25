@@ -63,6 +63,9 @@
                 </div>
             </div>
         </div>
+
+        <asp:Button ID="regresar" runat="server" Text="Regresar" OnClick="regresar_Click"/>
+
         <asp:Panel ID="Panel1" runat="server">
             <asp:GridView ID="gridnegocios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios">
                 <Columns>

@@ -49,6 +49,15 @@ namespace TainEns.paginas.Cliente.Negocios {
         protected global::System.Web.UI.WebControls.Label lblNegocioNoEncontrado;
         
         /// <summary>
+        /// regresar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button regresar;
+        
+        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>
