@@ -53,6 +53,7 @@
 	  </div>
 	</nav>
     <form id="form1" runat="server">
+
         <div class="form-signin">
             <div class="form-inline my-2 my-lg-0">
                 <asp:TextBox ID="tbBuscarNegocio" runat="server" class="form-control mr-sm-2" type="search" placeholder="Buscar Negocio" aria-label="Search"></asp:TextBox>
@@ -62,6 +63,17 @@
                 </div>
             </div>
         </div>
+        <asp:Panel ID="Panel1" runat="server">
+            <asp:GridView ID="gridnegocios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdNegocios">
+                <Columns>
+                    <asp:BoundField DataField="NombreNegocio" HeaderText="Nombre" />
+                    <asp:BoundField DataField="CalleNegocio" HeaderText="Ubicación" />
+                    <asp:BoundField DataField="TipoNegocio" HeaderText="Tipo" />
+                    <asp:BoundField DataField="TelefonoNegocio" HeaderText="Teléfono" />
+                </Columns>
+            </asp:GridView>
+        </asp:Panel>
+
     </form>
     <!--
     <footer class="footer azuloscuro">

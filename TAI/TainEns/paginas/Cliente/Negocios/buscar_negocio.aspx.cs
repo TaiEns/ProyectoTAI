@@ -16,7 +16,21 @@ namespace TainEns.paginas.Cliente.Negocios
         N_Negocio ObjNN = new N_Negocio();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Iniciar();
+            }
+        }
 
+        protected void Iniciar()
+        {
+            List<E_Negocios> lstN = new N_Negocio().LstNegocios();
+            foreach(E_Negocios E in lstN)
+            {
+                E.CalleNegocio = "Calle "+E.CalleNegocio + " #" + E.NumeroCalle + " Colonia " + E.ColoniaNegocio + " CP: " + E.CodigoPostal;
+            }
+            gridnegocios.DataSource = lstN;
+            gridnegocios.DataBind();
         }
 
         #region Botones
