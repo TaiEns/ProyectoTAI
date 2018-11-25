@@ -103,8 +103,8 @@ namespace TainEns.paginas.Cliente.Productos
                 //Session["ListaProductos"] = lista2;
                 // Response.Redirect("busqueda_producto.aspx");
                 Panelcategorias.Visible = false;
-                grdbusqueda.DataSource = lista2;
-                grdbusqueda.DataBind();
+                gridbusqueda.DataSource = lista2;
+                gridbusqueda.DataBind();
                 Panelbusqueda.Visible = true;
 
             }
@@ -119,35 +119,35 @@ namespace TainEns.paginas.Cliente.Productos
         #region Metodos
         protected void ApagarComponentes()
         {
-            pProducto.Visible = false;
-            ddlListasProductos.Visible = false;
+            //pProducto.Visible = false;
+           // ddlListasProductos.Visible = false;
         }
         #endregion
 
         #region Botones
-        protected void grvProductos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ApagarComponentes();
-            int IdProducto = Convert.ToInt16(grdbusqueda.SelectedDataKey["IdProducto"]);
-            pProducto.Visible = true;
-            ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
-
-            lblCardTitle.Text = ObjEP.NombreProducto;
-            lblMarca.Text = ObjEP.Marca;
-            lblCantidad.Text = Convert.ToString(ObjEP.CantidadProducto);
-            lblMedida.Text = ObjEP.MedidaProducto;
-
-        }
+        
 
         protected void btnAgregaraLista_Click(object sender, EventArgs e)
         {
-            ddlListasProductos.Visible = true;
+            //ddlListasProductos.Visible = true;
         }
 
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
-            ApagarComponentes();
+            //ApagarComponentes();
         }
         #endregion
+
+        protected void gridbusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Panelcategorias.Visible = true;
+            int IdProducto = Convert.ToInt16(gridbusqueda.SelectedDataKey["IdProducto"]);
+            pProducto.Visible = true;
+            ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
+            lblCardTitle.Text = ObjEP.NombreProducto;
+            lblMarca.Text = ObjEP.Marca;
+            lblCantidad.Text = Convert.ToString(ObjEP.CantidadProducto);
+            lblMedida.Text = ObjEP.MedidaProducto;
+        }
     }
 }

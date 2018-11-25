@@ -32,7 +32,7 @@
 	        <a class="nav-link text-white active" href="../Listas/listas.aspx">Lista</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link text-white active" href="#">Productos</a>
+	        <a class="nav-link text-white active" href="categorias_productos.aspx">Productos</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="../Negocios/buscar_negocio.aspx">Negocios</a>
@@ -180,24 +180,14 @@
         </asp:Panel>
         
         <asp:Panel ID="Panelbusqueda" runat="server">
-            <asp:GridView ID="grdbusqueda" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="IdProducto">
-                <AlternatingRowStyle BackColor="White" />
+            <asp:GridView ID="gridbusqueda" runat="server" AutoGenerateColumns="False" DataKeyNames="IdProducto" OnSelectedIndexChanged="gridbusqueda_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="NombreProducto" HeaderText="Producto" />
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:CommandField ButtonType="Button" HeaderText="Mostrar" SelectText="Mostrar" ShowSelectButton="True" />
                 </Columns>
-                <EditRowStyle BackColor="#2461BF" />
-                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
         </asp:Panel>
+        
         <asp:Panel ID="pProducto" runat="server"  class="card form-signin" style="width: 25rem;">
             <img class="card-img-top" src="../../../img/calis_producto.jpg" alt="Card image cap"/>
             <div class="card-body">
