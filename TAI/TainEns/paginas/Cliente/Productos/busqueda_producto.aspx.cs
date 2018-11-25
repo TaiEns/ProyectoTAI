@@ -25,19 +25,13 @@ namespace TainEns.paginas.Cliente.Productos
         protected void Iniciar()
         {
             ApagarComponentes();
-            string Producto = Convert.ToString(Session["Producto"]);
-            List<E_Producto> LstP = new N_Producto().LstProductos();
-            List<E_Producto> LstNT = new List<E_Producto>();
-
-            foreach (E_Producto P in LstP)
+            List<E_Producto> LstP = (List<E_Producto>)Session["Producto"];
+            List<E_Producto> lstep = new List<E_Producto>();
+            foreach(E_Producto p in LstP)
             {
-                if (P.NombreProducto == Producto)
-                {
-                    LstNT.Add(new N_Producto().BuscarProductoPorNombre(P.NombreProducto));
-                }
+                lstep.Add(p);
             }
-
-            grvProductos.DataSource = LstNT;
+            grvProductos.DataSource = lstep;
             grvProductos.DataBind();
         }
 
