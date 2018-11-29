@@ -569,12 +569,12 @@ namespace Negocios
             return ObjIBM.IBM_Entidad<E_ListaProducto>(Sp, pEntidad);
         }
 
-        public string BorraListaProducto(int pIdLista)
+        public string BorraListaProducto(int pIdListaProducto)
         {
             E_ListaProducto Entidad = new E_ListaProducto
             {
                 Accion = "BORRAR",
-                IdLista = pIdLista
+                IdListaProducto = pIdListaProducto
             };
             return ObjIBM.IBM_Entidad<E_ListaProducto>(Sp, Entidad);
         }
@@ -588,7 +588,7 @@ namespace Negocios
         //listado general de usuario en formato DataTable y list <E_Sistema>
         public DataTable GetDT_ListaProducto()
         {
-            return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdLista");
+            return ObjLst.DT_ListadoGeneral("[tbListaProducto]", "IdListaProducto");
             //return ObjLst.DT_ListadoGeneral("[tbListaUsuario]", "IdProducto");
         }
 
@@ -598,6 +598,11 @@ namespace Negocios
         }
 
         // Busqueda de usuarios por diferente creiterio
+
+        public E_ListaProducto BuscarListaProductoporIdListaProducto(int pIdListaProducto)
+        {
+            return (from User in LstUsuarios() where User.IdListaProducto == pIdListaProducto select User).FirstOrDefault();
+        }
 
         public E_ListaProducto BuscarListaProductoporlista(int pIdLista)
         {
