@@ -380,6 +380,7 @@ namespace Entidades
     {
         #region Atributos
         private string _Accion;
+        private int _IdListaProducto;
         private int _IdProducto;
         private int _IdLista;
         #endregion
@@ -387,6 +388,7 @@ namespace Entidades
         #region Contructor
         public E_ListaProducto()
         {
+            _IdListaProducto = 0;
             _IdLista = 0;
             _IdProducto = 0;
             _Accion = string.Empty;
@@ -395,6 +397,7 @@ namespace Entidades
 
         #region Encapsulamiento
         public string Accion { get => _Accion; set => _Accion = value; }
+        public int IdListaProducto { get => _IdListaProducto; set => _IdListaProducto = value; }
         public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
         public int IdLista { get => _IdLista; set => _IdLista = value; }
         #endregion
