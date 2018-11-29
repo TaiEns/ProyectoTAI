@@ -35,7 +35,7 @@ namespace TainEns.paginas.Cliente.Productos
 
             foreach (E_Producto P in LstP)
             {
-                if (P.CategoriaProducto == Categoria)
+                if (P.CategoriaProducto == Categoria && P.EstadoProducto == "3")
                 {
                     LstNT.Add(new N_Producto().BuscarProductoPorId(P.IdProducto));
                 }
