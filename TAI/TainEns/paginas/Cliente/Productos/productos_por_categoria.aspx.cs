@@ -139,8 +139,22 @@ namespace TainEns.paginas.Cliente.Productos
             int IdLista = Convert.ToInt16(grvListas.SelectedDataKey["IdLista"]);
             ObjELP.IdProducto = IdProducto;
             ObjELP.IdLista = IdLista;
-
-            string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+            List<E_ListaProducto> LstLP = new N_ListaProducto().LstUsuarios();
+            bool flag = false;
+            foreach(E_ListaProducto P in LstLP)
+            {
+                if(P.IdLista == IdLista && P.IdProducto == IdProducto)
+                {
+                    //Label
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag)
+            {
+                string msn2 = ObjNLP.InsertarListaProductol(ObjELP);
+            }
+            
 
             ApagarComponentes();
         }
