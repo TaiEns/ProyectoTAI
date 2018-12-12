@@ -26,10 +26,10 @@ namespace TainEns.paginas.Cliente.Negocios
 
         protected void Iniciar()
         {
-            int IdProductoNegocio = Convert.ToInt16(Session["IdProductoNegocio"]);
-            ObjEPN = ObjNPN.BuscarProductoNegociosPorIdProductoNegocio(IdProductoNegocio);
-            int IdProducto = ObjEPN.IdProducto;
-            int IdNegocio = ObjEPN.IdNegocios;
+            //int IdProductoNegocio = Convert.ToInt16(Session["IdProductoNegocio"]);
+            //ObjEPN = ObjNPN.BuscarProductoNegociosPorIdProductoNegocio(IdProductoNegocio);
+            int IdProducto = Convert.ToInt16(Session["IdProducto"]);
+            int IdNegocio = Convert.ToInt16(Session["IdNegocio"]);
 
             List<E_ProductoNegocios> LstPN = new N_ProductoNegocios().LstNegocios();
 
