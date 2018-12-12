@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -54,10 +55,19 @@ namespace TainEns.paginas.Cliente.Negocios
 
             ObjEPN.IdProducto = ObjEP.IdProducto;
             ObjEPN.IdNegocios = ObjEN.IdNegocios;
-            ObjEPN.Precios = Convert.ToInt16(Precio.Text);
+            if (Precio.Text.All(char.IsDigit))
+            {
+                ObjEPN.Precios = Convert.ToInt16(Precio.Text);
+                string msnPN = ObjNPN.InsertarProductoNegocios(ObjEPN);
+                Response.Redirect("productos.aspx");
+            }
+            else
+            {
+                perror.Text = "¡Introduce solo números!";
+            }
+           
 
-            string msnPN = ObjNPN.InsertarProductoNegocios(ObjEPN);
-            Response.Redirect("productos.aspx");
+            
         }
     }
 }

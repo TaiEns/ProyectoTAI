@@ -85,6 +85,7 @@
               <div class="col-md-4 mb-3">
                 <label for="Precio">Precio</label>
                 <asp:TextBox ID="Precio" runat="server" class="form-control" placeholder="$" required></asp:TextBox>
+                  <asp:Label ID="perror" runat="server" ForeColor="Red"></asp:Label>
               </div>
           </div>
           

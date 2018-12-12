@@ -30,6 +30,9 @@ namespace TainEns.paginas.Cliente.Negocios
         {
             int IdNegocio = Convert.ToInt16(Session["IdNegocio"]);
             ObjEN = ObjNN.BuscarNegocioPorId(IdNegocio);
+            ObjEHN = ObjNHN.BuscarHorarioNegociosPorIdNegocio(IdNegocio);
+            EntradaL.Text = ObjEHN.LE.ToString();
+            SalidaL.Text = Convert.ToString(ObjEHN.LS);
             Nombre.Text = ObjEN.NombreNegocio;
             RFC.Text = ObjEN.RFC;
             Calle.Text = ObjEN.CalleNegocio;
