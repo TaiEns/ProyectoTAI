@@ -69,9 +69,9 @@ namespace TainEns.paginas.Cliente.Listas
                         Response.Redirect("consultar_lista.aspx");
                         break;
                     };
-                case "modificar":
+                case "comparar":
                     {
-                        Response.Redirect("modificar_negocio.aspx");
+                        Response.Redirect("comparar.aspx");
                         break;
                     };
 
