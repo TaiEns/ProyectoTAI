@@ -59,16 +59,28 @@
             <div class="row">
                 <div class="col-sm">
                     <h5>Elige un negocio</h5>
-                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="NombreNegocio" DataValueField="NombreNegocio">
+                    <asp:DropDownList ID="ddlNegocio" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="NombreNegocio" DataValueField="NombreNegocio">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [NombreNegocio] FROM [tbNegocios]"></asp:SqlDataSource>
                 </div>
                 <div class="col-sm">
                     <h5><asp:Label runat="server" ID="lblNombreLista" Text=""></asp:Label></h5>
+                    <asp:GridView ID="grvProductosEncontrados" runat="server" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="Nombre" HeaderText="Producto" />
+                            <asp:BoundField DataField="Precio" HeaderText="Precio" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
                 <div class="col-sm">
                     <div class="shadow p-3 mb-5 bg-white rounded">
                         <h5>Productos no encontrados</h5>
+                        <asp:GridView ID="grvProductosNoEnocntrados" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:BoundField DataField="Nombre" HeaderText="Producto" />
+                                <asp:BoundField DataField="Precio" HeaderText="Precio" />
+                            </Columns>
+                        </asp:GridView>
                     </div>
                     <div class="shadow p-3 mb-5 bg-white rounded" runat="server" id="pNegocioInfo">
                         <asp:Label ID="lblNombreNegocio" runat="server" Text=""></asp:Label>

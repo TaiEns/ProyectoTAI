@@ -31,13 +31,13 @@ namespace TainEns.paginas.Cliente.Listas {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddlNegocio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNegocio;
         
         /// <summary>
         /// Control SqlDataSource1.
@@ -56,6 +56,24 @@ namespace TainEns.paginas.Cliente.Listas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNombreLista;
+        
+        /// <summary>
+        /// Control grvProductosEncontrados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grvProductosEncontrados;
+        
+        /// <summary>
+        /// Control grvProductosNoEnocntrados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grvProductosNoEnocntrados;
         
         /// <summary>
         /// Control pNegocioInfo.
