@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="administrador.aspx.cs" Inherits="TainEns.paginas.Administrador.administrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="calificaciones.aspx.cs" Inherits="TainEns.paginas.Administrador.calificaciones" %>
 
 <!DOCTYPE html>
 
@@ -11,10 +11,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/floating-labels.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <title>TAI</title>
+    <title>Calificaciones</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
+        <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
 	  <a class="navbar-brand text-white" href="#"><img src="../../img/footer.png" width="30" height="30"/>TAI</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -56,10 +56,26 @@
 	</nav>
 
     <form id="form1" runat="server">
-        <div>
+        <div class="container">
+            <h1>Criticas</h1>
+            <div class="progress">
+               <asp:Panel runat="server" ID="pVerde" class="progress-bar bg-success" role="progressbar"></asp:Panel>
+                <asp:Label ID="lblChido" runat="server" Text=""></asp:Label>
+            </div>
+            <div class="progress">
+                <asp:Panel runat="server" ID="pRojo" class="progress-bar bg-danger" role="progressbar"></asp:Panel>
+                <asp:Label ID="lblMal" runat="server" Text=""></asp:Label>
+            </div>
+            <asp:GridView ID="grvCriticas" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuarios">
+                <Columns>
+                    <asp:BoundField DataField="NombreUsuario" HeaderText="Nombre" />
+                    <asp:BoundField DataField="ApellidoUsuario" HeaderText="Critica" />
+                </Columns>
+            </asp:GridView>
         </div>
-    </form>
 
+    </form>
+    
     <footer class="footer azuloscuro">
     	<div class="footer-content">
       		<img src="../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI</p>

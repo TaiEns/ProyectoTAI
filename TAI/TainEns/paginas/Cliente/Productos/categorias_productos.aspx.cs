@@ -164,6 +164,7 @@ namespace TainEns.paginas.Cliente.Productos
             // Panelcategorias.Visible = true;
             int IdProducto = Convert.ToInt16(gridbusqueda.SelectedDataKey["IdProducto"]);
             Session["IdProducto"] = IdProducto;
+            Image1.ImageUrl = "../../../img/productos/" + IdProducto + ".jpg";
             pProducto.Visible = true;
             ObjEP = ObjNP.BuscarProductoPorId(IdProducto);
             lblCardTitle.Text = ObjEP.NombreProducto;

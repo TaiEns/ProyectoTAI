@@ -137,43 +137,46 @@ namespace TainEns.paginas.Cliente.Listas
             List<int> NT = new List<int>();
             List<int> ST = new List<int>();
             int total = 0;
+            if(LstPN.Count != 0)
+            {
+                foreach (E_ProductoNegocios P in LstPN)
+                {
+                    foreach (E_ListaProducto LP in LstLP)
+                    {
+                        if (P.IdProducto == LP.IdProducto)
+                        {
+                            ObjEP = ObjNP.BuscarProductoPorId(P.IdProducto);
+                            ObjPP.Nombre = ObjEP.NombreProducto;
+                            ObjPP.Precio = P.Precios;
+                            total += P.Precios;
+                            PN_encontrados.Add(ObjPP);
+                            ST.Add(P.IdProducto);
+                            if (NT.Contains(LP.IdProducto))
+                            {
+                                NT.Remove(LP.IdProducto);
+                            }
+                            ObjPP = new ProductoPrecio();
+                            PNE.Add(new N_Producto().BuscarProductoPorId(P.IdProducto));
+                        }
+                        else
+                        {
+                            if (!NT.Contains(LP.IdProducto) && !ST.Contains(LP.IdProducto))
+                            {
+                                NT.Add(LP.IdProducto);
+                            }
+                        }
+                    }
 
-            /* foreach(E_ListaProducto LP in LstLP)
-             {
-                 if(LstPN.Contains(LP))
-                 {
-
-                 }
-             }*/
-
-            foreach (E_ProductoNegocios P in LstPN)
+                }
+            }
+            else
             {
                 foreach(E_ListaProducto LP in LstLP)
                 {
-                    if(P.IdProducto == LP.IdProducto)
-                    {
-                          ObjEP = ObjNP.BuscarProductoPorId(P.IdProducto);
-                          ObjPP.Nombre = ObjEP.NombreProducto;
-                          ObjPP.Precio = P.Precios;
-                          total += P.Precios;
-                          PN_encontrados.Add(ObjPP);
-                          ST.Add(P.IdProducto);
-                          if(NT.Contains(LP.IdProducto))
-                          {
-                              NT.Remove(LP.IdProducto);
-                          }
-                        ObjPP = new ProductoPrecio();
-                        PNE.Add(new N_Producto().BuscarProductoPorId(P.IdProducto));
-                    }
-                    else
-                    {
-                        if (!NT.Contains(LP.IdProducto) && !ST.Contains(LP.IdProducto))
-                        {
-                            NT.Add(LP.IdProducto);
-                        }
-                    }
+                    ObjEP = ObjNP.BuscarProductoPorId(LP.IdProducto);
+                    ObjPP.Nombre = ObjEP.NombreProducto;
+                    PN_no_encontrados.Add(ObjPP);
                 }
-                
             }
             ObjPP = new ProductoPrecio();
             foreach(int P in NT)

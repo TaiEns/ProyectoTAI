@@ -84,6 +84,7 @@
     <Content Include="img\categorias\pan.jpg" />
     <Content Include="img\categorias\snacks.jpg" />
     <Content Include="img\facebook-logo.png" />
+    <Content Include="img\feliz.png" />
     <Content Include="img\footer.png" />
     <Content Include="img\gmail-logo.png" />
     <Content Include="img\happyface.jpg" />
@@ -103,6 +104,7 @@
     <Content Include="img\productos\7.jpg" />
     <Content Include="img\productos\8.jpg" />
     <Content Include="img\productos\9.jpg" />
+    <Content Include="img\triste.png" />
     <Content Include="img\usuario.png" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -111,10 +113,12 @@
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="paginas\Administrador\administrador.aspx" />
+    <Content Include="paginas\Administrador\calificaciones.aspx" />
     <Content Include="paginas\Administrador\Productos\agregar_productos.aspx" />
     <Content Include="paginas\Administrador\Productos\productos.aspx" />
     <Content Include="paginas\Administrador\Solicitudes\aprobar_producto.aspx" />
     <Content Include="paginas\Administrador\Solicitudes\solicitud_productos.aspx" />
+    <Content Include="paginas\Cliente\calificar.aspx" />
     <Content Include="paginas\Cliente\cliente.aspx" />
     <Content Include="paginas\Cliente\Listas\comparar.aspx" />
     <Content Include="paginas\Cliente\Listas\consultar_lista.aspx" />
@@ -158,6 +162,13 @@
     <Compile Include="paginas\Administrador\administrador.aspx.designer.cs">
       <DependentUpon>administrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="paginas\Administrador\calificaciones.aspx.cs">
+      <DependentUpon>calificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Administrador\calificaciones.aspx.designer.cs">
+      <DependentUpon>calificaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="paginas\Administrador\Productos\agregar_productos.aspx.cs">
       <DependentUpon>agregar_productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +196,13 @@
     </Compile>
     <Compile Include="paginas\Administrador\Solicitudes\solicitud_productos.aspx.designer.cs">
       <DependentUpon>solicitud_productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\Cliente\calificar.aspx.cs">
+      <DependentUpon>calificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\Cliente\calificar.aspx.designer.cs">
+      <DependentUpon>calificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginas\Cliente\cliente.aspx.cs">
       <DependentUpon>cliente.aspx</DependentUpon>

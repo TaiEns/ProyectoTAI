@@ -38,6 +38,9 @@
 	      <li class="nav-item">
 	        <a class="nav-link text-white active" href="Negocios/buscar_negocio.aspx">Negocios</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="calificar.aspx">Calificar TAI</a>
+	      </li>
 	    </ul>
 
 	    <form class="form-inline my-2 my-lg-0">

@@ -403,4 +403,34 @@ namespace Entidades
         #endregion
     }
 
+    public class E_Criticas
+    {
+        #region Atributos
+        private string _Accion;
+        private int _IdCritica;
+        private int _IdUsuario;
+        private int _ValorCritica;
+        private string _Comentario;
+        #endregion
+
+        #region Contructor
+        public E_Criticas()
+        {
+            _IdCritica = 0;
+            _IdUsuario = 0;
+            _ValorCritica = 0;
+            _Comentario = string.Empty;
+            _Accion = string.Empty;
+        }
+        #endregion
+
+        #region Encapsulamiento
+        public string Accion { get => _Accion; set => _Accion = value; }
+        public string Comentario { get => _Comentario; set => _Comentario = value; }
+        public int IdCritica { get => _IdCritica; set => _IdCritica = value; }
+        public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
+        public int ValorCritica { get => _ValorCritica; set => _ValorCritica = value; }
+        #endregion
+    }
+
 }

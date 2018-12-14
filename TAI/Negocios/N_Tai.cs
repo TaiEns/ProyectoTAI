@@ -615,6 +615,60 @@ namespace Negocios
         }
     }
 
+    public class N_Critica
+    {
+        D_IBM_Datos ObjIBM = new D_IBM_Datos();
+        D_Listados ObjLst = new D_Listados();
+        private string Sp = "IBM_Criticas";
+
+        //Acciones de insertar, Borrar y Modificar los datos del Criticas
+        public string InsertarCriticas(E_Criticas pEntidad)
+        {
+            pEntidad.Accion = "INSERTAR";
+            return ObjIBM.IBM_Entidad<E_Criticas>(Sp, pEntidad);
+        }
+
+        public string BorraCriticas(int pIdCriticass)
+        {
+            E_Criticas Entidad = new E_Criticas
+            {
+                Accion = "BORRAR",
+                IdCritica = pIdCriticass
+            };
+            return ObjIBM.IBM_Entidad<E_Criticas>(Sp, Entidad);
+        }
+
+        public string ModoficaCriticas(E_Criticas pEntidad)
+        {
+            pEntidad.Accion = "MODIFICAR";
+            return ObjIBM.IBM_Entidad<E_Criticas>(Sp, pEntidad);
+        }
+
+        //listado general de Criticas en formato DataTable y list <E_Sistema>
+        public DataTable GetDT_Criticas()
+        {
+            return ObjLst.DT_ListadoGeneral("[tbCriticas]", "IdCritica");
+        }
+
+        public List<E_Criticas> LstCriticas()
+        {
+            return D_ConvierteDatos.ConvertirDTALista<E_Criticas>(GetDT_Criticas());
+        }
+
+        // Busqueda de Criticass por diferente creiterio
+
+        public E_Criticas BuscarCriticasPorId(int pIdCriticas)
+        {
+            return (from User in LstCriticas() where User.IdCritica == pIdCriticas select User).FirstOrDefault();
+        }
+        
+        public E_Criticas BuscarCriticasPorValor(int pValorCritica)
+        {
+            return (from User in LstCriticas() where User.ValorCritica == pValorCritica select User).FirstOrDefault();
+        }
+
+
+    }
 
 
 }

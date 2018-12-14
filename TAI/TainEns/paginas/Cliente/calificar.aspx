@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="administrador.aspx.cs" Inherits="TainEns.paginas.Administrador.administrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="calificar.aspx.cs" Inherits="TainEns.paginas.Cliente.calificar" %>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/floating-labels.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <title>TAI</title>
+    <title></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light azuloscuro">
@@ -25,19 +26,20 @@
 	      <li class="nav-item active">
 	        <a class="nav-link text-white" href="#">Inicio <span class="sr-only">(current)</span></a>
 	      </li>
-	      <li class="nav-item dropdown active">
-	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Solicitudes
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="Solicitudes/solicitud_productos.aspx">Productos</a>
-            </div>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="Negocios/mis_negocios.aspx">Mis Negocios</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link active text-white" href="Productos/productos.aspx">Productos</a>
+	        <a class="nav-link text-white active" href="Listas/listas.aspx">Lista</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link active text-white" href="calificaciones.aspx">Calificaciones</a>
+	        <a class="nav-link text-white active" href="Productos/categorias_productos.aspx">Productos</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="Negocios/buscar_negocio.aspx">Negocios</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-white active" href="calificar.aspx">Calificar TAI</a>
 	      </li>
 	    </ul>
 
@@ -54,12 +56,17 @@
 	    </form>
 	  </div>
 	</nav>
-
     <form id="form1" runat="server">
         <div>
+            <h1>Calificar TAI</h1>
+            <asp:ImageButton ID="btnFeliz" runat="server" ImageUrl="~/img/feliz.png" OnClick="btnFeliz_Click" style="width:50px; height:50px;"/>
+            <asp:ImageButton ID="btnTriste" runat="server" ImageUrl="~/img/triste.png"  style="width:50px; height:50px;" OnClick="btnTriste_Click"/><br />
+            <asp:TextBox ID="tbComentario" runat="server"></asp:TextBox>
+            <asp:Button ID="btnEnviar" runat="server" Text="Enviar"  class="btn btn-lg btn-primary btn-block azuloscuro" OnClick="btnEnviar_Click" />
         </div>
     </form>
 
+    
     <footer class="footer azuloscuro">
     	<div class="footer-content">
       		<img src="../../img/footer.png" width="50" height="50" id="Icono-footer"/><p>TAI</p>
