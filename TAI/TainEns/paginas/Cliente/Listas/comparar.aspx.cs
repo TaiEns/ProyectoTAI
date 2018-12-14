@@ -33,12 +33,13 @@ namespace TainEns.paginas.Cliente.Listas
         E_ListaUsuario ObjELU = new E_ListaUsuario();
         N_ListaUsuario ObjNLU = new N_ListaUsuario();
         E_Producto ObjEP = new E_Producto();
+        E_Producto ObjEP2 = new E_Producto();
         N_Producto ObjNP = new N_Producto();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                Iniciar();
+                //Iniciar();
             }
             
         }
@@ -61,17 +62,24 @@ namespace TainEns.paginas.Cliente.Listas
         protected void InfoNegocio(E_Negocios negocio)
         {
             E_HorarioNegocios ObjEHN = new N_HorarioNegocios().BuscarHorarioNegociosPorIdNegocio(negocio.IdNegocios);
-            lblNombreNegocio.Text = negocio.NombreNegocio;
-            lblUbicacion.Text = negocio.CalleNegocio + " " + negocio.ColoniaNegocio + " " + negocio.NumeroCalle;
-            lblTipo.Text = negocio.TipoNegocio;
-            lblTelefono.Text = negocio.TelefonoNegocio;
-            lblL.Text = ObjEHN.LE + "--" + ObjEHN.LS;
-            lblM.Text = ObjEHN.ME + "--" + ObjEHN.MS;
-            lblMi.Text = ObjEHN.MIE + "--" + ObjEHN.MIS;
-            lblJ.Text = ObjEHN.JE + "--" + ObjEHN.JS;
-            lblV.Text = ObjEHN.VE + "--" + ObjEHN.VS;
-            lblS.Text = ObjEHN.SE + "--" + ObjEHN.SS;
-            lblD.Text = ObjEHN.DE + "--" + ObjEHN.DS;
+            if(ObjEHN != null)
+            {
+                lblNombreNegocio.Text = negocio.NombreNegocio;
+                lblUbicacion.Text = negocio.CalleNegocio + " " + negocio.ColoniaNegocio + " " + negocio.NumeroCalle;
+                lblTipo.Text = negocio.TipoNegocio;
+                lblTelefono.Text = negocio.TelefonoNegocio;
+                lblL.Text = ObjEHN.LE + "--" + ObjEHN.LS;
+                lblM.Text = ObjEHN.ME + "--" + ObjEHN.MS;
+                lblMi.Text = ObjEHN.MIE + "--" + ObjEHN.MIS;
+                lblJ.Text = ObjEHN.JE + "--" + ObjEHN.JS;
+                lblV.Text = ObjEHN.VE + "--" + ObjEHN.VS;
+                lblS.Text = ObjEHN.SE + "--" + ObjEHN.SS;
+                lblD.Text = ObjEHN.DE + "--" + ObjEHN.DS;
+            }
+            else
+            {
+                pNegocioInfo.Visible = false;
+            }
 
         }
 
@@ -123,37 +131,85 @@ namespace TainEns.paginas.Cliente.Listas
             List<E_ListaProducto> LstLP = LstProductosL(); //Lista de productos de la lista a comparar
             List<E_ProductoNegocios> LstPN = LstProductosN(negocio); //Lista de productos del negocio
             List<ProductoPrecio> PN_encontrados = new List<ProductoPrecio>();
+            List<E_Producto> PNE = new List<E_Producto>();
             List<ProductoPrecio> PN_no_encontrados = new List<ProductoPrecio>();
             ProductoPrecio ObjPP = new ProductoPrecio();
-            int cont;
+            List<int> NT = new List<int>();
+            List<int> ST = new List<int>();
+            int total = 0;
+
+            /* foreach(E_ListaProducto LP in LstLP)
+             {
+                 if(LstPN.Contains(LP))
+                 {
+
+                 }
+             }*/
 
             foreach (E_ProductoNegocios P in LstPN)
             {
-                cont = 0;
                 foreach(E_ListaProducto LP in LstLP)
                 {
                     if(P.IdProducto == LP.IdProducto)
                     {
-                        ObjEP = ObjNP.BuscarProductoPorId(P.IdProducto);
-                        ObjPP.Nombre = ObjEP.NombreProducto;
-                        ObjPP.Precio = P.Precios;
-                        PN_encontrados.Add(ObjPP);
-                        cont++;
+                          ObjEP = ObjNP.BuscarProductoPorId(P.IdProducto);
+                          ObjPP.Nombre = ObjEP.NombreProducto;
+                          ObjPP.Precio = P.Precios;
+                          total += P.Precios;
+                          PN_encontrados.Add(ObjPP);
+                          ST.Add(P.IdProducto);
+                          if(NT.Contains(LP.IdProducto))
+                          {
+                              NT.Remove(LP.IdProducto);
+                          }
+                        ObjPP = new ProductoPrecio();
+                        PNE.Add(new N_Producto().BuscarProductoPorId(P.IdProducto));
+                    }
+                    else
+                    {
+                        if (!NT.Contains(LP.IdProducto) && !ST.Contains(LP.IdProducto))
+                        {
+                            NT.Add(LP.IdProducto);
+                        }
                     }
                 }
-                if(cont == 0)
-                {
-                    ObjEP = ObjNP.BuscarProductoPorId(P.IdProducto);
-                    ObjPP.Nombre = ObjEP.NombreProducto;
-                    ObjPP.Precio = P.Precios;
-                    PN_no_encontrados.Add(ObjPP);
-                }
+                
+            }
+            ObjPP = new ProductoPrecio();
+            foreach(int P in NT)
+            {
+                ObjEP2 = ObjNP.BuscarProductoPorId(P);
+                ObjPP.Nombre = ObjEP2.NombreProducto;
+                PN_no_encontrados.Add(ObjPP);
             }
             grvProductosEncontrados.DataSource = PN_encontrados;
             grvProductosNoEnocntrados.DataSource = PN_no_encontrados;
             grvProductosEncontrados.DataBind();
             grvProductosNoEnocntrados.DataBind();
+            lblTotal.Text = "Total = $" + total;
 
+        }
+
+        protected void ddlNegocio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nom = ddlNegocio.Text;
+            //string nom = "Otro Cafe";
+            ObjEN = ObjNN.BuscarUsuarioPorNombre(nom);
+            if (ObjEN != null)
+            {
+                Comparar(ObjEN);
+            }
+        }
+
+        protected void btnComparar_Click(object sender, EventArgs e)
+        {
+            string nom = ddlNegocio.Text;
+            //string nom = "Otro Cafe";
+            ObjEN = ObjNN.BuscarUsuarioPorNombre(nom);
+            if (ObjEN != null)
+            {
+                Comparar(ObjEN);
+            }
         }
     }
 }

@@ -59,9 +59,10 @@
             <div class="row">
                 <div class="col-sm">
                     <h5>Elige un negocio</h5>
-                    <asp:DropDownList ID="ddlNegocio" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="NombreNegocio" DataValueField="NombreNegocio">
+                    <asp:DropDownList ID="ddlNegocio" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="NombreNegocio" DataValueField="NombreNegocio" OnSelectedIndexChanged="ddlNegocio_SelectedIndexChanged">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConexionBD %>" SelectCommand="SELECT [NombreNegocio] FROM [tbNegocios]"></asp:SqlDataSource>
+                    <asp:Button ID="btnComparar" runat="server" Text="Comparar" class="btn btn-outline-primary" OnClick="btnComparar_Click"/>
                 </div>
                 <div class="col-sm">
                     <h5><asp:Label runat="server" ID="lblNombreLista" Text=""></asp:Label></h5>
@@ -71,6 +72,7 @@
                             <asp:BoundField DataField="Precio" HeaderText="Precio" />
                         </Columns>
                     </asp:GridView>
+                    <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="col-sm">
                     <div class="shadow p-3 mb-5 bg-white rounded">
@@ -78,7 +80,6 @@
                         <asp:GridView ID="grvProductosNoEnocntrados" runat="server" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField DataField="Nombre" HeaderText="Producto" />
-                                <asp:BoundField DataField="Precio" HeaderText="Precio" />
                             </Columns>
                         </asp:GridView>
                     </div>
