@@ -77,6 +77,13 @@
                             <asp:Label ID="lbnumneg" runat="server" Text="Label"></asp:Label>
                         </p>
                          <p class="card-text">Horario</p>
+                            Lunes:<asp:Label ID="lblL" runat="server" Text=""></asp:Label>
+                            Martes:<asp:Label ID="lblM" runat="server" Text=""></asp:Label>
+                            Miercoles:<asp:Label ID="lblMi" runat="server" Text=""></asp:Label>
+                            Jueves:<asp:Label ID="lblJ" runat="server" Text=""></asp:Label>
+                            Viernes:<asp:Label ID="lblV" runat="server" Text=""></asp:Label>
+                            Sabado:<asp:Label ID="lblS" runat="server" Text=""></asp:Label>
+                            Domingo:<asp:Label ID="lblD" runat="server" Text=""></asp:Label>
                       </div>
                     </div>
                 </div>
